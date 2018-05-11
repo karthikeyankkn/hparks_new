@@ -10,7 +10,6 @@ module Hparks
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-	config.action_dispatch.default_headers['X-Frame-Options'] = "ALLOW-FROM https://test.ccavenue.com"
 
     # config.assets.initialize_on_precompile = false
 
