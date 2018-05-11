@@ -54,6 +54,6 @@ class PaymentsController < ApplicationController
   private
 
   def allow_iframe
-    response.headers.except! 'X-Frame-Options'
+    @finalResponse.headers.except! 'X-Frame-Options'
   end
 end
