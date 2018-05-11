@@ -1,9 +1,6 @@
 class PaymentsController < ApplicationController
     skip_before_action :verify_authenticity_token
-    after_action :allow_iframe, only: :embed
-
-  def embed
-  end
+    
 
 
   def requestHandler
@@ -19,6 +16,7 @@ class PaymentsController < ApplicationController
       @crypto = Crypto.new
       @encrypted_data = @crypto.encrypt(@merchantData,@working_key)
       response = HTTParty.post("https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest=#{@encrypted_data}&access_code=#{@access_code}")
+      response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM https://test.ccavenue.com"
       # "https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest=#{encrypted_data}&access_code=#{access_code}"
       # binding.pry
       @finalResponse = response
@@ -51,9 +49,5 @@ class PaymentsController < ApplicationController
     @payment = Payment.new
   end
 
-  private
-
-  def allow_iframe
-    @finalResponse.headers.except! 'X-Frame-Options'
-  end
+  
 end
