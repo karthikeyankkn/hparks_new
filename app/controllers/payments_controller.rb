@@ -1,6 +1,9 @@
 class PaymentsController < ApplicationController
     skip_before_action :verify_authenticity_token
-    # before_filter :allow_iframe_requests
+    after_action :allow_iframe, only: :embed
+
+  def embed
+  end
 
 
   def requestHandler
@@ -48,7 +51,9 @@ class PaymentsController < ApplicationController
     @payment = Payment.new
   end
 
-  # def allow_iframe_requests
-  #   response.headers.delete('X-Frame-Options')
-  # end
+  private
+
+  def allow_iframe
+    response.headers.except! 'X-Frame-Options'
+  end
 end
