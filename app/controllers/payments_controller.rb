@@ -16,7 +16,7 @@ class PaymentsController < ApplicationController
       @crypto = Crypto.new
       @encrypted_data = @crypto.encrypt(@merchantData,@working_key)
       response = HTTParty.post("https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest=#{@encrypted_data}&access_code=#{@access_code}")
-      response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest=#{@encrypted_data}&access_code=#{@access_code}"
+      # response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest=#{@encrypted_data}&access_code=#{@access_code}"
       # "https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction&encRequest=#{encrypted_data}&access_code=#{access_code}"
       # binding.pry
       @finalResponse = response
