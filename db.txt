@@ -1,0 +1,18 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: hparks_production
+  username: testing
+  password: testing
+  host: localhost
+  port: 5432
+
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: hparks_production
+  username: testing
+  password: testing
+  host: localhost
+  port: 5432
