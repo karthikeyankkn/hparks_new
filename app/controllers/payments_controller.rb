@@ -1,6 +1,6 @@
 class PaymentsController < ApplicationController
     skip_before_action :verify_authenticity_token
-    after_action :allow_facebook_iframe
+    before_filter :allow_iframe_requests
 
 
   def requestHandler
@@ -48,7 +48,7 @@ class PaymentsController < ApplicationController
     @payment = Payment.new
   end
 
-  def allow_facebook_iframe
-    response.headers['X-Frame-Options'] = 'ALLOW-FROM https://test.ccavenue.com'
+  def allow_iframe_requests
+    response.headers.delete('X-Frame-Options')
   end
 end
