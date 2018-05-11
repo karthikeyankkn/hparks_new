@@ -1,0 +1,15 @@
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180511-8084-qa7ji1.rb extconf.rb
+creating Makefile
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20180511-8084-1vyzcpy/bootsnap

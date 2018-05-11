@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /usr/share/rvm/rubies/ruby-2.4.1/include/ruby-2.4.0
+topdir = /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/include/ruby-2.4.0
 hdrdir = $(topdir)
-arch_hdrdir = /usr/share/rvm/rubies/ruby-2.4.1/include/ruby-2.4.0/x86_64-linux
+arch_hdrdir = /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/include/ruby-2.4.0/x86_64-darwin17
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/usr/share/rvm/rubies/ruby-2.4.1
+prefix = $(DESTDIR)/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20180511-11373-15pc10j
-sitelibdir = $(DESTDIR)./.gem.20180511-11373-15pc10j
+sitearchdir = $(DESTDIR)./.gem.20180511-8084-1xckx2t
+sitelibdir = $(DESTDIR)./.gem.20180511-8084-1xckx2t
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -50,11 +50,11 @@ dvidir = $(docdir)
 htmldir = $(docdir)
 infodir = $(datarootdir)/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
-oldincludedir = $(DESTDIR)/usr/include
+oldincludedir = $(SDKROOT)/usr/include
 includedir = $(prefix)/include
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
-sysconfdir = $(DESTDIR)/etc
+sysconfdir = $(prefix)/etc
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -67,8 +67,8 @@ CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-R'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-R'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)-static
+LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework CoreFoundation
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -79,30 +79,30 @@ cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = $(optflags) $(debugflags) $(warnflags)
 optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
-warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings   -Wdeprecated-declarations -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wno-maybe-uninitialized
-CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC $(ARCH_FLAG)
-INCFLAGS = -I. -I/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/libv8-3.16.14.19-x86_64-linux/vendor/v8/include -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
+warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings  -Wshorten-64-to-32  -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
+CCDLFLAGS = -fno-common
+CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe $(ARCH_FLAG)
+INCFLAGS = -I. -I/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/libv8-3.16.14.19-x86_64-darwin-17/vendor/v8/include -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS =   $(DEFS) $(cppflags) -Wall -g -rdynamic
+CPPFLAGS =   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) -Wall -g -rdynamic
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/libv8-3.16.14.19-x86_64-linux/vendor/v8/out/x64.release/obj.target/tools/gyp/libv8_base.a /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/libv8-3.16.14.19-x86_64-linux/vendor/v8/out/x64.release/obj.target/tools/gyp/libv8_snapshot.a -L. -fstack-protector -rdynamic -Wl,-export-dynamic
-dldflags = -Wl,--compress-debug-sections=zlib 
+ldflags  = /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/libv8-3.16.14.19-x86_64-darwin-17/vendor/v8/out/x64.release/libv8_base.a /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/libv8-3.16.14.19-x86_64-darwin-17/vendor/v8/out/x64.release/libv8_snapshot.a -L. -fstack-protector -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl@1.1/lib
+dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl@1.1/lib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
-LDSHARED = $(CXX) -shared
-LDSHAREDXX = $(CXX) -shared
+LDSHARED = $(CC) -dynamic -bundle
+LDSHAREDXX = $(CXX) -dynamic -bundle
 AR = ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
-RUBY_SO_NAME = ruby
+RUBY_SO_NAME = ruby.2.4.1
 RUBYW_INSTALL_NAME = 
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-linux
+arch = x86_64-darwin17
 sitearch = $(arch)
 ruby_version = 2.4.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -111,9 +111,9 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
-RMDIRS = rmdir --ignore-fail-on-non-empty -p
-MAKEDIRS = /bin/mkdir -p
-INSTALL = /usr/bin/install
+RMDIRS = rmdir -p
+MAKEDIRS = /usr/local/opt/coreutils/bin/gmkdir -p
+INSTALL = /usr/local/opt/coreutils/bin/ginstall -c
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -122,8 +122,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir)
-LIBPATH =  -L. -L$(libdir) -Wl,-R$(libdir)
+libpath = . $(libdir) /usr/local/opt/libyaml/lib /usr/local/opt/readline/lib /usr/local/opt/libksba/lib /usr/local/opt/openssl@1.1/lib
+LIBPATH =  -L. -L$(libdir) -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl@1.1/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -134,7 +134,7 @@ extout =
 extout_prefix = 
 target_prefix = /v8
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED) -lpthread  -lpthread -lgmp -ldl -lcrypt -lm   -lc
+LIBS = $(LIBRUBYARG_SHARED) -lobjc -lpthread  -lpthread -lgmp -ldl -lobjc 
 ORIG_SRCS = accessor.cc array.cc backref.cc constants.cc constraints.cc context.cc date.cc exception.cc external.cc function.cc gc.cc handles.cc heap.cc init.cc invocation.cc locker.cc message.cc object.cc primitive.cc rr.cc script.cc signature.cc stack.cc string.cc template.cc trycatch.cc v8.cc value.cc
 SRCS = $(ORIG_SRCS) 
 OBJS = accessor.o array.o backref.o constants.o constraints.o context.o date.o exception.o external.o function.o gc.o handles.o heap.o init.o invocation.o locker.o message.o object.o primitive.o rr.o script.o signature.o stack.o string.o template.o trycatch.o v8.o value.o
@@ -143,7 +143,7 @@ LOCAL_HDRS =
 TARGET = init
 TARGET_NAME = init
 TARGET_ENTRY = Init_$(TARGET_NAME)
-DLLIB = $(TARGET).so
+DLLIB = $(TARGET).bundle
 EXTSTATIC = 
 STATIC_LIB = 
 
@@ -257,6 +257,7 @@ $(TARGET_SO): $(OBJS) Makefile
 	$(ECHO) linking shared-object v8/$(DLLIB)
 	-$(Q)$(RM) $(@)
 	$(Q) $(LDSHAREDXX) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
+	$(Q) $(POSTLINK)
 
 
 

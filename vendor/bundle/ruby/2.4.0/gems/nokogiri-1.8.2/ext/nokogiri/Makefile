@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /usr/share/rvm/rubies/ruby-2.4.1/include/ruby-2.4.0
+topdir = /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/include/ruby-2.4.0
 hdrdir = $(topdir)
-arch_hdrdir = /usr/share/rvm/rubies/ruby-2.4.1/include/ruby-2.4.0/x86_64-linux
+arch_hdrdir = /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/include/ruby-2.4.0/x86_64-darwin17
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/usr/share/rvm/rubies/ruby-2.4.1
+prefix = $(DESTDIR)/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20180511-11373-jmjynx
-sitelibdir = $(DESTDIR)./.gem.20180511-11373-jmjynx
+sitearchdir = $(DESTDIR)./.gem.20180511-8084-w3e2tw
+sitelibdir = $(DESTDIR)./.gem.20180511-8084-w3e2tw
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -50,11 +50,11 @@ dvidir = $(docdir)
 htmldir = $(docdir)
 infodir = $(datarootdir)/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
-oldincludedir = $(DESTDIR)/usr/include
+oldincludedir = $(SDKROOT)/usr/include
 includedir = $(prefix)/include
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
-sysconfdir = $(DESTDIR)/etc
+sysconfdir = $(prefix)/etc
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -67,8 +67,8 @@ CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-R'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-R'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)-static
+LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework CoreFoundation
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -79,30 +79,30 @@ cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = $(optflags) $(debugflags) $(warnflags)
 optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
-warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wno-maybe-uninitialized
-CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
+warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
+CCDLFLAGS = -fno-common
+CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe  -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.32/include -I/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7/include/libxml2 -I/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7/include/libxml2  $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.32\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
+CPPFLAGS = -DHAVE_ICONV_H -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxslt/1.1.32/include -I/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxml2/2.9.7/include/libxml2 -I/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxml2/2.9.7/include/libxml2  -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxml2/2.9.7\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxslt/1.1.32\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -fstack-protector -rdynamic -Wl,-export-dynamic
-dldflags = -Wl,--compress-debug-sections=zlib 
+ldflags  = -L. -fstack-protector -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl@1.1/lib
+dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl@1.1/lib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
-LDSHARED = $(CC) -shared
-LDSHAREDXX = $(CXX) -shared
+LDSHARED = $(CC) -dynamic -bundle
+LDSHAREDXX = $(CXX) -dynamic -bundle
 AR = ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
-RUBY_SO_NAME = ruby
+RUBY_SO_NAME = ruby.2.4.1
 RUBYW_INSTALL_NAME = 
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-linux
+arch = x86_64-darwin17
 sitearch = $(arch)
 ruby_version = 2.4.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -111,9 +111,9 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
-RMDIRS = rmdir --ignore-fail-on-non-empty -p
-MAKEDIRS = /bin/mkdir -p
-INSTALL = /usr/bin/install
+RMDIRS = rmdir -p
+MAKEDIRS = /usr/local/opt/coreutils/bin/gmkdir -p
+INSTALL = /usr/local/opt/coreutils/bin/ginstall -c
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -122,8 +122,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7/lib /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.32/lib
-LIBPATH =  -L. -L$(libdir) -Wl,-R$(libdir) -L/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7/lib -Wl,-R/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7/lib -L/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.32/lib -Wl,-R/home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.32/lib
+libpath = . $(libdir) /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxml2/2.9.7/lib /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxslt/1.1.32/lib /usr/local/opt/libyaml/lib /usr/local/opt/readline/lib /usr/local/opt/libksba/lib /usr/local/opt/openssl@1.1/lib /usr/local/Cellar/xz/5.2.3/lib
+LIBPATH =  -L. -L$(libdir) -L/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxml2/2.9.7/lib -L/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxslt/1.1.32/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/Cellar/xz/5.2.3/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -134,16 +134,16 @@ extout =
 extout_prefix = 
 target_prefix = /nokogiri
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED) /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.32/lib/libexslt.a -lm -ldl -lz /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7/lib/libxml2.a /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxslt/1.1.32/lib/libxslt.a -ldl -lm -lz /home/ubuntu/app/hparks/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-pc-linux-gnu/libxml2/2.9.7/lib/libxml2.a -lpthread -lgmp -ldl -lcrypt -lm   -lc 
+LIBS = $(LIBRUBYARG_SHARED) /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxslt/1.1.32/lib/libexslt.a -lm -liconv -lpthread -llzma -lz /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxml2/2.9.7/lib/libxml2.a /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxslt/1.1.32/lib/libxslt.a -lm -liconv -lpthread -llzma -lz /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ports/x86_64-apple-darwin17.2.0/libxml2/2.9.7/lib/libxml2.a -llzma -lpthread -lgmp -ldl -lobjc  
 ORIG_SRCS = html_document.c html_element_description.c html_entity_lookup.c html_sax_parser_context.c html_sax_push_parser.c nokogiri.c xml_attr.c xml_attribute_decl.c xml_cdata.c xml_comment.c xml_document.c xml_document_fragment.c xml_dtd.c xml_element_content.c xml_element_decl.c xml_encoding_handler.c xml_entity_decl.c xml_entity_reference.c xml_io.c xml_libxml2_hacks.c xml_namespace.c xml_node.c xml_node_set.c xml_processing_instruction.c xml_reader.c xml_relax_ng.c xml_sax_parser.c xml_sax_parser_context.c xml_sax_push_parser.c xml_schema.c xml_syntax_error.c xml_text.c xml_xpath_context.c xslt_stylesheet.c
 SRCS = $(ORIG_SRCS) 
 OBJS = html_document.o html_element_description.o html_entity_lookup.o html_sax_parser_context.o html_sax_push_parser.o nokogiri.o xml_attr.o xml_attribute_decl.o xml_cdata.o xml_comment.o xml_document.o xml_document_fragment.o xml_dtd.o xml_element_content.o xml_element_decl.o xml_encoding_handler.o xml_entity_decl.o xml_entity_reference.o xml_io.o xml_libxml2_hacks.o xml_namespace.o xml_node.o xml_node_set.o xml_processing_instruction.o xml_reader.o xml_relax_ng.o xml_sax_parser.o xml_sax_parser_context.o xml_sax_push_parser.o xml_schema.o xml_syntax_error.o xml_text.o xml_xpath_context.o xslt_stylesheet.o
-HDRS = $(srcdir)/html_sax_push_parser.h $(srcdir)/xml_attribute_decl.h $(srcdir)/html_document.h $(srcdir)/xml_syntax_error.h $(srcdir)/xml_dtd.h $(srcdir)/xml_document_fragment.h $(srcdir)/xslt_stylesheet.h $(srcdir)/xml_io.h $(srcdir)/xml_encoding_handler.h $(srcdir)/xml_cdata.h $(srcdir)/xml_comment.h $(srcdir)/xml_text.h $(srcdir)/xml_xpath_context.h $(srcdir)/xml_entity_reference.h $(srcdir)/html_entity_lookup.h $(srcdir)/xml_sax_parser_context.h $(srcdir)/xml_node.h $(srcdir)/xml_schema.h $(srcdir)/html_sax_parser_context.h $(srcdir)/xml_element_content.h $(srcdir)/xml_node_set.h $(srcdir)/xml_attr.h $(srcdir)/xml_processing_instruction.h $(srcdir)/xml_libxml2_hacks.h $(srcdir)/xml_sax_push_parser.h $(srcdir)/xml_element_decl.h $(srcdir)/nokogiri.h $(srcdir)/xml_sax_parser.h $(srcdir)/xml_relax_ng.h $(srcdir)/xml_namespace.h $(srcdir)/xml_document.h $(srcdir)/xml_entity_decl.h $(srcdir)/html_element_description.h $(srcdir)/xml_reader.h
+HDRS = $(srcdir)/xml_xpath_context.h $(srcdir)/xml_sax_parser_context.h $(srcdir)/html_document.h $(srcdir)/xslt_stylesheet.h $(srcdir)/xml_node.h $(srcdir)/xml_syntax_error.h $(srcdir)/xml_reader.h $(srcdir)/xml_sax_parser.h $(srcdir)/html_entity_lookup.h $(srcdir)/xml_dtd.h $(srcdir)/xml_entity_decl.h $(srcdir)/xml_schema.h $(srcdir)/html_sax_push_parser.h $(srcdir)/xml_attr.h $(srcdir)/xml_document_fragment.h $(srcdir)/xml_cdata.h $(srcdir)/xml_document.h $(srcdir)/xml_processing_instruction.h $(srcdir)/xml_text.h $(srcdir)/xml_entity_reference.h $(srcdir)/xml_attribute_decl.h $(srcdir)/xml_io.h $(srcdir)/xml_element_content.h $(srcdir)/xml_comment.h $(srcdir)/html_element_description.h $(srcdir)/xml_node_set.h $(srcdir)/xml_element_decl.h $(srcdir)/nokogiri.h $(srcdir)/xml_encoding_handler.h $(srcdir)/xml_libxml2_hacks.h $(srcdir)/xml_relax_ng.h $(srcdir)/xml_sax_push_parser.h $(srcdir)/html_sax_parser_context.h $(srcdir)/xml_namespace.h
 LOCAL_HDRS = 
 TARGET = nokogiri
 TARGET_NAME = nokogiri
 TARGET_ENTRY = Init_$(TARGET_NAME)
-DLLIB = $(TARGET).so
+DLLIB = $(TARGET).bundle
 EXTSTATIC = 
 STATIC_LIB = 
 
@@ -257,6 +257,7 @@ $(TARGET_SO): $(OBJS) Makefile
 	$(ECHO) linking shared-object nokogiri/$(DLLIB)
 	-$(Q)$(RM) $(@)
 	$(Q) $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
+	$(Q) $(POSTLINK)
 
 
 

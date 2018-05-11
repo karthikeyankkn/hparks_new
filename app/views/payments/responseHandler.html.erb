@@ -1,0 +1,9 @@
+<h1>success</h1>
+
+<h1><%= @decResp %></h1>
+<%@decResp.each do |key|%> 
+    <tr>
+      <td><%=key.from(0).to(key.index("=")-1)%> </td>
+      <td><%=key.from(key.index("=")+1).to(-1)%> </td>
+    </tr>
+  <%end%>
