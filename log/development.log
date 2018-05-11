@@ -92,3 +92,34 @@ Processing by PaymentsController#requestHandler as HTML
 Completed 200 OK in 9341ms (Views: 25.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-11 20:20:25 +0530
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (1.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-11 20:20:29 +0530
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6869ms (Views: 6813.8ms | ActiveRecord: 3.8ms)
+
+
+Completed 200 OK in 3426ms (Views: 3416.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-11 20:21:16 +0530
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transaction/ccavRequestHandler" for 127.0.0.1 at 2018-05-11 20:21:20 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"merchant_id"=>"168876", "order_id"=>"123654789", "amount"=>"1.00", "currency"=>"INR", "redirect_url"=>"http://hparks.getspini.in/transaction/ccavResponseHandler", "language"=>"EN"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1264ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
