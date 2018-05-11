@@ -7,3 +7,88 @@ Processing by PaymentsController#new as HTML
 Completed 200 OK in 264ms (Views: 192.5ms | ActiveRecord: 4.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-11 17:56:01 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 201ms (Views: 159.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/transaction/ccavRequestHandler" for 127.0.0.1 at 2018-05-11 17:56:07 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"merchant_id"=>"168876", "order_id"=>"123654789", "amount"=>"1.00", "currency"=>"INR", "redirect_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "cancel_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "language"=>"EN", "billing_name"=>"Charli", "billing_address"=>"Room no 1101, near Railway station Ambad", "billing_city"=>"Indore", "billing_state"=>"MP", "billing_zip"=>"425001", "billing_country"=>"India", "billing_tel"=>"9876543210", "billing_email"=>"person@gmail.com", "delivery_name"=>"Chaplin", "delivery_address"=>"room no.701 near bus stand", "delivery_city"=>"Hyderabad", "delivery_state"=>"Andhra", "delivery_zip"=>"425001", "delivery_country"=>"India", "delivery_tel"=>"9595226054", "merchant_param1"=>"additional Info.", "merchant_param2"=>"additional Info.", "merchant_param3"=>"additional Info.", "merchant_param4"=>"additional Info.", "merchant_param5"=>"additional Info.", "promo_code"=>"", "customer_identifier"=>"", "integration_type"=>"iframe_normal"}
+  Rendering payments/requestHandler.html within layouts/application
+  Rendered payments/requestHandler.html within layouts/application (0.3ms)
+Completed 200 OK in 1858ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-11 17:58:05 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 300ms (Views: 229.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/transaction/ccavRequestHandler" for 127.0.0.1 at 2018-05-11 17:58:07 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"merchant_id"=>"168876", "order_id"=>"123654789", "amount"=>"1.00", "currency"=>"INR", "redirect_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "cancel_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "language"=>"EN", "billing_name"=>"Charli", "billing_address"=>"Room no 1101, near Railway station Ambad", "billing_city"=>"Indore", "billing_state"=>"MP", "billing_zip"=>"425001", "billing_country"=>"India", "billing_tel"=>"9876543210", "billing_email"=>"person@gmail.com", "delivery_name"=>"Chaplin", "delivery_address"=>"room no.701 near bus stand", "delivery_city"=>"Hyderabad", "delivery_state"=>"Andhra", "delivery_zip"=>"425001", "delivery_country"=>"India", "delivery_tel"=>"9595226054", "merchant_param1"=>"additional Info.", "merchant_param2"=>"additional Info.", "merchant_param3"=>"additional Info.", "merchant_param4"=>"additional Info.", "merchant_param5"=>"additional Info.", "promo_code"=>"", "customer_identifier"=>"", "integration_type"=>"iframe_normal"}
+  Rendering payments/requestHandler.html within layouts/application
+  Rendered payments/requestHandler.html within layouts/application (0.4ms)
+Completed 200 OK in 106155ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-11 18:02:19 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 245ms (Views: 203.6ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/transaction/ccavRequestHandler" for 127.0.0.1 at 2018-05-11 18:02:22 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"merchant_id"=>"168876", "order_id"=>"123654789", "amount"=>"1.00", "currency"=>"INR", "redirect_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "cancel_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "language"=>"EN", "billing_name"=>"Charli", "billing_address"=>"Room no 1101, near Railway station Ambad", "billing_city"=>"Indore", "billing_state"=>"MP", "billing_zip"=>"425001", "billing_country"=>"India", "billing_tel"=>"9876543210", "billing_email"=>"person@gmail.com", "delivery_name"=>"Chaplin", "delivery_address"=>"room no.701 near bus stand", "delivery_city"=>"Hyderabad", "delivery_state"=>"Andhra", "delivery_zip"=>"425001", "delivery_country"=>"India", "delivery_tel"=>"9595226054", "merchant_param1"=>"additional Info.", "merchant_param2"=>"additional Info.", "merchant_param3"=>"additional Info.", "merchant_param4"=>"additional Info.", "merchant_param5"=>"additional Info.", "promo_code"=>"", "customer_identifier"=>"", "integration_type"=>"iframe_normal"}
+  Rendering payments/requestHandler.html within layouts/application
+  Rendered payments/requestHandler.html within layouts/application (0.3ms)
+Completed 200 OK in 32687ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-11 18:07:14 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 338ms (Views: 263.3ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/transaction/ccavRequestHandler" for 127.0.0.1 at 2018-05-11 18:07:17 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"merchant_id"=>"168876", "order_id"=>"123654789", "amount"=>"1.00", "currency"=>"INR", "redirect_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "cancel_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "language"=>"EN", "billing_name"=>"Charli", "billing_address"=>"Room no 1101, near Railway station Ambad", "billing_city"=>"Indore", "billing_state"=>"MP", "billing_zip"=>"425001", "billing_country"=>"India", "billing_tel"=>"9876543210", "billing_email"=>"person@gmail.com", "delivery_name"=>"Chaplin", "delivery_address"=>"room no.701 near bus stand", "delivery_city"=>"Hyderabad", "delivery_state"=>"Andhra", "delivery_zip"=>"425001", "delivery_country"=>"India", "delivery_tel"=>"9595226054", "merchant_param1"=>"additional Info.", "merchant_param2"=>"additional Info.", "merchant_param3"=>"additional Info.", "merchant_param4"=>"additional Info.", "merchant_param5"=>"additional Info.", "promo_code"=>"", "customer_identifier"=>"", "integration_type"=>"iframe_normal"}
+  Rendering payments/requestHandler.html within layouts/application
+  Rendered payments/requestHandler.html within layouts/application (0.3ms)
+Completed 200 OK in 14326ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-11 18:08:21 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 245ms (Views: 202.0ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/transaction/ccavRequestHandler" for 127.0.0.1 at 2018-05-11 18:08:24 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"merchant_id"=>"168876", "order_id"=>"123654789", "amount"=>"1.00", "currency"=>"INR", "redirect_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "cancel_url"=>"http://merchantdomain/transaction/ccavResponseHandler", "language"=>"EN", "billing_name"=>"Charli", "billing_address"=>"Room no 1101, near Railway station Ambad", "billing_city"=>"Indore", "billing_state"=>"MP", "billing_zip"=>"425001", "billing_country"=>"India", "billing_tel"=>"9876543210", "billing_email"=>"person@gmail.com", "delivery_name"=>"Chaplin", "delivery_address"=>"room no.701 near bus stand", "delivery_city"=>"Hyderabad", "delivery_state"=>"Andhra", "delivery_zip"=>"425001", "delivery_country"=>"India", "delivery_tel"=>"9595226054", "merchant_param1"=>"additional Info.", "merchant_param2"=>"additional Info.", "merchant_param3"=>"additional Info.", "merchant_param4"=>"additional Info.", "merchant_param5"=>"additional Info.", "promo_code"=>"", "customer_identifier"=>"", "integration_type"=>"iframe_normal"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9341ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
