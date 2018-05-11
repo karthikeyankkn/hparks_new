@@ -9,8 +9,6 @@
 #Contribution	    : eLitmus Evaluation Pvt Ltd
 #***************************************************************** 
 
-
-
 class Crypto < ApplicationController
 
   INIT_VECTOR = (0..15).to_a.pack("C*")    
