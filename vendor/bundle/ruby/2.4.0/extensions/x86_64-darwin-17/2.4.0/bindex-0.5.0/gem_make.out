@@ -1,0 +1,15 @@
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180511-8084-ez1u1m.rb extconf.rb
+creating Makefile
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20180511-8084-1mo5zik/bindex

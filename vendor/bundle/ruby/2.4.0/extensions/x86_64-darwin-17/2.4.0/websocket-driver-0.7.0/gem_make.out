@@ -1,0 +1,15 @@
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180511-8084-1ietx7n.rb extconf.rb
+creating Makefile
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20180511-8084-1mknjgd
