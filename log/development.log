@@ -17961,3 +17961,33 @@ Processing by PaymentsController#requestHandler as HTML
 Completed 200 OK in 1247ms (Views: 71.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-14 14:22:29 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 362ms (Views: 331.3ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-14 14:22:40 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9GSjFU+utjBLr6DGgPeQLeR5Tk9c29xsZCgPvI5oxKb/nKfpQJNJV5FuICrG6HQpxOVGcPn/lQORlzpngJ/7Pw==", "user_detail"=>{"plot_details"=>"Plot size 1200 sq.ft and Rupees 26.4 Lacks", "name"=>"qweqwe", "number"=>"123123123", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[36mUserDetail Create (5.8ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "qweqwe"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 1200 sq.ft and Rupees 26.4 Lacks"], ["number", 123123123], ["created_at", "2018-05-14 08:52:40.465562"], ["updated_at", "2018-05-14 08:52:40.465562"]]
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:10
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=22
+Completed 302 Found in 13ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=22" for 127.0.0.1 at 2018-05-14 14:22:40 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"22"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 783ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
