@@ -17991,3 +17991,296 @@ Processing by PaymentsController#requestHandler as HTML
 Completed 200 OK in 783ms (Views: 41.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:29:23 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 19364ms (ActiveRecord: 8.1ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:31:46 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 57515ms (Views: 384.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:34:22 +0530
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 17037ms (ActiveRecord: 5.1ms)
+
+
+  
+NoMethodError (undefined method `[]=' for #<ResponseDetail:0x007fc9b9e08c80>):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:35:24 +0530
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 9555ms (ActiveRecord: 3.6ms)
+
+
+  
+NoMethodError (undefined method `[]=' for #<ResponseDetail:0x007f9aa5a254a8>):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:36:34 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 10100ms (ActiveRecord: 11.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "response_details" does not exist
+LINE 8:                WHERE a.attrelid = '"response_details"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"response_details"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/user_details_controller.rb:7:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:40:14 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 10362ms (ActiveRecord: 13.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "response_details" does not exist
+LINE 8:                WHERE a.attrelid = '"response_details"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"response_details"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/user_details_controller.rb:7:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:43:50 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 11281ms (ActiveRecord: 5.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "response_details" does not exist
+LINE 8:                WHERE a.attrelid = '"response_details"'::regc...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"response_details"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/user_details_controller.rb:7:in `new'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateResponseDetails (20180514102101)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (47.2ms)[0m  [1m[35mCREATE TABLE "response_details" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180514102101_create_response_details.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180514102101"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-05-14 15:51:35 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+Completed 500 Internal Server Error in 20379ms (ActiveRecord: 12.2ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:01:25 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 10237ms (ActiveRecord: 8.8ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:04:23 +0530
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 15397ms (ActiveRecord: 9.3ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:05:22 +0530
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 8062ms (ActiveRecord: 8.9ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:09:33 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 13131ms (ActiveRecord: 8.7ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:10:00 +0530
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 7445ms (ActiveRecord: 11.0ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:10:40 +0530
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 8214ms (ActiveRecord: 12.3ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `name`):
+  
+app/controllers/user_details_controller.rb:11:in `block in new'
+app/controllers/user_details_controller.rb:9:in `each'
+app/controllers/user_details_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:12:45 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 28152ms (Views: 2934.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:20:52 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 22915ms (Views: 550.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:22:07 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42721ms (Views: 52.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:22:53 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31601ms (Views: 56.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:23:54 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mPlotSize Load (0.6ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27195ms (Views: 45.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:25:23 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 11273ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `vvv' for {"vvv"=>"karthik", "age"=>"asasas", "occ"=>"software"}:Hash):
+    1: <%= @some.vvv %>
+    2: <div class="container">
+    3: 	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
+    4: 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
+  
+app/views/user_details/new.html.erb:1:in `_app_views_user_details_new_html_erb__3406308731620666665_70234351925040'
+Started GET "/" for 127.0.0.1 at 2018-05-14 16:26:08 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 8157ms (Views: 298.9ms | ActiveRecord: 8.2ms)
+
+

@@ -3,6 +3,16 @@ skip_before_action :verify_authenticity_token
 def new
 	@plots = PlotSize.all
 	@user_detail = UserDetail.new
+	# binding.pry
+	# @some = {}
+	# @arr = ["vvv=karthik","age=asasas","occ=software"]
+	# @arr.each do |key|
+	# 	binding.pry
+ #        @some["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
+ #      end
+ #      binding.pry
+ #      @order_id = @some["vvv"]
+ #       binding.pry
 end
 def create
 	# binding.pry
@@ -20,4 +30,5 @@ private
   def user_detail_params
     params.require(:user_detail).permit(:name, :email, :plot_details,:number,:payment_status,:description)
   end	
+
 end

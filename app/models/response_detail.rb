@@ -1,0 +1,3 @@
+class ResponseDetail < ApplicationRecord
+	
+end
