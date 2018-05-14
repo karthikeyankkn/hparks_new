@@ -1,0 +1,2 @@
+class PlotSize < ApplicationRecord
+end

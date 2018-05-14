@@ -62,7 +62,7 @@ group :development do
 
   # Remove the following if your server does not use RVM
   gem 'capistrano-rvm'
-    # gem 'pry-byebug'
+    gem 'pry-byebug'
 end
 
 group :test do

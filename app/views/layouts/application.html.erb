@@ -10,6 +10,30 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 logo-1">
+            <img src="http://cdn.getspini.com/hira-img/logo/opt/hparks-logo2.png"/>
+          </div>
+          <div class="col-md-6 text-right logo-2">
+            <img src="http://cdn.getspini.com/hira-img/logo/hcom-logo3.png" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <%= yield %>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">Demo footer</div>
+          <div class="col-md-4">Demo footer</div>
+          <div class="col-md-4">Demo footer</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

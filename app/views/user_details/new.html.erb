@@ -1,0 +1,102 @@
+<div class="container">
+	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
+		<!-- <form method="POST" name="user_params" action="/create" validate> -->
+		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+		<div class="row">
+			<h2>1~> Choose Plot*</h2>
+			<% @plots.each do |plot| %>	
+					<div class="col-md-3 col-xs-6 box">
+						<label class="btn btn-primary">
+							<img src="<%= plot.thumb_image %>" alt="..." class="img-thumbnail img-check">
+							<!-- <input type="radio" name="chk1" id="item<%= plot.sequence %>" value="Plot size<%= plot.size %>sq.ft and Rs.<%= plot.amount %> L" class="hidden" autocomplete="off" required> -->
+							<%= f.radio_button :plot_details ,value: plot.full_message ,id: 'item#{plot.sequence}' , autocomplete: 'off'  %>
+
+							
+						</label>
+					</div>
+			<% end %>
+		</div>
+		<div class="row">
+			<h2>2~> Name*</h2>
+			<div class="col-md-12 box">
+				<!-- <input class="input-name" type="text" name="name" value="" required> -->
+				<%= f.text_field :name, class:'input-name', placeholder:'Enter your name' %>
+
+				
+			</div>
+		</div>
+		<div class="row">
+			<h2>3~> Number*</h2>
+			<div class="col-md-12 box">
+				<!-- <input class="input-name" type="number" name="number" value="" required> -->
+				<%= f.number_field :number, class:'input-name', placeholder:'Enter your number' %>
+
+
+			</div>
+		</div>
+		<div class="row">
+			<h2>3~> And Email?*</h2>
+			<p>We need your email to send your invoice & order confirmation.</p>
+			<div class="col-md-12 box">
+				<!-- <input class="input-name" type="email" name="email" value="" required> -->
+				<%= f.email_field :email, class:'input-name', placeholder:'Enter your email' %>
+
+			</div>
+		</div>
+		<!--Hidden details for payments start -->
+
+			<!-- <div class="col-md-12 box" style="display: none;">
+				<input class="input-name" type="text" name="merchant_id" value="168876">
+				<input class="input-name" type="text" name="order_id" value="12346">
+				<input class="input-name" type="text" name="amount" value="30000">
+				<input type="text" id="text" name="currency" value="INR">
+				<input type="text" class="form-control" id="text" name="redirect_url" value="http://hparks.getspini.in/transaction/ccavResponseHandler">
+				<input type="text" class="form-control" id="text" name="redirect_url" value="http://hparks.getspini.in/transaction/ccavResponseHandler">
+				<input type="text" class="form-control" id="text" name="language" value="EN">
+			</div> -->
+		
+		<!--Hidden details for payments end -->
+		<div class="row">
+			<div class="col-md-12 box">
+				<!-- <button class="btn btn-warning btn-lg" TYPE="submit" value="CheckOut" style="margin-top: 10px">Submit & Payment</button> -->
+				<%= f.submit "Submit & Payment",class:'btn btn-warning btn-lg'  %>
+			</div>
+		</div>
+	<!-- </form> -->
+	<% end %>
+	
+</div>
+
+<style type="text/css">
+.check
+{
+    opacity:0.5;
+	color:#996;
+}
+.box{
+    margin-bottom:5px;
+}
+.input-name{
+	/*width: 313%;*/
+    background: transparent;
+    border-radius: 5%;
+    height: 60px;
+    font-size: 40px;
+}
+.hidden{
+	display:none !important;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(e){
+    		
+			$('.img-check').click(function(e) {
+        $('.img-check').not(this).removeClass('check')
+    		.siblings('input').prop('checked',false);
+    	$(this).addClass('check')
+            .siblings('input').prop('checked',true);
+    });
+			$('input[type=radio]').hide();
+			
+	});
+</script>

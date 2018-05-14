@@ -1,0 +1,3 @@
+class PlotSizesController < ApplicationController
+	
+end

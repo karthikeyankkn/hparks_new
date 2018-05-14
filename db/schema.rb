@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_11_101204) do
+ActiveRecord::Schema.define(version: 2018_05_13_161255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,29 @@ ActiveRecord::Schema.define(version: 2018_05_11_101204) do
     t.text "integration_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "plot_sizes", force: :cascade do |t|
+    t.string "size"
+    t.integer "amount"
+    t.string "value"
+    t.integer "sequence"
+    t.string "thumb_image"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "full_message"
+  end
+
+  create_table "user_details", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "plot_details"
+    t.integer "number"
+    t.boolean "payment_status", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "full_message"
   end
 
 end
