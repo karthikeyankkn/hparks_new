@@ -5,14 +5,14 @@ def new
 	@user_detail = UserDetail.new
 end
 def create
-	binding.pry
+	# binding.pry
 	@user_detail = UserDetail.new(user_detail_params)
 	if @user_detail.save
-		binding.pry
+		# binding.pry
 		redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
  
 	else
-		binding.pry
+		# binding.pry
 		render 'new'
 	end
 end

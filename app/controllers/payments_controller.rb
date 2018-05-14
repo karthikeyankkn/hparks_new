@@ -12,7 +12,7 @@ class PaymentsController < ApplicationController
     #   binding.pry
     # end
     # order_id = params[:order_id]
-    binding.pry
+    # binding.pry
 
     @merchantData="order_id=#{params[:order_id]}&merchant_id=168876&amount=20000&currency=INR&redirect_url=http://hparks.getspini.in/transaction/ccavResponseHandler&cancel_url=http://hparks.getspini.in/transaction/ccavResponseHandler&language=EN"
     # @merchant_id="168876"
