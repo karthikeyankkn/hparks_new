@@ -52,7 +52,7 @@ class PaymentsController < ApplicationController
       @crypto = Crypto.new 
       @decResp=@crypto.decrypt(@encResponse,@working_key);
       @decResp = @decResp.split("&")
-      @user_id = @decResp[:order_id]
+      # @user_id = @decResp[:order_id]
   end
   def new
     @payment = Payment.new
