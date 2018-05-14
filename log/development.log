@@ -17620,3 +17620,344 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 141ms (Views: 133.2ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:46:33 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (6.7ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.4ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.4ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.4ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  Rendered user_details/new.html.erb within layouts/application (412.5ms)
+Completed 500 Internal Server Error in 464ms (ActiveRecord: 16.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `thumb_image' for #<ActionView::Helpers::FormBuilder:0x007fa706fd5ef8>):
+     7: 			<% f.fields_for :@plots do |plot| %>	
+     8: 					<div class="col-md-3 col-xs-6 box">
+     9: 						<label class="btn btn-primary">
+    10: 							<img src="<%= plot.thumb_image %>" alt="..." class="img-thumbnail img-check">
+    11: 							<!-- <input type="radio" name="chk1" id="item<%= plot.sequence %>" value="Plot size<%= plot.size %>sq.ft and Rs.<%= plot.amount %> L" class="hidden" autocomplete="off" required> -->
+    12: 							<%= f.radio_button :plot_details ,value: plot.full_message ,id: 'item#{plot.sequence}' , autocomplete: 'off'  %>
+    13: 
+  
+app/views/user_details/new.html.erb:10:in `block (2 levels) in _app_views_user_details_new_html_erb__1067123189811252660_70177683000100'
+app/views/user_details/new.html.erb:7:in `block in _app_views_user_details_new_html_erb__1067123189811252660_70177683000100'
+app/views/user_details/new.html.erb:4:in `_app_views_user_details_new_html_erb__1067123189811252660_70177683000100'
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:47:15 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.7ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  Rendered user_details/new.html.erb within layouts/application (364.0ms)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `sequence' for #<ActionView::Helpers::FormBuilder:0x007fa70a781208>):
+     8: 					<div class="col-md-3 col-xs-6 box">
+     9: 						<label class="btn btn-primary">
+    10: 							<img src= plot.thumb_image alt="..." class="img-thumbnail img-check">
+    11: 							<!-- <input type="radio" name="chk1" id="item<%= plot.sequence %>" value="Plot size<%= plot.size %>sq.ft and Rs.<%= plot.amount %> L" class="hidden" autocomplete="off" required> -->
+    12: 							<%= f.radio_button :plot_details ,value: plot.full_message ,id: 'item#{plot.sequence}' , autocomplete: 'off'  %>
+    13: 
+    14: 							
+  
+app/views/user_details/new.html.erb:11:in `block (2 levels) in _app_views_user_details_new_html_erb__1067123189811252660_70177670127760'
+app/views/user_details/new.html.erb:7:in `block in _app_views_user_details_new_html_erb__1067123189811252660_70177670127760'
+app/views/user_details/new.html.erb:4:in `_app_views_user_details_new_html_erb__1067123189811252660_70177670127760'
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:47:58 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.1ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  Rendered user_details/new.html.erb within layouts/application (350.2ms)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_message' for #<ActionView::Helpers::FormBuilder:0x007fa70b8fe350>):
+     9: 						<label class="btn btn-primary">
+    10: 							<img src= plot.thumb_image alt="..." class="img-thumbnail img-check">
+    11: 							
+    12: 							<%= f.radio_button :plot_details ,value: plot.full_message ,id: 'item#{plot.sequence}' , autocomplete: 'off'  %>
+    13: 
+    14: 							
+    15: 						</label>
+  
+app/views/user_details/new.html.erb:12:in `block (2 levels) in _app_views_user_details_new_html_erb__1067123189811252660_70177715089960'
+app/views/user_details/new.html.erb:7:in `block in _app_views_user_details_new_html_erb__1067123189811252660_70177715089960'
+app/views/user_details/new.html.erb:4:in `_app_views_user_details_new_html_erb__1067123189811252660_70177715089960'
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:59:49 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.5ms)[0m  [1m[34mSELECT "plot_sizes".* FROM "plot_sizes"[0m
+  ↳ app/views/user_details/new.html.erb:7
+  Rendered user_details/new.html.erb within layouts/application (160.4ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `plot_size_path' for #<#<Class:0x007fa707bb84c8>:0x007fa707b725e0>):
+     5: 		<div class="row">
+     6: 			<h2>1~> Choose Plot*</h2>
+     7: 			<% @plots.each do |plot| %>	
+     8: 			<%= form_for(plot) do |f| %>
+     9: 					<div class="col-md-3 col-xs-6 box">
+    10: 						<label class="btn btn-primary">
+    11: 							<img src="<%= plot.thumb_image %>" alt="..." class="img-thumbnail img-check">
+  
+app/views/user_details/new.html.erb:8:in `block (2 levels) in _app_views_user_details_new_html_erb__1067123189811252660_70177682874140'
+app/views/user_details/new.html.erb:7:in `block in _app_views_user_details_new_html_erb__1067123189811252660_70177682874140'
+app/views/user_details/new.html.erb:4:in `_app_views_user_details_new_html_erb__1067123189811252660_70177682874140'
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:16:08 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.4ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.4ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.4ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendered user_details/_plots.html.erb (398.4ms)
+  Rendered user_details/new.html.erb within layouts/application (403.6ms)
+Completed 500 Internal Server Error in 443ms (ActiveRecord: 11.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `plot' for #<#<Class:0x007fd213cf37c0>:0x007fd213cd6c60>
+Did you mean?  @plots):
+    2: <div class="col-md-3 col-xs-6 box">
+    3: 	<label class="btn btn-primary">
+    4: 		<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+    5: 		<!-- <input type="radio" name="chk1" id="item<%= plot.sequence %>" value="Plot size<%= plot.size %>sq.ft and Rs.<%= plot.amount %> L" class="hidden" autocomplete="off" required> -->
+    6: 		<%= f.radio_button :plot_details ,value: "Plot size 600 sq.ft and Rupees 13.2 Lacks" ,id: 'item1' , autocomplete: 'off'  %>
+    7: 	</label>
+    8: </div>
+  
+app/views/user_details/_plots.html.erb:5:in `_app_views_user_details__plots_html_erb___4021068703131634012_70270125759260'
+app/views/user_details/new.html.erb:7:in `block in _app_views_user_details_new_html_erb__4321994302234992127_70270103250140'
+app/views/user_details/new.html.erb:4:in `_app_views_user_details_new_html_erb__4321994302234992127_70270103250140'
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:17:16 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.7ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendered user_details/new.html.erb within layouts/application (317.4ms)
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `plot' for #<#<Class:0x007fd213cf37c0>:0x007fd211e15d58>
+Did you mean?  @plots):
+     8: 				<div class="col-md-3 col-xs-6 box">
+     9: 					<label class="btn btn-primary">
+    10: 						<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+    11: 						<!-- <input type="radio" name="chk1" id="item<%= plot.sequence %>" value="Plot size<%= plot.size %>sq.ft and Rs.<%= plot.amount %> L" class="hidden" autocomplete="off" required> -->
+    12: 						<%= f.radio_button :plot_details ,value: "Plot size 600 sq.ft and Rupees 13.2 Lacks" ,id: 'item1' , autocomplete: 'off'  %>
+    13: 					</label>
+    14: 				</div>
+  
+app/views/user_details/new.html.erb:11:in `block in _app_views_user_details_new_html_erb__4321994302234992127_70270099427380'
+app/views/user_details/new.html.erb:4:in `_app_views_user_details_new_html_erb__4321994302234992127_70270099427380'
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:18:14 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (118.7ms)
+Completed 200 OK in 382ms (Views: 379.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:18:52 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (114.3ms)
+Completed 200 OK in 355ms (Views: 315.8ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-14 10:19:04 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"phCcgdrEqsdpkowAe2/HgDiegx2eF4K2SY5ElawFRh+t6Jh91flVoLNTDOw9cCOEGAKLIjszy9m8MXFOovJ5hg==", "user_detail"=>{"plot_details"=>"{:value=>\"Plot size 1200 sq.ft and Rupees 26.4 Lacks\", :id=>\"item2\", :autocomplete=>\"off\"}", "name"=>"asdasda", "number"=>"12312312", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[36mUserDetail Create (1.1ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "asdasda"], ["email", "colkar99@gmail.com"], ["plot_details", "{:value=>\"Plot size 1200 sq.ft and Rupees 26.4 Lacks\", :id=>\"item2\", :autocomplete=>\"off\"}"], ["number", 12312312], ["created_at", "2018-05-14 04:49:52.591817"], ["updated_at", "2018-05-14 04:49:52.591817"]]
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:10
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=14
+Completed 302 Found in 49480ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=14" for 127.0.0.1 at 2018-05-14 10:19:53 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"14"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2019ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:20:00 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+f.radio_button :plot_details "Plot size 600 sq.ft and Rupees
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+sq.ft and Rupees 13.2 Lacks" ,id: 'item1' , autocomplete: 'o
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+ees 13.2 Lacks" ,id: 'item1' , autocomplete: 'off'  );@outpu
+                              ^):
+  
+app/views/user_details/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/user_details/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+app/views/user_details/new.html.erb:12: syntax error, unexpected ',', expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:20:24 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+     9: 					<label class="btn btn-primary">
+    10: 						<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+    11: 						
+    12: 						<%= f.radio_button :plot_details => "Plot size 600 sq.ft and Rupees 13.2 Lacks" ,id: 'item1' , autocomplete: 'off'  %>
+    13: 					</label>
+    14: 				</div>
+    15: 				<div class="col-md-3 col-xs-6 box">
+  
+app/views/user_details/new.html.erb:12:in `block in _app_views_user_details_new_html_erb___427738663185181487_70177948492600'
+app/views/user_details/new.html.erb:4:in `_app_views_user_details_new_html_erb___427738663185181487_70177948492600'
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:20:51 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 76ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-14 10:21:04 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"99CvYwiNbN3TEAk5kvNp48nsS47FMx3Jd/CqWl4FUCr8KKufB7CTugnRidXU7I3n6XBDsWAXVKaCT5+BUPJvsw==", "user_detail"=>{"plot_details"=>"Plot size 600 sq.ft and Rupees 13.2 Lacks", "name"=>"asdasd", "number"=>"123123", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[36mUserDetail Create (1.0ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "asdasd"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 600 sq.ft and Rupees 13.2 Lacks"], ["number", 123123], ["created_at", "2018-05-14 04:53:47.326379"], ["updated_at", "2018-05-14 04:53:47.326379"]]
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:10
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=15
+Completed 302 Found in 163737ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=15" for 127.0.0.1 at 2018-05-14 10:23:48 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"15"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1414ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 10:23:56 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-14 10:24:07 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OmTpo3G0DfpeRanFLmj+Bso7420df0fzT1uzRw0QA8QxnO1ffonynYSEKSlodxoC6qfrUrhbDpy65IacA+c8XQ==", "user_detail"=>{"plot_details"=>"Plot size 2400 sq.ft and Rupees 52.8 Lacks", "name"=>"asdadasd", "number"=>"213123", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[36mUserDetail Create (0.4ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "asdadasd"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 2400 sq.ft and Rupees 52.8 Lacks"], ["number", 213123], ["created_at", "2018-05-14 04:54:14.307056"], ["updated_at", "2018-05-14 04:54:14.307056"]]
+  ↳ app/controllers/user_details_controller.rb:10
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:10
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=16
+Completed 302 Found in 7463ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=16" for 127.0.0.1 at 2018-05-14 10:24:15 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"16"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1247ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
