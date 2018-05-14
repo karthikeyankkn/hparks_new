@@ -52,7 +52,7 @@ class PaymentsController < ApplicationController
       @crypto = Crypto.new 
       @decResp=@crypto.decrypt(@encResponse,@working_key);
       @decResp = @decResp.split("&")
-      @result = Object.new
+      @result = Payment.new
       @decResp.each do |key|
         @result["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
       end
