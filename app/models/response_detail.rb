@@ -1,3 +1,0 @@
-class ResponseDetail < ApplicationRecord
-	
-end
