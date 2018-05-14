@@ -52,6 +52,7 @@ class PaymentsController < ApplicationController
       @crypto = Crypto.new 
       @decResp=@crypto.decrypt(@encResponse,@working_key);
       @decResp = @decResp.split("&")
+      
     
   end
   def new

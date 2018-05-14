@@ -8,6 +8,8 @@ def create
 	# binding.pry
 	@user_detail = UserDetail.new(user_detail_params)
 	if @user_detail.save
+		UserDetailMailer.registration_confimation(@user_detail).deliver_now
+		UserDetailMailer.lead_post(@user_detail).deliver_now
 		# binding.pry
 		redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
  
