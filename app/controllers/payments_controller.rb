@@ -52,7 +52,11 @@ class PaymentsController < ApplicationController
       @crypto = Crypto.new 
       @decResp=@crypto.decrypt(@encResponse,@working_key);
       @decResp = @decResp.split("&")
-      @result = @decResp.to_json
+      @result = {}
+      @decResp.each do |key|
+        @result["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
+      end
+      @order_id = @result["order_id"]
       # @user_id = @decResp[:order_id]
   end
   def new
