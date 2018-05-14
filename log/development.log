@@ -17567,3 +17567,23 @@ Processing by PaymentsController#requestHandler as HTML
 Completed 200 OK in 37786ms (Views: 47.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:25:09 +0530
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.9ms)[0m  [1m[34mSELECT "plot_sizes".* FROM "plot_sizes"[0m
+  ↳ app/views/user_details/new.html.erb:7
+  Rendered user_details/new.html.erb within layouts/application (149.9ms)
+Completed 200 OK in 488ms (Views: 437.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:28:56 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.8ms)[0m  [1m[34mSELECT "plot_sizes".* FROM "plot_sizes"[0m
+  ↳ app/views/user_details/new.html.erb:7
+  Rendered user_details/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 84ms (Views: 80.1ms | ActiveRecord: 0.8ms)
+
+
