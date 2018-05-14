@@ -4,8 +4,9 @@
 		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
 		<div class="row">
 			<h2>1~> Choose Plot*</h2>
-			<% @plots.each do |plot| %>	
+			
 					<div class="col-md-3 col-xs-6 box">
+						<% @plots.each do |plot| %>
 						<label class="btn btn-primary">
 							<img src="<%= plot.thumb_image %>" alt="..." class="img-thumbnail img-check">
 							<!-- <input type="radio" name="chk1" id="item<%= plot.sequence %>" value="Plot size<%= plot.size %>sq.ft and Rs.<%= plot.amount %> L" class="hidden" autocomplete="off" required> -->
@@ -13,8 +14,9 @@
 
 							
 						</label>
+						<% end %>
 					</div>
-			<% end %>
+			
 		</div>
 		<div class="row">
 			<h2>2~> Name*</h2>

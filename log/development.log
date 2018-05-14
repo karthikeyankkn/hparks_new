@@ -17587,3 +17587,36 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 84ms (Views: 80.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:32:07 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.6ms)[0m  [1m[34mSELECT "plot_sizes".* FROM "plot_sizes"[0m
+  ↳ app/views/user_details/new.html.erb:7
+  Rendered user_details/new.html.erb within layouts/application (155.9ms)
+Completed 200 OK in 451ms (Views: 400.3ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:40:33 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:107: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/user_details/new.html.erb:107: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-05-14 09:40:57 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (3.1ms)[0m  [1m[34mSELECT "plot_sizes".* FROM "plot_sizes"[0m
+  ↳ app/views/user_details/new.html.erb:9
+  Rendered user_details/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 141ms (Views: 133.2ms | ActiveRecord: 3.1ms)
+
+
