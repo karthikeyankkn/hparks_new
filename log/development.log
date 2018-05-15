@@ -20164,3 +20164,177 @@ Processing by PaymentsController#requestHandler as HTML
 Completed 200 OK in 818ms (Views: 46.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:34:45 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.1ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x007fa397f2a4f8>
+Did you mean?  try):
+  
+app/controllers/user_details_controller.rb:6:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:34:56 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.6ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (uninitialized class variable @@test in ActionView::CompiledTemplates):
+    1: <%= @@test.inspect %>
+    2: <div class="container">
+    3: 	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
+    4: 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
+  
+app/views/user_details/new.html.erb:1:in `_app_views_user_details_new_html_erb__3793118421037267539_70170302272160'
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:35:16 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (1.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 432ms (Views: 421.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:35:48 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+output_buffer.append=( @test.[:id] );@output_buffer.safe_app
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:140: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/user_details/new.html.erb:140: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:35:57 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (1.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+output_buffer.append=( @test.["id"] );@output_buffer.safe_ap
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:1: syntax error, unexpected ']', expecting ')'
+t_buffer.append=( @test.["id"] );@output_buffer.safe_append=
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:140: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+app/views/user_details/new.html.erb:1: syntax error, unexpected ']', expecting ')'
+app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/user_details/new.html.erb:140: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:36:09 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (1.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+output_buffer.append=( @test.["id"].inspect );@output_buffer
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:1: syntax error, unexpected ']', expecting ')'
+t_buffer.append=( @test.["id"].inspect );@output_buffer.safe
+                              ^):
+  
+app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+app/views/user_details/new.html.erb:1: syntax error, unexpected ']', expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:36:22 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (1.8ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 80ms (Views: 71.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:36:39 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.7ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `UserDetail' for #<UserDetail:0x007fa39b269620>):
+    1: <%= @test.UserDetail %>
+    2: <div class="container">
+    3: 	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
+    4: 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
+  
+app/views/user_details/new.html.erb:1:in `_app_views_user_details_new_html_erb__3793118421037267539_70170308584480'
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:37:03 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+output_buffer.append=( @test.[:name] );@output_buffer.safe_a
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:140: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/user_details/new.html.erb:1: syntax error, unexpected '[', expecting '('
+app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/user_details/new.html.erb:140: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:37:23 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.6ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 79ms (Views: 71.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:37:35 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.9ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:7
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 0.9ms)
+
+
