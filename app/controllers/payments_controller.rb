@@ -59,7 +59,7 @@ class PaymentsController < ApplicationController
       end
       @user = UserDetail.find(@resultData["order_id"])
       @order_status = @resultData["order_status"]
-      # PaymentMailer.payment_user_confirmation(@user).deliver_now
+      PaymentMailer.payment_user_confirmation(@user,@resultData).deliver_now
       # PaymentMailer.payment_response_confirmation(@user,@resultData).deliver_now
       # @order_id = @result["order_id"]
       # @user_id = @decResp[:order_id]
