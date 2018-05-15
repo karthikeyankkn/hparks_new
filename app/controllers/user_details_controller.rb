@@ -11,8 +11,8 @@ def create
 	@user_detail = UserDetail.new(user_detail_params)
 	if @user_detail.save
 		# binding.pry
-		PaymentMailer.lead_registration(@user_detail).deliver_later
-		PaymentMailer.lead_post(@user_detail).deliver_later
+		PaymentMailer.lead_registration(@user_detail).deliver_now
+		PaymentMailer.lead_post(@user_detail).deliver_now
 		redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
  
 	else
