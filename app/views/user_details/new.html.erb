@@ -2,7 +2,7 @@
 <div class="container">
 	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
-		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form",validate:true} do |f| %>
+		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
 		<div class="row">
 			<h2>1~> Choose Plot*</h2>
 			
@@ -53,7 +53,7 @@
 			<h2>2~> Name*</h2>
 			<div class="col-md-12 box">
 				<!-- <input class="input-name" type="text" name="name" value="" required> -->
-				<%= f.text_field :name, class:'input-name', placeholder:'Enter your name' ,required:true %>
+				<%= f.text_field :name, class:'input-name', placeholder:'Enter your name'  %>
 
 				
 			</div>
@@ -63,7 +63,7 @@
 			<p>Please enter correct format mobile number.</p>
 			<div class="col-md-12 box">
 				<!-- <input class="input-name" type="number" name="number" value="" required> -->
-				<%= f.telephone_field :number, class:'input-name', placeholder:'Enter your 10 digit no', pattern:'[7890][0-9]{9}' ,required:true %>
+				<%= f.telephone_field :number, class:'input-name', placeholder:'Enter your 10 digit no', pattern:'[7890][0-9]{9}' %>
 
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 			<p>We need your email to send your invoice & order confirmation.</p>
 			<div class="col-md-12 box">
 				<!-- <input class="input-name" type="email" name="email" value="" required> -->
-				<%= f.email_field :email, class:'input-name', placeholder:'Enter your email',required:true %>
+				<%= f.email_field :email, class:'input-name', placeholder:'Enter your email' %>
 
 			</div>
 		</div>

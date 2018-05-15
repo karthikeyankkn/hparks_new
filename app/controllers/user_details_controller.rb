@@ -4,10 +4,18 @@ def new
 	@plots = PlotSize.all
 	@user_detail = UserDetail.new
 	
-	
+	# @some = {}
+	# @arr = ["vvv=karthik","age=asasas","occ=software"]
+	# @arr.each do |key|
+	# 	binding.pry
+ #        @some["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
+ #      end
+ #      binding.pry
+ #      @order_id = @some["vvv"]
+ #       binding.pry
 end
 def create
-	
+	# binding.pry
 	@user_detail = UserDetail.new(user_detail_params)
 	if @user_detail.save
 		# binding.pry
