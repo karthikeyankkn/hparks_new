@@ -1,6 +1,6 @@
 <h3>Hi<%= @user.name %>,</h3>
 
-<h4>Your Payment have made <%= @payments["order_staus"] %> With Hiranandhani parks</h4>
+<h4>Your Payment have made <%= @payments["order_status"] %> With Hiranandhani parks</h4>
 
 <table>
   <tr>
@@ -10,7 +10,7 @@
     <th>Amount</th>
   </tr>
   <tr>
-    <td><%= @payments["order_staus"]%></td>
+    <td><%= @payments["order_status"] %></td>
     <td><%= @payments["order_id"] %></td>
     <td><%= @payments["bank_ref_no"] %></td>
    <td>Rs. <%= @payments["amount"] %></td>
