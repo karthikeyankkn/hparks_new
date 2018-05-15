@@ -53,12 +53,12 @@ class PaymentsController < ApplicationController
       @decResp=@crypto.decrypt(@encResponse,@working_key);
       @decResp = @decResp.split("&")
 
-      # @resultData = {}
-      # @decResp.each do |key|
-      #   @resultData["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
-      # end
-      # @user = user.find(@resultData["order_id"])
-      # @order_status = @resultData["order_status"]
+      @resultData = {}
+      @decResp.each do |key|
+        @resultData["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
+      end
+      @user = user.find(@resultData["order_id"])
+      @order_status = @resultData["order_status"]
       # @order_id = @result["order_id"]
       # @user_id = @decResp[:order_id]
   end
