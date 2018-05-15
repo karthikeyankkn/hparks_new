@@ -18528,3 +18528,387 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 322ms (Views: 297.5ms | ActiveRecord: 4.2ms)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-05-15 10:45:23 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 562ms (Views: 534.6ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 10:45:39 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NZ/GB0lDUTSPr+FwKbQX/80YDTSrBcFB3DeeeGI1tyM+Z8L7Rn6uU1VuYZxvq/P77YQFCw4hiC4piKujbMKIug==", "user_detail"=>{"plot_details"=>"Plot size 1200 sq.ft and Rupees 26.4 Lacks", "name"=>"test", "number"=>"1234567890", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[36mUserDetail Create (7.5ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 1200 sq.ft and Rupees 26.4 Lacks"], ["number", 1234567890], ["created_at", "2018-05-15 05:15:39.090688"], ["updated_at", "2018-05-15 05:15:39.090688"]]
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.5ms)
+  Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.4ms)
+PaymentMailer#lead_registration: processed outbound mail in 106.3ms
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 10.9ms)
+
+
+  
+NoMethodError (undefined method `delvery_now' for #<ActionMailer::MessageDelivery:0x007fdb7ab31c00>
+Did you mean?  deliver_now
+               deliver_now!):
+  
+app/controllers/user_details_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2018-05-15 10:46:09 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 95ms (Views: 72.3ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 10:46:22 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uYdZZe0Pt9Y7HjWeoKgi0DhiioiW6v7+sEbnuEMpHNuyf12Z4jJIseHftXLmt8bUGP6CtzPOt5FF+dJjTd4jQg==", "user_detail"=>{"plot_details"=>"Plot size 600 sq.ft and Rupees 13.2 Lacks", "name"=>"karthik", "number"=>"1234567890", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[36mUserDetail Create (0.5ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "karthik"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 600 sq.ft and Rupees 13.2 Lacks"], ["number", 1234567890], ["created_at", "2018-05-15 05:16:22.350589"], ["updated_at", "2018-05-15 05:16:22.350589"]]
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (1.0ms)
+  Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.7ms)
+PaymentMailer#lead_registration: processed outbound mail in 52.4ms
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 6.8ms)
+
+
+  
+NoMethodError (undefined method `delivery_now' for #<ActionMailer::MessageDelivery:0x007fdb7add8b98>
+Did you mean?  deliver_now
+               deliver_now!):
+  
+app/controllers/user_details_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2018-05-15 10:47:46 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 68ms (Views: 50.7ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 10:47:57 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hhW0uDzZl/9JNBqa/VqloymHG16R4e/QyrGjcHaPAq6N7bBEM+RomJP1mna7RUGnCRsTYTTFpr8/DpareHg9Nw==", "user_detail"=>{"plot_details"=>"Plot size 600 sq.ft and Rupees 13.2 Lacks", "name"=>"karthik", "number"=>"123456", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[36mUserDetail Create (0.6ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "karthik"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 600 sq.ft and Rupees 13.2 Lacks"], ["number", 123456], ["created_at", "2018-05-15 05:17:57.230836"], ["updated_at", "2018-05-15 05:17:57.230836"]]
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.4ms)
+  Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.4ms)
+PaymentMailer#lead_registration: processed outbound mail in 59.8ms
+Sent mail to colkar99@gmail.com (4106.5ms)
+Date: Tue, 15 May 2018 10:47:57 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com
+Message-ID: <5afa6d854b62e_1ef23fedbf0206106314b@karthikrajs-MacBook-Pro.local.mail>
+Subject: Thanks for registration
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afa6d8549dc6_1ef23fedbf020610630aa";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afa6d8549dc6_1ef23fedbf020610630aa
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, karthik Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5afa6d8549dc6_1ef23fedbf020610630aa
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>karthik</h1>
+
+<p>Thank you for registration</p>
+
+<p>
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afa6d8549dc6_1ef23fedbf020610630aa--
+
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=25
+Completed 302 Found in 4186ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=25" for 127.0.0.1 at 2018-05-15 10:48:01 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"25"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1060ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 10:53:12 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 305ms (Views: 276.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 10:53:25 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"isK1Z/GYfYbUMmSZq75TAEChIaCEo4f13eOT7Jg1QiCBOrGb/qWC4Q7z5HXtobcEYD0pnyGHzpooXKY3lsJ9uQ==", "user_detail"=>{"plot_details"=>"Plot size 1200 sq.ft and Rupees 26.4 Lacks", "name"=>"karthik", "number"=>"1234567890", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[36mUserDetail Create (1.1ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "karthik"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 1200 sq.ft and Rupees 26.4 Lacks"], ["number", 1234567890], ["created_at", "2018-05-15 05:23:25.667361"], ["updated_at", "2018-05-15 05:23:25.667361"]]
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.6ms)
+  Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.7ms)
+PaymentMailer#lead_registration: processed outbound mail in 91.4ms
+Sent mail to colkar99@gmail.com (3157.5ms)
+Date: Tue, 15 May 2018 10:53:25 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com
+Message-ID: <5afa6ecdceab6_1f593fc7e93e8cd05376@karthikrajs-MacBook-Pro.local.mail>
+Subject: Thanks for registration
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afa6ecdcc6ac_1f593fc7e93e8cd053654";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afa6ecdcc6ac_1f593fc7e93e8cd053654
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, karthik Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5afa6ecdcc6ac_1f593fc7e93e8cd053654
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Hello, karthik Thanks for Registration</h1>
+
+<h3>Your order id: 26</h3>
+
+<p> You have booked Plot size 1200 sq.ft and Rupees 26.4 Lacks,</p>
+<p>Once payment have done successfully you will receive a mail</p>
+
+<h4><b>Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5afa6ecdcc6ac_1f593fc7e93e8cd053654--
+
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=26
+Completed 302 Found in 3338ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=26" for 127.0.0.1 at 2018-05-15 10:53:29 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"26"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1407ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 11:23:35 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 96ms (Views: 75.8ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 11:24:36 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KAR6iQROQaNQ5BNV9QQr2Dp9UH1l76FksYbAwF4LcI0j/H51C3O+xIolk7mzG8/cGuFYQsDL6AtEOfUbUPxPFA==", "user_detail"=>{"plot_details"=>"Plot size 1200 sq.ft and Rupees 26.4 Lacks", "name"=>"karthik", "number"=>"1234567890", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[36mUserDetail Create (0.6ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "karthik"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 1200 sq.ft and Rupees 26.4 Lacks"], ["number", 1234567890], ["created_at", "2018-05-15 05:54:36.629353"], ["updated_at", "2018-05-15 05:54:36.629353"]]
+  ↳ app/controllers/user_details_controller.rb:20
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:20
+  Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.5ms)
+  Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.3ms)
+PaymentMailer#lead_registration: processed outbound mail in 43.9ms
+Sent mail to colkar99@gmail.com (4102.5ms)
+Date: Tue, 15 May 2018 11:24:36 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com
+Message-ID: <5afa761cae8f0_1f593fc7e93e8aa0539c8@karthikrajs-MacBook-Pro.local.mail>
+Subject: Thanks for registration
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afa761cadb4d_1f593fc7e93e8aa0538ba";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afa761cadb4d_1f593fc7e93e8aa0538ba
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, karthik Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5afa761cadb4d_1f593fc7e93e8aa0538ba
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello, karthik Thanks for Registration</h3>
+
+<h4>Your order id: 27</h4>
+
+<p> You have booked Plot size 1200 sq.ft and Rupees 26.4 Lacks,</p>
+<p>Once payment have done successfully you will receive a mail</p>
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5afa761cadb4d_1f593fc7e93e8aa0538ba--
+
+  Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.4ms)
+PaymentMailer#lead_post: processed outbound mail in 34.2ms
+Sent mail to colkar99@gmail.com, karthikraj@spinircle.com (3164.4ms)
+Date: Tue, 15 May 2018 11:24:40 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com, 
+ karthikraj@spinircle.com
+Message-ID: <5afa7620d0465_1f593fc7e93e8aa054026@karthikrajs-MacBook-Pro.local.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p>Plot size 1200 sq.ft and Rupees 26.4 Lacks</p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p>karthik</p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p>colkar99@gmail.com</p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>1234567890</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=27
+Completed 302 Found in 7390ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=27" for 127.0.0.1 at 2018-05-15 11:24:44 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"27"}
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 594ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+

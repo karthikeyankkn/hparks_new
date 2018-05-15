@@ -1,0 +1,39 @@
+<h3>Hi,</h3>
+
+<p>Lead payments details given below</p>
+
+<h4>Payment have made <%= @payments.order_status %> With Hiranandhani parks</h4>
+<h4>Lead Details</h4>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+  </tr>
+  <tr>
+    <td><%= @user.name%></td>
+    <td><%= @user.email %></td>
+    <td><%= @user.number %></td>
+   <td>Rs. <%= @user.plot_details %></td>
+  </tr>
+</table>
+<h4>Payment Details</h4>
+<table>
+  <tr>
+    <th>Payment Staus</th>
+    <th>Order id</th>
+    <th>Bank Ref no</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td><%= @payments.order_staus%></td>
+    <td><%= @payments.order_id %></td>
+    <td><%= @payments.bank_ref_no %></td>
+   <td>Rs. <%= @payments.amount %></td>
+  </tr>
+</table>
+<a href="http://hiranandaniparks.com/contact-us.html">Click here to see contact details</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
