@@ -17,6 +17,7 @@ end
 def create
 	# binding.pry
 	@user_detail = UserDetail.new(user_detail_params)
+	# binding.pry
 	if @user_detail.save
 		# binding.pry
 		PaymentMailer.lead_registration(@user_detail).deliver_now
