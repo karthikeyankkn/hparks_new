@@ -10,9 +10,11 @@ class PaymentMailer < ApplicationMailer
 
     mail to: @user.email , subject: "Thanks for registration"
   end
-  def payment_user_confirmation(details)
-  	 @details = details
-  	 mail to: @details.email , subject: "Payment status"
+  def payment_user_confirmation(user,payments)
+    binding.pry
+  	 @user = user
+  	 @payments = payments
+  	 mail to: @user.email , subject: "Payment status"
   end
   def lead_post(user)
   	 @user = user

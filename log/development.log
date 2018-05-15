@@ -20338,3 +20338,281 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-15 14:50:28 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+Started GET "/" for 127.0.0.1 at 2018-05-15 14:50:32 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.7ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mPlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mPlotSize Load (0.3ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+Started GET "/" for 127.0.0.1 at 2018-05-15 14:52:24 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 59226ms (Views: 313.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:08:40 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:08:44 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (1.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+PaymentMailer#payment_user_confirmation: processed outbound mail in 31975.5ms
+Completed 500 Internal Server Error in 51979ms (ActiveRecord: 5.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template payment_mailer/payment_user_confirmation with "mailer". Searched in:
+  * "payment_mailer"
+):
+  
+app/mailers/payment_mailer.rb:17:in `payment_user_confirmation'
+app/controllers/user_details_controller.rb:12:in `new'
+PaymentMailer#payment_user_confirmation: processed outbound mail in 60768.1ms
+Completed 500 Internal Server Error in 77202ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::MissingTemplate (Missing template payment_mailer/payment_user_confirmation with "mailer". Searched in:
+  * "payment_mailer"
+):
+  
+app/mailers/payment_mailer.rb:17:in `payment_user_confirmation'
+app/controllers/user_details_controller.rb:12:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:11:21 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+Completed 500 Internal Server Error in 10917ms (ActiveRecord: 5.4ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/mailers/payment_mailer.rb:17: syntax error, unexpected tLABEL
+  	 mail (to: @user.email , subject: "Payme
+  	          ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/mailers/payment_mailer.rb:17: syntax error, unexpected tLABEL, expecting '='
+il (to: @user.email , subject: "Payment status")
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/mailers/payment_mailer.rb:17: syntax error, unexpected ')', expecting keyword_end
+l , subject: "Payment status")
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/mailers/payment_mailer.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/mailers/payment_mailer.rb:17: syntax error, unexpected tLABEL
+app/mailers/payment_mailer.rb:17: syntax error, unexpected tLABEL, expecting '='
+app/mailers/payment_mailer.rb:17: syntax error, unexpected ')', expecting keyword_end
+app/mailers/payment_mailer.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/user_details_controller.rb:12:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:11:58 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+PaymentMailer#payment_user_confirmation: processed outbound mail in 25125.4ms
+Completed 500 Internal Server Error in 29990ms (ActiveRecord: 6.5ms)
+
+
+  
+ActionView::MissingTemplate (Missing template payment_mailer/payment_user_confirmation with "mailer". Searched in:
+  * "payment_mailer"
+):
+  
+app/mailers/payment_mailer.rb:17:in `payment_user_confirmation'
+app/controllers/user_details_controller.rb:12:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:14:20 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+  Rendering payment_mailer/payment_user_confirmation.html.erb within layouts/mailer
+  Rendered payment_mailer/payment_user_confirmation.html.erb within layouts/mailer (5.8ms)
+PaymentMailer#payment_user_confirmation: processed outbound mail in 1319.5ms
+Completed 500 Internal Server Error in 6125ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_status' for {"order_status"=>"success"}:Hash):
+    1: <h3>Hi<%= @user.name %>,</h3>
+    2: 
+    3: <h4>Your Payment have made <%= @payments.order_status %> With Hiranandhani parks</h4>
+    4: 
+    5: <!-- <table>
+    6:   <tr>
+  
+app/views/payment_mailer/payment_user_confirmation.html.erb:3:in `_app_views_payment_mailer_payment_user_confirmation_html_erb__2489872337398092947_70325984549860'
+app/mailers/payment_mailer.rb:17:in `payment_user_confirmation'
+app/controllers/user_details_controller.rb:12:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:15:09 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+  Rendering payment_mailer/payment_user_confirmation.html.erb within layouts/mailer
+  Rendered payment_mailer/payment_user_confirmation.html.erb within layouts/mailer (4.8ms)
+PaymentMailer#payment_user_confirmation: processed outbound mail in 1176.2ms
+Completed 500 Internal Server Error in 4775ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_status' for {"order_status"=>"success"}:Hash):
+    1: <h3>Hi<%= @user.name %>,</h3>
+    2: 
+    3: <h4>Your Payment have made <%= @payments.order_status %> With Hiranandhani parks</h4>
+    4: 
+    5: <!-- <table>
+    6:   <tr>
+  
+app/views/payment_mailer/payment_user_confirmation.html.erb:3:in `_app_views_payment_mailer_payment_user_confirmation_html_erb__2489872337398092947_70326013967680'
+app/mailers/payment_mailer.rb:17:in `payment_user_confirmation'
+app/controllers/user_details_controller.rb:12:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:15:41 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+  Rendering payment_mailer/payment_user_confirmation.html.erb within layouts/mailer
+  Rendered payment_mailer/payment_user_confirmation.html.erb within layouts/mailer (7.0ms)
+PaymentMailer#payment_user_confirmation: processed outbound mail in 1031.1ms
+Completed 500 Internal Server Error in 4737ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_staus' for {"order_status"=>"success"}:Hash):
+    10:     <th>Amount</th>
+    11:   </tr>
+    12:   <tr>
+    13:     <td><%= @payments.order_staus%></td>
+    14:     <td><%= @payments.order_id %></td>
+    15:     <td><%= @payments.bank_ref_no %></td>
+    16:    <td>Rs. <%= @payments.amount %></td>
+  
+app/views/payment_mailer/payment_user_confirmation.html.erb:13:in `_app_views_payment_mailer_payment_user_confirmation_html_erb__2489872337398092947_70326015012940'
+app/mailers/payment_mailer.rb:17:in `payment_user_confirmation'
+app/controllers/user_details_controller.rb:12:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:17:26 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+  Rendering payment_mailer/payment_user_confirmation.html.erb within layouts/mailer
+  Rendered payment_mailer/payment_user_confirmation.html.erb within layouts/mailer (5.5ms)
+PaymentMailer#payment_user_confirmation: processed outbound mail in 1095.2ms
+Completed 500 Internal Server Error in 4453ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_staus' for {"order_status"=>"success"}:Hash):
+    10:     <th>Amount</th>
+    11:   </tr>
+    12:   <tr>
+    13:     <td><%= @payments.order_staus%></td>
+    14:     <td><%= @payments.order_id %></td>
+    15:     <td><%= @payments.bank_ref_no %></td>
+    16:    <td>Rs. <%= @payments.amount %></td>
+  
+app/views/payment_mailer/payment_user_confirmation.html.erb:13:in `_app_views_payment_mailer_payment_user_confirmation_html_erb__2489872337398092947_70325984739160'
+app/mailers/payment_mailer.rb:17:in `payment_user_confirmation'
+app/controllers/user_details_controller.rb:12:in `new'
+Started GET "/" for 127.0.0.1 at 2018-05-15 15:17:52 +0530
+Processing by UserDetailsController#new as HTML
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:6
+  Rendering payment_mailer/payment_user_confirmation.html.erb within layouts/mailer
+  Rendered payment_mailer/payment_user_confirmation.html.erb within layouts/mailer (0.8ms)
+PaymentMailer#payment_user_confirmation: processed outbound mail in 1469.5ms
+Sent mail to colkar99@gmail.com (7996.8ms)
+Date: Tue, 15 May 2018 15:17:58 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com
+Message-ID: <5afaacce50d9d_2a1d3ff60afb470458570@karthikrajs-MacBook-Pro.local.mail>
+Subject: Payment status
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hiqweqwe,</h3>
+
+<h4>Your Payment have made  With Hiranandhani parks</h4>
+
+
+<a href="http://hiranandaniparks.com/contact-us.html">Click here to see contact details</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+
+  </body>
+</html>
+
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 16174ms (Views: 362.8ms | ActiveRecord: 0.4ms)
+
+

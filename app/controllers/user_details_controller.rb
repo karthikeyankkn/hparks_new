@@ -3,7 +3,7 @@ skip_before_action :verify_authenticity_token
 def new
 	@plots = PlotSize.all
 	@user_detail = UserDetail.new
-	# binding.pry
+	
 	# @some = {}
 	# @arr = ["vvv=karthik","age=asasas","occ=software"]
 	# @arr.each do |key|
