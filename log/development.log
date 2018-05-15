@@ -22050,3 +22050,668 @@ Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=44
 Completed 302 Found in 38124ms (ActiveRecord: 3.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:00:58 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 341ms (Views: 317.4ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 17:01:03 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oGVgxqFWpdQk+chR6kJ1zBPojaTofV1dblLMjdWI0IernWQ6rmtas/44SL2sXZHIM3SFm01ZFDKb7flW23/vHg==", "user_detail"=>{"name"=>"", "number"=>"", "email"=>""}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[36mUserDetail Create (1.4ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["email", ""], ["created_at", "2018-05-15 11:31:03.669758"], ["updated_at", "2018-05-15 11:31:03.669758"]]
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:21
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: ad879111-a6c0-4c4e-8efc-a1adc442bcd5) to Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fc0ba6d1758 @uri=#<URI::GID gid://hparks/UserDetail/45>>
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 77d6618c-a8b4-46e7-8fa8-ab16b94dd73a) to Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fc0ba6d1758 @uri=#<URI::GID gid://hparks/UserDetail/45>>
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=45
+Completed 302 Found in 90ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/transaction/ccavRequestHandler?order_id=45" for 127.0.0.1 at 2018-05-15 17:01:03 +0530
+Processing by PaymentsController#requestHandler as HTML
+  Parameters: {"order_id"=>"45"}
+  [1m[36mUserDetail Load (1.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5] Performing ActionMailer::DeliveryJob (Job ID: ad879111-a6c0-4c4e-8efc-a1adc442bcd5) from Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fc0b4bac0a8 @uri=#<URI::GID gid://hparks/UserDetail/45>>
+  [1m[36mUserDetail Load (1.8ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5]   Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5]   Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [77d6618c-a8b4-46e7-8fa8-ab16b94dd73a] Performing ActionMailer::DeliveryJob (Job ID: 77d6618c-a8b4-46e7-8fa8-ab16b94dd73a) from Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fc0b7784568 @uri=#<URI::GID gid://hparks/UserDetail/45>>
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5]   Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5]   Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5] PaymentMailer#lead_registration: processed outbound mail in 114.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [77d6618c-a8b4-46e7-8fa8-ab16b94dd73a]   Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [77d6618c-a8b4-46e7-8fa8-ab16b94dd73a]   Rendered payment_mailer/lead_post.html.erb within layouts/mailer (2.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [77d6618c-a8b4-46e7-8fa8-ab16b94dd73a] PaymentMailer#lead_post: processed outbound mail in 85.0ms
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1142ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5] Sent mail to  (1616.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5] Date: Tue, 15 May 2018 17:01:03 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+Message-ID: <5afac4f7de755_30183fe05d368a4455491@karthikrajs-MacBook-Pro.local.mail>
+Subject: Thanks for registration
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afac4f7dd7af_30183fe05d368a445537d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afac4f7dd7af_30183fe05d368a445537d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello,  Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5afac4f7dd7af_30183fe05d368a445537d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello,  Thanks for Registration</h3>
+
+<h4>Your order id: 45</h4>
+
+<p> You have booked ,</p>
+<p>Once payment have done successfully you will receive a mail</p>
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5afac4f7dd7af_30183fe05d368a445537d--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [ad879111-a6c0-4c4e-8efc-a1adc442bcd5] Error performing ActionMailer::DeliveryJob (Job ID: ad879111-a6c0-4c4e-8efc-a1adc442bcd5) from Async(mailers) in 1733.99ms: ArgumentError (SMTP To address may not be blank: []):
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/check_delivery_params.rb:21:in `check_to'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/check_delivery_params.rb:7:in `check'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp_connection.rb:52:in `deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:101:in `block in deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/smtp.rb:519:in `start'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:2160:in `do_delivery'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `block in deliver'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `deliver'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+[ActiveJob] [ActionMailer::DeliveryJob] [77d6618c-a8b4-46e7-8fa8-ab16b94dd73a] Sent mail to colkar99@gmail.com, karthikraj@spinircle.com (3514.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [77d6618c-a8b4-46e7-8fa8-ab16b94dd73a] Date: Tue, 15 May 2018 17:01:03 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com, 
+ karthikraj@spinircle.com
+Message-ID: <5afac4f7e002d_30183fe05d80eaf855535@karthikrajs-MacBook-Pro.local.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p></p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [77d6618c-a8b4-46e7-8fa8-ab16b94dd73a] Performed ActionMailer::DeliveryJob (Job ID: 77d6618c-a8b4-46e7-8fa8-ab16b94dd73a) from Async(mailers) in 3600.05ms
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:01:07 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 87ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:01:33 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 83ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 17:01:40 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NLLEuq3PKqDoLt2t37WAuhrfTC8Lb9l4GS12qbVWKaU/SsBGovLVxzLvXUGZqmS+OkNEEK5LkBfskkNyu6EWPA==", "user_detail"=>{"name"=>"", "number"=>"12123", "email"=>""}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[36mUserDetail Create (1.1ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["email", ""], ["number", 12123], ["created_at", "2018-05-15 11:31:40.895220"], ["updated_at", "2018-05-15 11:31:40.895220"]]
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:21
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 544623e2-0c16-407c-85fb-53779b2746da) to Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fc0b4b91690 @uri=#<URI::GID gid://hparks/UserDetail/46>>
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 797f8cb0-7992-46aa-aac7-a495be7d91fd) to Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fc0b4b91690 @uri=#<URI::GID gid://hparks/UserDetail/46>>
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=46
+  [1m[36mUserDetail Load (1.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (1.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+Completed 302 Found in 29ms (ActiveRecord: 9.1ms)
+
+
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da] Performing ActionMailer::DeliveryJob (Job ID: 544623e2-0c16-407c-85fb-53779b2746da) from Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fc0b51ca688 @uri=#<URI::GID gid://hparks/UserDetail/46>>
+[ActiveJob] [ActionMailer::DeliveryJob] [797f8cb0-7992-46aa-aac7-a495be7d91fd] Performing ActionMailer::DeliveryJob (Job ID: 797f8cb0-7992-46aa-aac7-a495be7d91fd) from Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fc0b5203c58 @uri=#<URI::GID gid://hparks/UserDetail/46>>
+Started GET "/transaction/ccavRequestHandler?order_id=46" for 127.0.0.1 at 2018-05-15 17:01:40 +0530
+Processing by PaymentsController#requestHandler as HTML
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da]   Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Parameters: {"order_id"=>"46"}
+[ActiveJob] [ActionMailer::DeliveryJob] [797f8cb0-7992-46aa-aac7-a495be7d91fd]   Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da]   Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [797f8cb0-7992-46aa-aac7-a495be7d91fd]   Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da]   Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [797f8cb0-7992-46aa-aac7-a495be7d91fd] PaymentMailer#lead_post: processed outbound mail in 54.0ms
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da]   Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da] PaymentMailer#lead_registration: processed outbound mail in 100.7ms
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 343ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da] Sent mail to  (1489.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da] Date: Tue, 15 May 2018 17:01:41 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+Message-ID: <5afac51d6c67_30183fe05d80eaf8558e5@karthikrajs-MacBook-Pro.local.mail>
+Subject: Thanks for registration
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afac51d5e9f_30183fe05d80eaf8557ba";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afac51d5e9f_30183fe05d80eaf8557ba
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello,  Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5afac51d5e9f_30183fe05d80eaf8557ba
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello,  Thanks for Registration</h3>
+
+<h4>Your order id: 46</h4>
+
+<p> You have booked ,</p>
+<p>Once payment have done successfully you will receive a mail</p>
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5afac51d5e9f_30183fe05d80eaf8557ba--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [544623e2-0c16-407c-85fb-53779b2746da] Error performing ActionMailer::DeliveryJob (Job ID: 544623e2-0c16-407c-85fb-53779b2746da) from Async(mailers) in 1592.21ms: ArgumentError (SMTP To address may not be blank: []):
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/check_delivery_params.rb:21:in `check_to'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/check_delivery_params.rb:7:in `check'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp_connection.rb:52:in `deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:101:in `block in deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/smtp.rb:519:in `start'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:2160:in `do_delivery'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `block in deliver'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `deliver'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+[ActiveJob] [ActionMailer::DeliveryJob] [797f8cb0-7992-46aa-aac7-a495be7d91fd] Sent mail to colkar99@gmail.com, karthikraj@spinircle.com (2874.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [797f8cb0-7992-46aa-aac7-a495be7d91fd] Date: Tue, 15 May 2018 17:01:41 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com, 
+ karthikraj@spinircle.com
+Message-ID: <5afac51d5214_30183fe05d391b2455639@karthikrajs-MacBook-Pro.local.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>12123</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [797f8cb0-7992-46aa-aac7-a495be7d91fd] Performed ActionMailer::DeliveryJob (Job ID: 797f8cb0-7992-46aa-aac7-a495be7d91fd) from Async(mailers) in 2931.13ms
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:02:06 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:5: syntax error, unexpected '}', expecting =>
+{class: "nifty_form",validate} do |f| @output_buffer.safe_ap
+                              ^
+/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/user_details/new.html.erb:5: syntax error, unexpected '}', expecting =>
+app/views/user_details/new.html.erb:138: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:02:22 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-15 17:02:32 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YMqxMGCO4ZQCYHmhgtdkjIJCDcoBgbYh6wPCUIj4njNrMrXMb7Me89ih+U3EyICIot4F9aSl/04evPeLhg+hqg==", "user_detail"=>{"name"=>"", "number"=>"123456", "email"=>""}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[36mUserDetail Create (1.2ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["email", ""], ["number", 123456], ["created_at", "2018-05-15 11:32:32.741412"], ["updated_at", "2018-05-15 11:32:32.741412"]]
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:21
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 6753e6c2-0e10-4c65-b36b-8a678b3c112f) to Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fc0bb213580 @uri=#<URI::GID gid://hparks/UserDetail/47>>
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 8642875e-51dd-4355-8dd3-5f43b6286216) to Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fc0bb213580 @uri=#<URI::GID gid://hparks/UserDetail/47>>
+  [1m[36mUserDetail Load (2.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+Redirected to http://localhost:3000/transaction/ccavRequestHandler?order_id=47
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+Completed 302 Found in 21ms (ActiveRecord: 8.5ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f] Performing ActionMailer::DeliveryJob (Job ID: 6753e6c2-0e10-4c65-b36b-8a678b3c112f) from Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fc0ba560450 @uri=#<URI::GID gid://hparks/UserDetail/47>>
+  [1m[36mUserDetail Load (1.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+Started GET "/transaction/ccavRequestHandler?order_id=47" for 127.0.0.1 at 2018-05-15 17:02:32 +0530
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [8642875e-51dd-4355-8dd3-5f43b6286216] Performing ActionMailer::DeliveryJob (Job ID: 8642875e-51dd-4355-8dd3-5f43b6286216) from Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fc0bb1d9998 @uri=#<URI::GID gid://hparks/UserDetail/47>>
+Processing by PaymentsController#requestHandler as HTML
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f]   Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Parameters: {"order_id"=>"47"}
+[ActiveJob] [ActionMailer::DeliveryJob] [8642875e-51dd-4355-8dd3-5f43b6286216]   Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f]   Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8642875e-51dd-4355-8dd3-5f43b6286216]   Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f]   Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [8642875e-51dd-4355-8dd3-5f43b6286216] PaymentMailer#lead_post: processed outbound mail in 55.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f]   Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f] PaymentMailer#lead_registration: processed outbound mail in 107.0ms
+  Rendering payments/requestHandler.html.erb within layouts/application
+  Rendered payments/requestHandler.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 397ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f] Sent mail to  (1373.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f] Date: Tue, 15 May 2018 17:02:32 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+Message-ID: <5afac550d40ed_30183fe05d391b24561a6@karthikrajs-MacBook-Pro.local.mail>
+Subject: Thanks for registration
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afac550d353b_30183fe05d391b245604c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afac550d353b_30183fe05d391b245604c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello,  Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5afac550d353b_30183fe05d391b245604c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello,  Thanks for Registration</h3>
+
+<h4>Your order id: 47</h4>
+
+<p> You have booked ,</p>
+<p>Once payment have done successfully you will receive a mail</p>
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5afac550d353b_30183fe05d391b245604c--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6753e6c2-0e10-4c65-b36b-8a678b3c112f] Error performing ActionMailer::DeliveryJob (Job ID: 6753e6c2-0e10-4c65-b36b-8a678b3c112f) from Async(mailers) in 1481.41ms: ArgumentError (SMTP To address may not be blank: []):
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/check_delivery_params.rb:21:in `check_to'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/check_delivery_params.rb:7:in `check'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp_connection.rb:52:in `deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:101:in `block in deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/smtp.rb:519:in `start'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:2160:in `do_delivery'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `block in deliver'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `deliver'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+/Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:02:35 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [8642875e-51dd-4355-8dd3-5f43b6286216] Sent mail to colkar99@gmail.com, karthikraj@spinircle.com (2788.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8642875e-51dd-4355-8dd3-5f43b6286216] Date: Tue, 15 May 2018 17:02:32 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: colkar99@gmail.com, 
+ karthikraj@spinircle.com
+Message-ID: <5afac550d27c2_30183fe05d80eaf855969@karthikrajs-MacBook-Pro.local.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p></p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>123456</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [8642875e-51dd-4355-8dd3-5f43b6286216] Performed ActionMailer::DeliveryJob (Job ID: 8642875e-51dd-4355-8dd3-5f43b6286216) from Async(mailers) in 2844.71ms
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:07:15 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 17:09:53 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 82ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
