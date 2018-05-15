@@ -59,7 +59,7 @@ class PaymentsController < ApplicationController
       end
       @user = UserDetail.find(@resultData["order_id"])
       @user.each do |key,value| 
-        @resultData["#{key}"] = value 
+        @resultData[key] = value 
       end
       @order_status = @resultData["order_status"]
       PaymentMailer.payment_user_confirmation(@resultData).deliver_now
