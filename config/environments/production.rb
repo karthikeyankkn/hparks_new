@@ -97,12 +97,12 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "http://hparks.getspini.in",
+    domain: "hparks.getspini.in",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "noreplay.hparks@gmail.com",
     password: "hparks.9"
 
   }
-  config.action_mailer.default_url_options = { host: "localhost:3000"}
+  config.action_mailer.default_url_options = { host: "http://hparks.getspini.in"}
 end
