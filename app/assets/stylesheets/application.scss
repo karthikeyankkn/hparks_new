@@ -63,7 +63,11 @@ html, body {
     border-color: #333;
     margin-top: 25px;
 }
-
+.nav-bar-custom{
+	margin-top: 20px;
+	background: #fff;
+	width: 100%;
+}
 
 /* footer css code starts  */
 .footer-content {
@@ -92,7 +96,15 @@ ul.social_media li a .fa {
     color: #fff;
 }
 
-
+@media only screen and (max-width: 400px) {
+	.nav-bar-custom{
+		margin-top: 0px;
+   		 background: #fff;
+   		 color:#fff;
+   		 width: 105%;
+	}
+    
+}
 
 
 
