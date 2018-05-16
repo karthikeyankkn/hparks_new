@@ -24531,3 +24531,26 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to ChangeNumberInUserDetails (20180516095326)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (36.6ms)[0m  [1m[35mALTER TABLE "user_details" ALTER COLUMN "number" TYPE bigint[0m
+  ↳ db/migrate/20180516095326_change_number_in_user_details.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180516095326"]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/bin/rake:23
