@@ -24308,3 +24308,226 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-16 13:46:14 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 417ms (Views: 393.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 13:48:37 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (5.8ms)
+Completed 200 OK in 105ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-16 13:48:51 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BePZkPcllFNTcD/VlkZ8oN0Muwr6aTDmgJt7Ko+IYmIOG91s+BhrNImxvznQWZik/ZCzNV9NeYl1JE7xgX9d+w==", "user_detail"=>{"name"=>"asdasa", "number"=>"123456789", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_details_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 13:48:51 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 75ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-16 13:49:10 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r3XExGfeUT1cz9s6/Ajpz5GKA2XUXl7W7XMQG4Cq1AqkjcA4aOOuWoYOW9a6Fw3LsRYLWnF6F7kYzCXAjl3rkw==", "user_detail"=>{"plot_details"=>"Plot size 1200 sq.ft for Rupees 26.4 Lacks", "name"=>"qwqwqw", "number"=>"1234567", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_details_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 13:49:10 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-16 13:55:52 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v3z0sPanwjkHxs8+n5aa7v+GRscJ165kgusSjnhLLYq0hPBM+Zo9Xt0HT9LZiX7q3xpO+Kzz5wt3VCdVdrwSEw==", "user_detail"=>{"plot_details"=>"Plot size 1500 sq.ft for Rupees 33 Lacks", "name"=>"asdasdas", "number"=>"12345", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_details_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 13:55:52 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:01:14 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 97ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-16 14:01:24 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fdR3qBEbG/CL/z7ebJ4k3819MFELhHZ9/kdKI82D/bZ2LHNUHibkl1E+vjIqgcDb7eE4bq6gPxIL+H/4w3TCLw==", "user_detail"=>{"name"=>"qweqwq", "number"=>"1234567890", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_details_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:01:24 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:01:38 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2018-05-16 14:02:10 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fOEXZHHehDhc5bySaFkc+Q2HWM/IDOxF6jPx1Sen2ld3GROYfuN7X4YkPH4uRvj9LRtQ8G0opSofjMQOKVDlzg==", "user_detail"=>{"plot_details"=>"Plot size 1200 sq.ft for Rupees 26.4 Lacks", "name"=>"wewe", "number"=>"12345", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_details_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:02:10 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:07:02 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (50.9ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial user_detail/_radio with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/karthikrajkrishnamoorthy/Desktop/spini/ccaven/new_back/hparks_new/app/views"
+):
+    12: 	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
+    13: 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
+    14: 		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    15: 		<%= render 'user_detail/radio' %>
+    16: 		<div class="row">
+    17: 			<h2>2~> Name*</h2>
+    18: 			<div class="col-md-12 box">
+  
+app/views/user_details/new.html.erb:15:in `block in _app_views_user_details_new_html_erb__2758654430414857035_70283412104200'
+app/views/user_details/new.html.erb:14:in `_app_views_user_details_new_html_erb__2758654430414857035_70283412104200'
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:07:49 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  [1m[36mPlotSize Load (0.6ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.2ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE PlotSize Load (0.0ms)[0m  [1m[34mSELECT  "plot_sizes".* FROM "plot_sizes" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendered user_details/_radio.html.erb (366.6ms)
+  Rendered user_details/new.html.erb within layouts/application (370.1ms)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 10.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fd841f06588>:0x007fd83e91eab0>):
+     5: 					<label class="btn btn-warning">
+     6: 						<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+     7: 						
+     8: 						<%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 13.2 Lacks" ,id: 'item1' , autocomplete: 'off'  %>
+     9: 					</label>
+    10: 				</div>
+    11: 				<div class="col-md-4 col-xs-6 box">
+  
+app/views/user_details/_radio.html.erb:8:in `_app_views_user_details__radio_html_erb__4412191844182775798_70283425032300'
+app/views/user_details/new.html.erb:16:in `block in _app_views_user_details_new_html_erb__2758654430414857035_70283369708160'
+app/views/user_details/new.html.erb:14:in `_app_views_user_details_new_html_erb__2758654430414857035_70283369708160'
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:08:42 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:09:30 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 14:09:48 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+

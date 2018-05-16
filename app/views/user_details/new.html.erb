@@ -13,7 +13,7 @@
 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
 		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
 		<div class="row">
-			<h2>1~> Choose Plot*</h2>
+			<h3>1~> Choose Plot*</h3>
 			
 				<div class="col-md-4 col-xs-6 box">
 					<label class="btn btn-warning">
@@ -59,7 +59,7 @@
 				</div>
 		</div>
 		<div class="row">
-			<h2>2~> Name*</h2>
+			<h3>2~> Name*</h3>
 			<div class="col-md-12 box">
 				<!-- <input class="input-name" type="text" name="name" value="" required> -->
 				<%= f.text_field :name, class:'input-name', placeholder:'Enter your name',required:true  %>
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<h2>3~>Contact Number*</h2>
+			<h3>3~> Contact Number*</h3>
 			<p>Please enter correct format mobile number.</p>
 			<div class="col-md-12 box">
 				<!-- <input class="input-name" type="number" name="number" value="" required> -->
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<h2>3~> And Email?*</h2>
+			<h3>3~> And Email?*</h3>
 			<p>We need your email to send your invoice & order confirmation.</p>
 			<div class="col-md-12 box">
 				<!-- <input class="input-name" type="email" name="email" value="" required> -->
