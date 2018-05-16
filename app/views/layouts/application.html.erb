@@ -7,34 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes" />
+
   </head>
 
   <body>
-    <header>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 logo-1">
-            <img src="http://cdn.getspini.com/hira-img/logo/opt/hparks-logo2.png"/>
-          </div>
-          <div class="col-md-6 text-right logo-2">
-            <img src="http://cdn.getspini.com/hira-img/logo/hcom-logo3.png" />
-          </div>
-        </div>
-      </div>
-    </header>
-    <section>
+    <%= render 'layouts/header' %>
+    <section style="background-color: #121212;">
       <%= yield %>
     </section>
 
-    <footer>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p style="color:#fff;">© Hiranandani Parks. All rights reserved.</p>
-          </div>
-          
-        </div>
-      </div>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

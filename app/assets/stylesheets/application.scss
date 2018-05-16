@@ -6,7 +6,7 @@
 	 padding: 10px;
 }
 section{
-	background-image: url(https://d28avw9ny3vgf2.cloudfront.net/application/_img/salesite/everythingyouneed/bg.jpg);
+	
 	color:#F4AD33;
 }
    
@@ -17,3 +17,87 @@ footer{
 	min-height:50px;
 }   
    
+
+
+
+
+
+@font-face{
+	font-family: 'Open Sans', sans-serif;
+     src: url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+
+}
+body{
+	font-family: 'Lato', sans-serif;
+
+    /*background-image:  url(../images/bg-about.jpg) no-repeat top center;*/
+
+}
+
+html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+/* header css code starts  */
+  .navbar-inverse {
+    color: black;
+    background-color: #FFF;
+    border-color: #090909;
+    height: 71px;
+}
+.img-custom-nav{
+      height: 74px;
+    width: 118%;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: black;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #f4ad41;
+    background-color: transparent;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #333;
+    margin-top: 25px;
+}
+
+
+/* footer css code starts  */
+.footer-content {
+    color: #fff;
+    background-color: #626465;
+    padding-bottom: 8px;
+}
+.footer-content p a {
+    color: #fff;
+    list-style-type: none;
+}
+.social_media li {
+    display: inline-block !important;
+    font-size: 15px;
+    padding: 0px 10px 0px 10px;
+    margin-left: 40px;
+    padding-top: 5px;
+}
+ul.social_media li a .fa {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
