@@ -1,4 +1,13 @@
-
+ <div class="row">
+ 	<div class="col-xs-10 col-xs-offset-1">
+ 		<% flash.each do |name,msg|%>
+ 		<div class='alert alert-<%= "#{name}"%>'>
+ 			<a href="#" class="close" data-dismiss='alert'>&#215;</a>
+ 			<%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+ 		</div>
+ 		<% end %>
+ 	</div>
+ </div>
 <div class="container">
 	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
@@ -6,43 +15,43 @@
 		<div class="row">
 			<h2>1~> Choose Plot*</h2>
 			
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-primary">
+				<div class="col-md-4 col-xs-6 box">
+					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 13.2 Lacks" ,id: 'item1' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-primary">
+				<div class="col-md-4 col-xs-6 box">
+					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/Lq7svQcpzeum/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 26.4 Lacks" ,id: 'item2' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-primary">
+				<div class="col-md-4 col-xs-6 box">
+					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/ER95F25xFkDn/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 33 Lacks" ,id: 'item3' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-primary">
+				<div class="col-md-4 col-xs-6 box">
+					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/LuD2SVkrJKw4/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 39.6 Lacks" ,id: 'item4' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-primary">
+				<div class="col-md-4 col-xs-6 box">
+					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/k5KZWMT55EHd/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 42.6 Lacks" ,id: 'item5' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-primary">
+				<div class="col-md-4 col-xs-6 box">
+					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/Nxq6UHB9kUq3/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 2400 sq.ft for Rupees 52.8 Lacks" ,id: 'item6' , autocomplete: 'off'  %>
@@ -59,7 +68,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<h2>3~> Number*</h2>
+			<h2>3~>Contact Number*</h2>
 			<p>Please enter correct format mobile number.</p>
 			<div class="col-md-12 box">
 				<!-- <input class="input-name" type="number" name="number" value="" required> -->
@@ -92,7 +101,7 @@
 		<div class="row">
 			<div class="col-md-12 box">
 				<!-- <button class="btn btn-warning btn-lg" TYPE="submit" value="CheckOut" style="margin-top: 10px">Submit & Payment</button> -->
-				<%= f.submit "Submit & Payment",class:'btn btn-warning btn-lg'  %>
+				<%= f.submit "Submit & Payment",class:'btn custom-btn btn-lg'  %>
 			</div>
 		</div>
 	<!-- </form> -->
@@ -105,6 +114,11 @@
 {
     opacity:0.5;
 	color:#996;
+	/*background-color: #f0ad4e;
+    border-color: #eea236;*/
+    background-color: #ec971f;
+    border-color: #d58512;
+
 }
 .box{
     margin-bottom:5px;
@@ -118,6 +132,18 @@
 }
 .hidden{
 	display:none !important;
+}
+.btn-warning {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    border: 5px solid transparent;
+}
+
+.custom-btn{
+	background-color: #f0ad4e;
+    border-color: #eea236;
+    color: #fff;
 }
 </style>
 <script type="text/javascript">

@@ -26,7 +26,8 @@ def create
  
 	else
 		# binding.pry
-		render 'new'
+		flash[:warning] = "Contact number should be minimum 10 to maximum 15 digits"
+		redirect_to action: 'new'
 	end
 end
 private
