@@ -18,11 +18,11 @@ class PaymentMailer < ApplicationMailer
   end
   def lead_post(user)
   	 @user = user
-  	 mail to: "<colkar99@gmail.com>,<karthikraj@spinircle.com>" , subject: "Lead response"
+  	 mail to: "<colkar99@gmail.com>,<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Lead response"
   end
   def payment_response_confirmation(user,payments)
   	 @user = user
   	 @payments = payments
-  	 mail to: "<colkar99@gmail.com>,<karthikraj@spinircle.com>" , subject: "Lead Payment Details"
+  	 mail to: "<colkar99@gmail.com>,<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Lead Payment Details"
   end
 end
