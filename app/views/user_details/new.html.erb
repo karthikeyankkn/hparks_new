@@ -1,3 +1,7 @@
+<%= content_for(:title, "Hiranandani Parks - Plot Booking | Oragadam, Chennai") %>
+<%= content_for(:description, "Hiranandani Parks is a mega township with all Lifestyle Amenities at Oragadam-Chennai by Hiranandani Communities under leadership of Niranjan Hiranandani.") %>
+<%= content_for(:keyword, "Hiranandani Parks, Mega Township at Oragadam  Chennai, Mega Township at Chennai suburb, Hiranandani Parks at Oragadam Chennai, Hiranandani Parks by Hiranandani Communities, Hiranandani Communities, Niranjan Hiranandani Initiative, Township by Niranjan Hiranandani, Hiranandani Parks by Hiranandani Communities, Oragadam Residences, Peaceful Residences at Oragadam Chennai, Township by Hiranandani Communities, Township by Hiranandani Communities at Oragadam Chennai, Township with all lifestyle amenities, Luxury Residences at Oragadam Chennai, Residences with Premium Amenities, Residences with Club House and Gymnasium, Residences with Swimming Pool, Township with Luxury Amenities, Township with Golf Course, Township with Club House, Hiranandani Township in Chennai, Niranjan Hiranandani instead Niranjan Hiranandani Initiative, Niranjan Hiranandani's projects, Hiranandani's in Chennai, 2,2.5,3 BHK in Oragadam, 2,2.5,3 BHK in Chennai, Plots and Villas in Oragadam, Hiranandani's plots in Chennai, Hiranandani villa in Chennai, Township with cricket in chennai, Township by Hiranandani Group at Chennai, Township with Music academy in Chennai,Free plots in chennai,Individual villas in chennai,Plots in OMR,Plots in chennai outer,Plots in oragadam,Plot in hiranandani,Plots at low rate chennai,600 square feet Plots in chennai,1200 square feet Plots in chennai,Free movie tickets,Best real estate in chennai,Best builders in chennai,India no 1 builders,constructural industry with low rate in chennai,Plots under 1000000") %>
+<section class="bg-about" style="margin-top: 50px;">
  <div class="row">
  	<div class="col-xs-10 col-xs-offset-1">
  		<% flash.each do |name,msg|%>
@@ -8,49 +12,60 @@
  		<% end %>
  	</div>
  </div>
-<div class="container">
+<div class="container" style="padding: 40px;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="text-center">
+				<%= image_tag("line-top.png", :alt => "hiranandani-image") %>
+
+					<h1>Plot Booking</h1>
+					<!-- <h3>Oragadam, Chennai</h3> -->
+				<%= image_tag("line-bottom.png", :alt => "hiranandani-image") %>
+			</div>
+		</div>
+	</div>
 	<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
 		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
 		<div class="row">
-			<h3>1~> Choose Plot*</h3>
+			<label style="display: block;">Choose Plot*</label>
 			
-				<div class="col-md-4 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 13.2 Lakhs" ,id: 'item1' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-4 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/Lq7svQcpzeum/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 26.4 Lakhs" ,id: 'item2' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-4 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/ER95F25xFkDn/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 33 Lakhs" ,id: 'item3' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-4 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/LuD2SVkrJKw4/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 39.6 Lakhs" ,id: 'item4' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-4 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/k5KZWMT55EHd/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
 						<%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 42.6 Lakhs" ,id: 'item5' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-4 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning">
 						<img src="https://images.typeform.com/images/Nxq6UHB9kUq3/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						
@@ -59,30 +74,29 @@
 				</div>
 		</div>
 		<div class="row">
-			<h3>2~> Name*</h3>
-			<div class="col-md-12 box">
-				<!-- <input class="input-name" type="text" name="name" value="" required> -->
-				<%= f.text_field :name, class:'input-name', placeholder:'Enter your name',required:true  %>
-
-				
+			<div class="col-sm-4">
+				<label>Name:</label>
+				<div class="input-group">
+				   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				   <!-- <input id="name" type="text" class="form-control" name="name" placeholder="Email"> -->
+				   <%= f.text_field :name, class:'form-control input-lg', placeholder:'Enter your name',required:true  %>
+				 </div>
 			</div>
-		</div>
-		<div class="row">
-			<h3>3~> Contact Number*</h3>
-			<p>Please enter correct format mobile number.</p>
-			<div class="col-md-12 box">
-				<!-- <input class="input-name" type="number" name="number" value="" required> -->
-				<%= f.telephone_field :number, class:'input-name', placeholder:'Enter your 10 digit no' ,required:true %>
-
+			<div class="col-sm-4">
+				<label>Contact Number:</label>
+				<div class="input-group">
+				   <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+				   <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
+				   <%= f.telephone_field :number, class:'form-control input-lg', placeholder:'Enter your 10 digit no' ,required:true %>
+				 </div>
 			</div>
-		</div>
-		<div class="row">
-			<h3>3~> And Email?*</h3>
-			<p>We need your email to send your invoice & order confirmation.</p>
-			<div class="col-md-12 box">
-				<!-- <input class="input-name" type="email" name="email" value="" required> -->
-				<%= f.email_field :email, class:'input-name', placeholder:'Enter your email',required:true %>
-
+			<div class="col-sm-4">
+				<label>Email id:</label>
+				<div class="input-group">
+				   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+				   <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
+				   <%= f.email_field :email, class:'form-control input-lg', placeholder:'Enter your email',required:true %>
+				 </div>
 			</div>
 		</div>
 		<!--Hidden details for payments start -->
@@ -98,17 +112,18 @@
 			</div> -->
 		
 		<!--Hidden details for payments end -->
-		<div class="row">
-			<div class="col-md-12 box">
+		<div class="row" style="padding: 25px;">
+			<div class="col-md-12 box text-center">
 				<!-- <button class="btn btn-warning btn-lg" TYPE="submit" value="CheckOut" style="margin-top: 10px">Submit & Payment</button> -->
 				<%= f.submit "Submit & Payment",class:'btn custom-btn btn-lg'  %>
 			</div>
 		</div>
 	<!-- </form> -->
 	<% end %>
-	
 </div>
 
+
+</section>
 
 <style type="text/css">
 .check
