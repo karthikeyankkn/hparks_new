@@ -31,6 +31,18 @@ class HomesController < ApplicationController
   def contact_us
     
   end
+  def testimonial
+    
+  end
+  def policies
+    
+  end
+  def sitemap
+    
+  end
+  def sitemap2
+    
+  end
 
   # GET /homes/1
   # GET /homes/1.json

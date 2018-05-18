@@ -169,4 +169,103 @@ ul.social_media li a .fa {
     }
 }
 
-
+/* enquiery now and book plot button css*/
+  .book-plot-btn{
+    background-color: #f4ad33;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 15px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: fixed;
+    top: 100px;
+    right: 5px;
+    z-index: 100;
+    border-radius: 30px;
+  }
+  .call-btn{
+    background-color: #f4ad33;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 15px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: fixed;
+    top: 100px;
+    left: -5px;
+    z-index: 100;
+  }
+  .call-btn-toggle{
+    display: none;
+    background-color: #f4ad33;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 15px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: fixed;
+    top: 100px;
+    left: 41px;
+    z-index: 100;
+  }
+  .Enquire-now-btn{
+    background-color: #f4ad33;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 15px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: fixed;
+    top: 200px;
+    left: -53px;
+    z-index: 100;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    /*border-radius: 30px;*/
+  }
+  @media only screen and (max-width: 798px) {
+    .book-plot-btn{
+      top: 125px;
+    }
+    .Enquire-now-btn{
+      top:245px;
+    }
+    .call-btn{
+      top: 145px;
+    }
+    .call-btn-toggle{
+       top: 145px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .book-plot-btn{
+      padding: 5px;
+      font-size: 15px;
+    }
+    .Enquire-now-btn{
+      padding: 5px;
+      font-size: 15px;
+    }
+    .call-btn{
+      padding: 5px;
+      font-size: 15px;
+    }
+    .call-btn-toggle{
+       padding: 5px;
+      font-size: 15px;
+      left: 22px;
+    }
+}
