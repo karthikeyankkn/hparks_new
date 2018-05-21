@@ -17,7 +17,11 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-document.write('<script src="//trkr.scdn1.secure.raxcdn.com/t/5657f9703bb2f89d12000215.js"></script>');
+// document.write('<script src="//trkr.scdn1.secure.raxcdn.com/t/5657f9703bb2f89d12000215.js"></script>');
+var script = document.createElement('script');  
+script.src = "//trkr.scdn1.secure.raxcdn.com/t/5657f9703bb2f89d12000215.js";  
+document.head.appendChild(script);
+
 
  var _selldo = [{_async:true}]; 
   var _selldo = [];
