@@ -13,16 +13,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
 
   <body>
     <%= render 'layouts/header' %>
+    <%= render 'layouts/enquire' %>
+    
     <div class="col-md-12">
        <a class="book-plot-btn" href="/Plot-booking">Book plot</a>
        <button class="call-btn"><i class="glyphicon glyphicon-earphone"></i></button>
        <button class="call-btn-toggle"><a href="tel:044 3301 2879">044 3301 2879</a></button>
-       <button class="Enquire-now-btn">ENQUIRE-NOW</button>
+       <button class="Enquire-now-btn" data-toggle="modal" data-target="#popup-enqiuery">ENQUIRE-NOW</button>
     </div>
       <%= yield %>
     <%= render 'layouts/footer' %>
@@ -32,6 +33,7 @@
             $('.call-btn-toggle').toggle('slow');
           });
         });
+
     </script>
   </body>
 </html>

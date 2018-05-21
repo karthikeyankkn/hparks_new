@@ -16,3 +16,22 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+document.write('<script src="//trkr.scdn1.secure.raxcdn.com/t/5657f9703bb2f89d12000215.js"></script>');
+
+ var _selldo = [{_async:true}]; 
+  var _selldo = [];
+
+_selldo.push({project_id : "56659cb03bb2f8f46900001b"});
+
+  window.sell_do_form_successfully_submitted = function(data, event){
+
+   
+    try{
+     dataLayer.push({
+         'event' : 'selldo_form_submitted'
+      });
+    }catch(err){}
+    
+  };
+
