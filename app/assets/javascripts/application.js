@@ -39,7 +39,4 @@ _selldo.push({project_id : "56659cb03bb2f8f46900001b"});
     
   };
 
-  $(document).ready(function(){
-  	$("a.fancybox").fancybox();
-  })
 
