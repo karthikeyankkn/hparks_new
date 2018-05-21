@@ -159,7 +159,9 @@
 	<div class="col-md-6" style="text-align: center;padding-top: 100px;">
 		<h2>PREMIUM 2.5 & 3 BHK APARTMENTS  </h2>
 		<h3>STARTING AT ₹76 LAKHS ONWARDS </h3>
-		<a target="_blank" href="pdf/hiranandani-parks-luxury-apartments.pdf"><button type="button" class="btn btn-warning">   E-Brochure</button></a>
+		
+		<%= link_to "E-Brochure" , "/hiranandani-parks-luxury-apartments.pdf", :target => "_blank",:class => "btn btn-warning" %>
+
 	</div>
 </div>
 
@@ -219,7 +221,8 @@
 					<h4>WINDSOR</h4>
 				</div>
 			</div>
-			<a target="_blank" href="images/floor-plans.pdf"><button type="button" class="btn btn-warning">   Download Floor Plans</button></a>
+			<!-- <a target="_blank" href="images/floor-plans.pdf"><button type="button" class="btn btn-warning">   Download Floor Plans</button></a> -->
+			<%= link_to "Download Floor Plans" , "/floor-plans.pdf", :target => "_blank",:class => "btn btn-warning" %>
 			<p style="text-align: center;">Pdf file size: 3.05 MB</p>
 		</div>
 	</div>
