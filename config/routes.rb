@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 	get "sitemap.xml", to: "homes#sitemap", :defaults => {:format => 'xml'}
 	get "site-map.html", to: "homes#sitemap2"
 	post "create",to:  "user_details#create"
+	
 
 	# post "transaction/ccavRequestHandler",to: "payments#requestHandler"
 	get "transaction/ccavRequestHandler",to: "payments#requestHandler"
