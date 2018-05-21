@@ -36,6 +36,19 @@
     .scroll-top-wrapper i.fa {
     line-height: inherit;
     }
+    .enquire-now{
+    background: #f4ad41;
+    position: fixed;
+    top: 55%;
+    left: -42px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    padding: 10px;
+    z-index: 100;
+    text-transform: uppercase;
+
+}
 </style>
 <footer class="footer-content">
 		<div class="container-fluid">
@@ -59,9 +72,9 @@
                             <li><a style="color: #fff" href="/commercial-retail" target="_blank">Commercial Retail</a> </li><br>
                             <li><a style="color: #fff" href="/contact-us" target="_blank">Contact Us</a> </li><br>
                             <li><a style="color: #fff" href="/testimonial" target="_blank">Customer Testimonial</a> </li><br>
-	                        <!-- <div id="enquire-now" style="display:none;">
+	                        <div id="enquire-now">
                                 <script src="//trkr.scdn1.secure.raxcdn.com/t/forms/5657f9703bb2f89d12000215/5657f9733bb2f89d12000256.js" data-form-id="5657f9733bb2f89d12000256"></script>
-                            </div> -->
+                            </div>
 	                 </ul>
 				</div>
                 <div class="footer-map">
@@ -81,7 +94,8 @@
 			</div>
 		</div>
 </footer>
-<!-- <a style="color: #fff !important;" href="#" target="_blank" class="enquire-now">Enquire-Now</a> -->
+<a style="color: #fff !important;" href="#enquire-now" target="_blank" class="enquire-now">Enquire-Now</a>
+
 <div class="scroll-top-wrapper">
     <span class="scroll-top-inner">
         <i class="glyphicon glyphicon-circle-arrow-up" style="font-size: 25px;line-height: 2;"></i>
@@ -112,5 +126,87 @@
  
     })
 </script>
+<script>
+         $(document).ready(function () {
+
+            // call us script
+
+            $(".call-us").click(function(){
+                $(".call-us span").fadeToggle();
+            });
+            
+
+
+             $("body").delay(100).animate({ "opacity": "1" }, 300);
+         });
+
+
+
+         jQuery(document).ready(function ($) {
+             $(".fancybox").fancybox({
+                 maxWidth: 600,
+                 maxHeight: 404,
+                 padding: 5,
+                 fitToView: false,
+                 width: '80%',
+                 height: 'auto',
+                 autoSize: false,
+                 closeClick: false,
+                 openEffect: 'none',
+                 closeEffect: 'none',
+                 type: "iframe" // <-- whatever content : image, inline, swf, etc.
+             }).trigger("click");
+         }); // ready
+         
+         $(document).ready(function () {
+             $(".enquire-now").fancybox({
+                 maxWidth: 500,
+                 maxHeight: 540,
+                 fitToView: false,
+                 width: '70%',
+                 height: '70%',
+                 autoSize: false,
+                 closeClick: false,
+                 closeEffect: 'fade',
+                 closeEffect: 'fade'
+             });
+         });
+         
+
+         $(".fancybox").fancybox({
+        openEffect: 'none',
+        closeEffect: 'none',
+        loop: false
+    });
+
+    
+    $('.fancybox-media').fancybox({
+        openEffect: 'fade',
+        openSpeed: '500',
+        closeEffect: 'elastic',
+        closeSpeed: '800',
+        width: '600',
+        height: '450',
+        padding: 5,
+        helpers: {
+            overlay: {
+                locked: false // try changing to true and scrolling around the page
+            },
+            media: {}
+        }
+    });
+
+
+    $(".fancyzoom").fancybox({
+        width: '800',
+        height: 'auto',
+        fitToView: true,
+        autoSize: false,
+        closeClick: false,
+        openEffect: 'none',
+        closeEffect: 'none'
+    });
+      </script>
+
 
     

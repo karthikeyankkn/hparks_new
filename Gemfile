@@ -40,6 +40,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
+gem 'fancybox-rails'
 # gem 'fancybox-rails'
 # gem 'fancybox2-rails'
 
