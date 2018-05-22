@@ -31,43 +31,49 @@
 			<label style="display: block;">Choose Plot*</label>
 			
 				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning">
+					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
 						
 						<%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 13.2 Lakhs" ,id: 'item1' , autocomplete: 'off'  %>
 					</label>
 				</div>
 				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning">
+					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/Lq7svQcpzeum/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
 						
 						<%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 26.4 Lakhs" ,id: 'item2' , autocomplete: 'off'  %>
 					</label>
 				</div>
 				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning">
+					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/ER95F25xFkDn/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
 						
 						<%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 33 Lakhs" ,id: 'item3' , autocomplete: 'off'  %>
 					</label>
 				</div>
 				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning">
+					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/LuD2SVkrJKw4/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
 						
 						<%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 39.6 Lakhs" ,id: 'item4' , autocomplete: 'off'  %>
 					</label>
 				</div>
 				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning">
+					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/k5KZWMT55EHd/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
 						
 						<%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 42.6 Lakhs" ,id: 'item5' , autocomplete: 'off'  %>
 					</label>
 				</div>
 				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning">
+					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/Nxq6UHB9kUq3/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
+						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
 						
 						<%= f.radio_button :plot_details , "Plot size 2400 sq.ft for Rupees 52.8 Lakhs" ,id: 'item6' , autocomplete: 'off'  %>
 					</label>
@@ -126,14 +132,29 @@
 </section>
 
 <style type="text/css">
+.custom-label{
+	position: relative;
+}
+.newimg{
+	display: none;
+	
+}
+.new_class{
+	display: block;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    height: 80px;
+    width: 50%;
+}
 .check
 {
-    opacity:0.5;
-	color:#996;
+    /*opacity:0.5;*/
+	/*color:#996;*/
 	/*background-color: #f0ad4e;
     border-color: #eea236;*/
-    background-color: #ec971f;
-    border-color: #d58512;
+   /* background-color: #ec971f;
+    border-color: #d58512;*/
 
 }
 .box{
@@ -166,13 +187,14 @@
 	$(document).ready(function(e){
     		
 			$('.img-check').click(function(e) {
-        $('.img-check').not(this).removeClass('check')
-    		.siblings('input').prop('checked',false);
-    	$(this).addClass('check')
-            .siblings('input').prop('checked',true);
+        $('.img-check')
+    		.siblings('input').prop('checked',false)
+    		.siblings('.new_class').removeClass('new_class').addClass('newimg');
+    	$(this)
+            .siblings('input').prop('checked',true)
+            .siblings('.newimg').removeClass('newimg').addClass('new_class');
     });
 			$('input[type=radio]').hide();
-			console.log("hii am from view");
 			
 	});
 </script>
