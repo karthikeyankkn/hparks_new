@@ -22,7 +22,8 @@
        <a class="book-plot-btn" href="/Plot-booking">Book plot</a>
        <button class="call-btn"><i class="glyphicon glyphicon-earphone"></i></button>
       <a class="call-btn-toggle" href="tel:04433012879">044-3301-2879</a>
-       <button class="Enquire-now-btn" >ENQUIRE-NOW</button>
+       <button type="button" class="Enquire-now-btn" data-toggle="modal" data-target="#popup-enqiuery">ENQUIRE-NOW</button>
+       <%= render 'layouts/enquire' %>
     </div>
       <%= yield %>
     <%= render 'layouts/footer' %>
