@@ -152,7 +152,10 @@ ul.social_media li a .fa {
         height: 250px ;
     }
     
-    
+    .img-custom-nav {
+        height: 74px;
+        width: 120%;
+    }
 }
 
 @media only screen and (max-width: 786px) {
@@ -165,6 +168,7 @@ ul.social_media li a .fa {
         height: 470px ;
 
     }
+    
     
 }
 
@@ -183,7 +187,7 @@ ul.social_media li a .fa {
     }
     .img-custom-nav {
         height: 74px;
-        width: 128%;
+        width: 120%;
     }
 }
 
@@ -269,6 +273,9 @@ ul.social_media li a .fa {
     .call-btn-toggle{
        top: 145px;
     }
+    .nav-bar-custom{
+        font-size:13px;
+    }
 }
 @media only screen and (max-width: 500px){
     .book-plot-btn{
@@ -287,5 +294,9 @@ ul.social_media li a .fa {
        padding: 5px;
       font-size: 15px;
       left: 22px;
+    }
+    .img-custom-nav {
+        height: 74px;
+        width: 120%;
     }
 }
