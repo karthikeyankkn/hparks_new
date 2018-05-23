@@ -1,0 +1,69 @@
+<section>
+  <!-- Modal -->
+  <div id="disclaimer" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" style="width:80%;border: 5px solid #fff;">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="background: black;">
+        <!-- div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Enquire Form</h4>
+        </div> -->
+        <div class="modal-body" style="color:#fff">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>Thank you for visiting Hiranandani Parks website.</p>
+            </div>
+            <div class="col-md-12" style="text-align: justify;">
+              <p>We are currently in the process of revising our website in accordance with the Real Estate (Regulation and Development) Act, 2016 and the Rules made thereunder (&quot;RERA&quot;), which have been brought into effect from 22 nd July, 2017.</p>
+              <p>No information given on this Website creates a warranty or expands the scope of any warranty that
+              cannot be disclaimed under applicable law. Your use of the Website is solely at your own risk.</p>
+              <p>Until our Website is duly revised and updated, none of the images, material, stock photography,
+              projections, details, descriptions and other information that are currently available and/or displayed
+              on the website including details of the projects/developments undertaken by the company including
+              depictions by banners/posters of the project, should be deemed to be or constitute advertisements,
+              solicitations, marketing, offer for sale, invitation to offer, invitation to acquire, including within the
+              purview of the RERA.</p>
+              <p>You are therefore requested to directly verify all details and aspects of any proposed
+              booking/acquisition of units/premises, directly with our authorised sales team. Please do not rely on
+              the information contained on this website, until our revision and update is complete.</p>
+              <p>Please note, that we will not be accepting any bookings or allotments based on the images, material,
+              stock photography, projections, details, descriptions that are currently available and/or displayed on
+              the Website. We advise you to contact our Sales Team for further information.</p>
+              <p>We thank you for your patience and understanding.</p>
+            </div>
+            <div class="col-md-12 text-center"><button id="dis-btn" class="btn btn-warning">Agree</button></div>
+        </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+  $(document).ready(function(){
+          var view_count;
+          // localStorage.setItem("view_count","");
+          view_count = localStorage.getItem("view_count");
+          if (view_count == undefined) {
+            localStorage.setItem("view_count",true);
+          }else{
+            localStorage.setItem("view_count", false);
+          }
+          view_count = localStorage.getItem("view_count");
+          if (view_count == "true") {
+           $('#disclaimer').modal('toggle');
+          }
+
+          $("#dis-btn").click(function(){
+           $('#disclaimer').modal('toggle');
+          });
+      
+    
+  })
+</script>

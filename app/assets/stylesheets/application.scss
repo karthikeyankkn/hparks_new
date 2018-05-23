@@ -25,7 +25,17 @@ section{
 	
 	color:#F4AD33;
 }
-
+.disclaimer {
+    background: #000000bf;
+    color: #fff;
+    padding: 30px;
+    max-width: 1e3px;
+    margin: auto;
+    position: relative;
+    z-index: 102;
+    border: 2px solid #fff;
+    display: block;
+}
    
 
 
@@ -168,7 +178,7 @@ ul.social_media li a .fa {
         height: 470px ;
 
     }
-    
+
     
 }
 
