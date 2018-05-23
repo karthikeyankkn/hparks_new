@@ -87,7 +87,7 @@ html, body {
 }
 .img-custom-nav{
       height: 74px;
-    width: 118%;
+    width: 138%;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: black;
@@ -165,9 +165,7 @@ ul.social_media li a .fa {
         height: 470px ;
 
     }
-    .banner{
-        margin-top: 95px;
-    }
+    
 }
 
 
@@ -216,6 +214,7 @@ ul.social_media li a .fa {
     top: 100px;
     left: -5px;
     z-index: 100;
+    border: transparent;
   }
   .call-btn-toggle{
     display: none;
@@ -234,6 +233,7 @@ ul.social_media li a .fa {
     z-index: 100;
   }
   .Enquire-now-btn{
+    border:transparent;
     background-color: #f4ad33;
     color: #fff;
     cursor: pointer;
@@ -245,7 +245,7 @@ ul.social_media li a .fa {
     -moz-osx-font-smoothing: grayscale;
     position: fixed;
     top: 200px;
-    left: -53px;
+    left: -54px;
     z-index: 100;
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
