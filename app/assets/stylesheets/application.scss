@@ -36,7 +36,10 @@ section{
     border: 2px solid #fff;
     display: block;
 }
-   
+.disclaimer-dialog{
+   width:80%;
+   border: 5px solid #fff; 
+}   
 
 
 footer{
@@ -166,6 +169,10 @@ ul.social_media li a .fa {
         height: 74px;
         width: 120%;
     }
+    .disclaimer-dialog{
+        width:auto;
+        border: 5px solid #fff; 
+    } 
 }
 
 @media only screen and (max-width: 786px) {
