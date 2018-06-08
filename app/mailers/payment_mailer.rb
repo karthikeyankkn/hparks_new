@@ -25,4 +25,8 @@ class PaymentMailer < ApplicationMailer
   	 @payments = payments
   	 mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Lead Payment Details"
   end
+  def camp_lead_response_mail(lead_details)
+     @lead_details = lead_details
+     mail to: "<karthikraj@spinircle.com>" , subject: "Lead Response from campign"
+  end
 end
