@@ -3,51 +3,19 @@ class HomesController < ApplicationController
 
   # GET /homes
   # GET /homes.json
-  def index
-    # @homes = Home.all
-  end
-  def aboutus
-    
-  end
-  def about_oragadam
-    
-  end
-  def plots_oragadam
+  
+  
 
-    
-  end
-  def apartment
-    
-  end
-  def amenities
-    
-  end
-  def rental
-    
-  end
-  def commercial_retail
-    
-  end
-  def contact_us
-    
-  end
-  def testimonial
-    
-  end
-  def policies
-    
-  end
-  def sitemap
-    
-  end
-  def sitemap2
-    
-  end
+  
+  
+  
+
+
+ 
 
   # GET /homes/1
   # GET /homes/1.json
-  def show
-  end
+  
 
   # GET /homes/new
   def new
