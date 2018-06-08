@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 	get "Plot-booking/success",to: "payments#finish"
 	post "Plot-booking/transaction/ccavResponseHandler",to: "payments#responseHandler"
 	# resources :camp_leads
-	post "camp_lead/new", to: "camp_leads#create"
+	post "Plot-booking/camp_lead/new", to: "camp_leads#create"
 
   # resources :payments
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
