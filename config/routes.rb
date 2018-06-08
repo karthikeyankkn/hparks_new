@@ -16,14 +16,14 @@ Rails.application.routes.draw do
 	#get "policies", to: "homes#policies"
 	#get "sitemap.xml", to: "homes#sitemap", :defaults => {:format => 'xml'}
 	#get "site-map.html", to: "homes#sitemap2"
-	post "create",to:  "user_details#create"
+	post "Plot-booking/create",to:  "user_details#create"
 	
 
 	# post "transaction/ccavRequestHandler",to: "payments#requestHandler"
-	get "transaction/ccavRequestHandler",to: "payments#requestHandler"
+	get "Plot-booking/transaction/ccavRequestHandler",to: "payments#requestHandler"
 
-	get "success",to: "payments#finish"
-	post "transaction/ccavResponseHandler",to: "payments#responseHandler"
+	get "Plot-booking/success",to: "payments#finish"
+	post "Plot-booking/transaction/ccavResponseHandler",to: "payments#responseHandler"
   # resources :payments
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
