@@ -1,0 +1,2 @@
+class CampLead < ApplicationRecord
+end
