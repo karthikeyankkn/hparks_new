@@ -4,7 +4,7 @@ class PaymentsController < ApplicationController
   def requestHandler
     
 
-    @merchantData="order_id=#{params[:order_id]}&merchant_id=168876&amount=20000&currency=INR&redirect_url=https://hparks.getspini.in/transaction/ccavResponseHandler&cancel_url=https://hparks.getspini.in/transaction/ccavResponseHandler&language=EN"
+    @merchantData="order_id=#{params[:order_id]}&merchant_id=168876&amount=20000&currency=INR&redirect_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&cancel_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&language=EN"
       @working_key="28177749CE3784F5BECC20C6A20DBF1B"   #Put in the 32 Bit Working Key provided by CCAVENUES.  
       @access_code="AVJW01FC55BA81WJAB"   #Put in the Access Code in quotes provided by CCAVENUES.
       # params.each do |key,value|
