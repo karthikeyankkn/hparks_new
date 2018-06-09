@@ -4286,3 +4286,456 @@ Processing by CampLeadsController#create as */*
 Completed 201 Created in 9605ms (Views: 1.1ms | ActiveRecord: 37.8ms)
 
 
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-08 16:58:13 +0530
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"google", "name"=>"test", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[36mCampLead Create (7.5ms)[0m  [1m[32mINSERT INTO "camp_leads" ("from", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["from", "google"], ["name", "test"], ["email", "email@gmail.com"], ["plot_size", "asdasdasdasd"], ["phone_number", "8056756218"], ["queries", "have some queries"], ["created_at", "2018-06-08 11:28:14.494663"], ["updated_at", "2018-06-08 11:28:14.494663"]]
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 21b07a9b-4122-4fd4-b672-5a694869feda) to Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007fafd0091708 @uri=#<URI::GID gid://hparks/CampLead/2>>
+Completed 201 Created in 365ms (Views: 0.9ms | ActiveRecord: 32.8ms)
+
+
+  [1m[36mCampLead Load (0.9ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [21b07a9b-4122-4fd4-b672-5a694869feda] Performing ActionMailer::DeliveryJob (Job ID: 21b07a9b-4122-4fd4-b672-5a694869feda) from Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007fafcc65f170 @uri=#<URI::GID gid://hparks/CampLead/2>>
+[ActiveJob] [ActionMailer::DeliveryJob] [21b07a9b-4122-4fd4-b672-5a694869feda]   Rendering payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [21b07a9b-4122-4fd4-b672-5a694869feda]   Rendered payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer (3.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [21b07a9b-4122-4fd4-b672-5a694869feda] PaymentMailer#camp_lead_response_mail: processed outbound mail in 143.9ms
+[ActiveJob] [ActionMailer::DeliveryJob] [21b07a9b-4122-4fd4-b672-5a694869feda] Sent mail to karthikraj@spinircle.com (3826.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [21b07a9b-4122-4fd4-b672-5a694869feda] Date: Fri, 08 Jun 2018 16:58:15 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: karthikraj@spinircle.com
+Message-ID: <5b1a684f21e01_1b073fd7e8048a1c92783@karthikrajs-MBP.mail>
+Subject: Lead Response from campign
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+
+<p>Get Enquiry Response from google</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>email@gmail.com</td>
+    <td>8056756218</td>
+   <td>asdasdasdasd</td>
+  </tr>
+</table>
+
+
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [21b07a9b-4122-4fd4-b672-5a694869feda] Performed ActionMailer::DeliveryJob (Job ID: 21b07a9b-4122-4fd4-b672-5a694869feda) from Async(mailers) in 3973.6ms
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-08 16:59:33 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"google", "name"=>"test", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[36mCampLead Create (0.7ms)[0m  [1m[32mINSERT INTO "camp_leads" ("from", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["from", "google"], ["name", "test"], ["email", "email@gmail.com"], ["plot_size", "asdasdasdasd"], ["phone_number", "8056756218"], ["queries", "have some queries"], ["created_at", "2018-06-08 11:29:33.346462"], ["updated_at", "2018-06-08 11:29:33.346462"]]
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 152d1962-a822-4634-9620-e3604416a423) to Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007fafccda7f18 @uri=#<URI::GID gid://hparks/CampLead/3>>
+Completed 201 Created in 13ms (Views: 0.5ms | ActiveRecord: 7.2ms)
+
+
+  [1m[36mCampLead Load (1.3ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [152d1962-a822-4634-9620-e3604416a423] Performing ActionMailer::DeliveryJob (Job ID: 152d1962-a822-4634-9620-e3604416a423) from Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007fafccd6e038 @uri=#<URI::GID gid://hparks/CampLead/3>>
+[ActiveJob] [ActionMailer::DeliveryJob] [152d1962-a822-4634-9620-e3604416a423]   Rendering payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [152d1962-a822-4634-9620-e3604416a423]   Rendered payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [152d1962-a822-4634-9620-e3604416a423] PaymentMailer#camp_lead_response_mail: processed outbound mail in 54.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [152d1962-a822-4634-9620-e3604416a423] Sent mail to karthikraj@spinircle.com (2942.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [152d1962-a822-4634-9620-e3604416a423] Date: Fri, 08 Jun 2018 16:59:33 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: karthikraj@spinircle.com
+Message-ID: <5b1a689d6b0ed_1b073fd7e8048a1c9286b@karthikrajs-MBP.mail>
+Subject: Lead Response from campign
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h2>Source: google</h2>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>email@gmail.com</td>
+    <td>8056756218</td>
+   <td>asdasdasdasd</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [152d1962-a822-4634-9620-e3604416a423] Performed ActionMailer::DeliveryJob (Job ID: 152d1962-a822-4634-9620-e3604416a423) from Async(mailers) in 3001.14ms
+Started GET "/" for 127.0.0.1 at 2018-06-08 17:04:17 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomesController#index as HTML
+Completed 406 Not Acceptable in 99ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomesController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-08 17:04:22 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (423.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.3ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 632ms (Views: 587.0ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:48:41 +0530
+  [1m[35m (11.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"", "name"=>"test", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (13.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 25.5ms)
+
+
+  
+ActiveJob::SerializationError (Unable to serialize CampLead without an id. (Maybe you forgot to call save?)):
+  
+app/controllers/camp_leads_controller.rb:13:in `create'
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:49:12 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"", "name"=>"test", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (6.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 7.1ms)
+
+
+  
+ActiveJob::SerializationError (Unable to serialize CampLead without an id. (Maybe you forgot to call save?)):
+  
+app/controllers/camp_leads_controller.rb:13:in `create'
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:51:02 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"", "name"=>"test", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 8.7ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/camp_leads_controller.rb:16:in `create'
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:51:11 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"ewe", "name"=>"test", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (28.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[36mCampLead Create (45.8ms)[0m  [1m[32mINSERT INTO "camp_leads" ("from", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["from", "ewe"], ["name", "test"], ["email", "email@gmail.com"], ["plot_size", "asdasdasdasd"], ["phone_number", "8056756218"], ["queries", "have some queries"], ["created_at", "2018-06-09 04:21:11.980290"], ["updated_at", "2018-06-09 04:21:11.980290"]]
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 65d04618-88ca-47b3-ac36-c4c2ee947b9f) to Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007ff5c9f856f8 @uri=#<URI::GID gid://hparks/CampLead/4>>
+Completed 201 Created in 95ms (Views: 0.9ms | ActiveRecord: 80.3ms)
+
+
+  [1m[36mCampLead Load (0.8ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [65d04618-88ca-47b3-ac36-c4c2ee947b9f] Performing ActionMailer::DeliveryJob (Job ID: 65d04618-88ca-47b3-ac36-c4c2ee947b9f) from Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007ff5cabbfce8 @uri=#<URI::GID gid://hparks/CampLead/4>>
+[ActiveJob] [ActionMailer::DeliveryJob] [65d04618-88ca-47b3-ac36-c4c2ee947b9f]   Rendering payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [65d04618-88ca-47b3-ac36-c4c2ee947b9f]   Rendered payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [65d04618-88ca-47b3-ac36-c4c2ee947b9f] PaymentMailer#camp_lead_response_mail: processed outbound mail in 118.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [65d04618-88ca-47b3-ac36-c4c2ee947b9f] Sent mail to karthikraj@spinircle.com (3991.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [65d04618-88ca-47b3-ac36-c4c2ee947b9f] Date: Sat, 09 Jun 2018 09:51:12 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: karthikraj@spinircle.com
+Message-ID: <5b1b55b82c113_1d563ffae4fc2a009231@karthikrajs-MBP.mail>
+Subject: Lead Response from campign
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: ewe</h4>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>email@gmail.com</td>
+    <td>8056756218</td>
+   <td>asdasdasdasd</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [65d04618-88ca-47b3-ac36-c4c2ee947b9f] Performed ActionMailer::DeliveryJob (Job ID: 65d04618-88ca-47b3-ac36-c4c2ee947b9f) from Async(mailers) in 4111.5ms
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:51:19 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"ewe", "name"=>"", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/camp_leads_controller.rb:16:in `create'
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:53:38 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"ewe", "name"=>"", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+Completed 422 Unprocessable Entity in 15ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:53:49 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"ewe", "name"=>"sdsdsd", "email"=>"emailgmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:54:01 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"ewe", "name"=>"sdsdsd", "email"=>"email@gmail.com", "phone_number"=>"80756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-06-09 09:54:16 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"ewe", "name"=>"sdsdsd", "email"=>"email@gmail.com", "phone_number"=>"8056756218", "queries"=>"have some queries", "plot_size"=>"asdasdasdasd"}}
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[36mCampLead Create (1.0ms)[0m  [1m[32mINSERT INTO "camp_leads" ("from", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["from", "ewe"], ["name", "sdsdsd"], ["email", "email@gmail.com"], ["plot_size", "asdasdasdasd"], ["phone_number", "8056756218"], ["queries", "have some queries"], ["created_at", "2018-06-09 04:24:16.814419"], ["updated_at", "2018-06-09 04:24:16.814419"]]
+  ↳ app/controllers/camp_leads_controller.rb:12
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:12
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: ddc312a4-848e-4a71-b513-4f9afd5b915b) to Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007ff5c9f05bb0 @uri=#<URI::GID gid://hparks/CampLead/5>>
+Completed 201 Created in 74ms (Views: 0.7ms | ActiveRecord: 6.1ms)
+
+
+  [1m[36mCampLead Load (0.6ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [ddc312a4-848e-4a71-b513-4f9afd5b915b] Performing ActionMailer::DeliveryJob (Job ID: ddc312a4-848e-4a71-b513-4f9afd5b915b) from Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007ff5cb7b4378 @uri=#<URI::GID gid://hparks/CampLead/5>>
+[ActiveJob] [ActionMailer::DeliveryJob] [ddc312a4-848e-4a71-b513-4f9afd5b915b]   Rendering payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [ddc312a4-848e-4a71-b513-4f9afd5b915b]   Rendered payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ddc312a4-848e-4a71-b513-4f9afd5b915b] PaymentMailer#camp_lead_response_mail: processed outbound mail in 58.3ms
+[ActiveJob] [ActionMailer::DeliveryJob] [ddc312a4-848e-4a71-b513-4f9afd5b915b] Sent mail to karthikraj@spinircle.com (3297.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ddc312a4-848e-4a71-b513-4f9afd5b915b] Date: Sat, 09 Jun 2018 09:54:16 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: karthikraj@spinircle.com
+Message-ID: <5b1b5670e7361_1d563ffae4fc2a0092427@karthikrajs-MBP.mail>
+Subject: Lead Response from campign
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: ewe</h4>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+  </tr>
+  <tr>
+    <td>sdsdsd</td>
+    <td>email@gmail.com</td>
+    <td>8056756218</td>
+   <td>asdasdasdasd</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [ddc312a4-848e-4a71-b513-4f9afd5b915b] Performed ActionMailer::DeliveryJob (Job ID: ddc312a4-848e-4a71-b513-4f9afd5b915b) from Async(mailers) in 3358.18ms

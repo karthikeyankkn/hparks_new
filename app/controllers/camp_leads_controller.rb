@@ -9,9 +9,12 @@ class CampLeadsController < ApplicationController
 	def create
 		@camp_lead = CampLead.new(camp_lead_params)
 
-		@camp_lead.save
-		PaymentMailer.camp_lead_response_mail(@camp_lead).deliver_later
-		render json: @camp_lead, status: :created
+		if @camp_lead.save
+			PaymentMailer.camp_lead_response_mail(@camp_lead).deliver_later
+			render json: @camp_lead, status: :created
+		else
+			render json: @camp_lead.errors, status: :unprocessable_entity
+		end
 	end
 
 	private
