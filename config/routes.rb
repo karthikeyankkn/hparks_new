@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 	# root :to => "payments#new"
 	# root :to => "user_details#new" use this for paymment gateway
 	get "Plot-booking", to: "user_details#new"
-	root :to => 'homes#index'
+	# root :to => 'homes#index'
 	#get "about-us",to: "homes#aboutus"
 	#get "about-oragadam",to: "homes#about_oragadam"
 	#get "plots-oragadam",to: "homes#plots_oragadam"
