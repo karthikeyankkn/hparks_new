@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 	#get "policies", to: "homes#policies"
 	#get "sitemap.xml", to: "homes#sitemap", :defaults => {:format => 'xml'}
 	#get "site-map.html", to: "homes#sitemap2"
+	root :to => "user_details#create"
 	post "Plot-booking/create",to:  "user_details#create"
 	
 
