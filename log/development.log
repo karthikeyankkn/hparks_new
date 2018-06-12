@@ -4840,3 +4840,22 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-12 19:31:09 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by UserDetailsController#create as HTML
+Completed 400 Bad Request in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user_detail):
+  
+app/controllers/user_details_controller.rb:38:in `user_detail_params'
+app/controllers/user_details_controller.rb:19:in `create'
+Started GET "/" for 127.0.0.1 at 2018-06-12 19:31:27 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
