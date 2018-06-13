@@ -24,6 +24,7 @@ class HomesController < ApplicationController
 
   # GET /homes/1/edit
   def edit
+   
   end
 
   # POST /homes

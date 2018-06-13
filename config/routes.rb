@@ -3,6 +3,15 @@ Rails.application.routes.draw do
 	# root :to => "payments#new"
 	# root :to => "user_details#new" use this for paymment gateway
 	get "Plot-booking", to: "user_details#new"
+	post "Plot-booking-confirmation",to:  "user_details#create"
+	# get "Plot-booking/confirmation",to: "payments#edit"
+	get 'Plot-booking/confirmation/:id' => 'user_details#edit', as: 'plot_booking_confirmation_success'
+	get 'Plot-booking/confirmation/redirect/:id' => 'user_details#redirect', as: 'plot_booking_confirmation_redirect'
+
+ 
+
+	# get "Plot-booking/confirmation", to: "user_details#edit" 
+
 	# root :to => 'homes#index'
 	#get "about-us",to: "homes#aboutus"
 	#get "about-oragadam",to: "homes#about_oragadam"
@@ -17,7 +26,6 @@ Rails.application.routes.draw do
 	#get "sitemap.xml", to: "homes#sitemap", :defaults => {:format => 'xml'}
 	#get "site-map.html", to: "homes#sitemap2"
 	# root :to => "user_details#create"
-	post "Plot-booking/create",to:  "user_details#create"
 	
 
 	# post "transaction/ccavRequestHandler",to: "payments#requestHandler"

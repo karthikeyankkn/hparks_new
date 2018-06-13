@@ -14,15 +14,20 @@ def new
  #      @order_id = @some["vvv"]
  #       binding.pry
 end
+def redirect
+	binding.pry
+	redirect_to controller: 'payments', action: 'requestHandler', order_id: params[:id] 
+end
 def create
 	# binding.pry
 	@user_detail = UserDetail.new(user_detail_params)
 	# binding.pry
 	if @user_detail.save
 		# binding.pry
-		PaymentMailer.lead_registration(@user_detail).deliver_later
-		PaymentMailer.lead_post(@user_detail).deliver_later
-		redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
+		# PaymentMailer.lead_registration(@user_detail).deliver_later
+		# PaymentMailer.lead_post(@user_detail).deliver_later
+		redirect_to plot_booking_confirmation_success_path(@user_detail)
+		# redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
  
 	else
 		# binding.pry
@@ -32,6 +37,13 @@ def create
 		# flash[:warning] = "Contact number should be minimum 10 to maximum 15 digits"
 		redirect_to action: 'new'
 	end
+end
+def edit
+	# binding.pry
+	 @user_detail = UserDetail.find(params[:id])
+	 	binding.pry
+
+	
 end
 private
   def user_detail_params
