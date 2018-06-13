@@ -15,7 +15,7 @@ def new
  #       binding.pry
 end
 def redirect
-	binding.pry
+	# binding.pry
 	redirect_to controller: 'payments', action: 'requestHandler', order_id: params[:id] 
 end
 def create
@@ -24,8 +24,8 @@ def create
 	# binding.pry
 	if @user_detail.save
 		# binding.pry
-		# PaymentMailer.lead_registration(@user_detail).deliver_later
-		# PaymentMailer.lead_post(@user_detail).deliver_later
+		PaymentMailer.lead_registration(@user_detail).deliver_later
+		PaymentMailer.lead_post(@user_detail).deliver_later
 		redirect_to plot_booking_confirmation_success_path(@user_detail)
 		# redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
  
@@ -41,7 +41,7 @@ end
 def edit
 	# binding.pry
 	 @user_detail = UserDetail.find(params[:id])
-	 	binding.pry
+	 	# binding.pry
 
 	
 end
