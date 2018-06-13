@@ -60,7 +60,7 @@
 #     # password: "please use keys"
 #   }
 
-##production code ################
+##production code ################hiranandaniparks.com
 # role :app, %w{ubuntu@13.126.86.237}
 # role :web, %w{ubuntu@13.126.86.237}
 # role :db,  %w{ubuntu@13.126.86.237}
@@ -72,7 +72,7 @@
 
 
 
-##########staging code############
+##########staging code############hparks.getspini.in
 role :app, %w{ubuntu@54.251.179.157}
 role :web, %w{ubuntu@54.251.179.157}
 role :db,  %w{ubuntu@54.251.179.157}
