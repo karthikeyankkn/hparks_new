@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6">
+	<!-- <div class="col-md-6">
 		<div class="col-md-12">
 			<label style="display: block;">Layout</label>
 		<%= image_tag("layoutImg.png", :alt => "hiranandani-image",class: "img_class_layout",width: '500px') %>
@@ -38,15 +38,15 @@
 				<button class="btn custom-btn btn-lg" >Download E-Brochure</button>
 			</div>
 		</div>
-	</div>
-	<div class="col-md-6">
+	</div> -->
+	<!-- <div class="col-md-6"> -->
 		<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
 		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
 		<div class="row">
 			<label style="display: block;">Choose Plot*</label>
 			
-				<div class="col-md-6 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/VPg7Pg6aiQPx/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -54,7 +54,7 @@
 						<%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 13.2 Lakhs" ,id: 'item1' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-6 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/Lq7svQcpzeum/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -62,7 +62,7 @@
 						<%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 26.4 Lakhs" ,id: 'item2' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-6 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/ER95F25xFkDn/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -70,7 +70,7 @@
 						<%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 33 Lakhs" ,id: 'item3' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-6 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/LuD2SVkrJKw4/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -78,7 +78,7 @@
 						<%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 39.6 Lakhs" ,id: 'item4' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-6 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/k5KZWMT55EHd/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -86,7 +86,7 @@
 						<%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 42.6 Lakhs" ,id: 'item5' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-6 col-xs-6 box">
+				<div class="col-md-3 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="https://images.typeform.com/images/Nxq6UHB9kUq3/choice/default#.jpeg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -96,7 +96,7 @@
 				</div>
 		</div>
 		<div class="row" style="padding: 18px;">
-			<div class="col-sm-12">
+			<div class="col-sm-4">
 				<label>Name:</label>
 				<div class="input-group">
 				   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -104,7 +104,7 @@
 				   <%= f.text_field :name, class:'form-control input-lg', placeholder:'Enter your name',required:true  %>
 				 </div>
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-4">
 				<label>Contact Number:</label>
 				<div class="input-group">
 				   <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -112,7 +112,7 @@
 				   <%= f.telephone_field :number, class:'form-control input-lg', placeholder:'Enter your 10 digit no' ,required:true %>
 				 </div>
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-4">
 				<label>Email id:</label>
 				<div class="input-group">
 				   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -142,35 +142,10 @@
 		</div>
 	<!-- </form> -->
 	<% end %>
-	</div>
+	<!-- </div> -->
 	
 </div>
 
-<!-- Modal -->
-<div id="layoutImg" class="modal fade" role="dialog">
-  <div class="modal-dialog model-width">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-        	<%= image_tag("layoutImg.jpg", :alt => "hiranandani-image",class: "img_class_model_img") %>
-        </div>
-      </div>
-      <div class="modal-footer">
-      	<div class="col-md-12 text-center">
-      		<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-      		<a href="layout.pdf" class="btn btn-default" download>download</a>
-      	</div>
-      </div>
-    </div>
-
-  </div>
-</div>
 </section>
 
 <style type="text/css">
