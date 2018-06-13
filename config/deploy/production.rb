@@ -59,11 +59,25 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-role :app, %w{ubuntu@13.126.86.237}
-role :web, %w{ubuntu@13.126.86.237}
-role :db,  %w{ubuntu@13.126.86.237}
+
+##production code ################
+# role :app, %w{ubuntu@13.126.86.237}
+# role :web, %w{ubuntu@13.126.86.237}
+# role :db,  %w{ubuntu@13.126.86.237}
+# set :ssh_options, {
+#   keys: %w(~/.ssh/hiranandani.pem),
+#   forward_agent: false,
+#   auth_methods: %w(publickey password)
+# }
+
+
+
+##########staging code############
+role :app, %w{ubuntu@54.251.179.157}
+role :web, %w{ubuntu@54.251.179.157}
+role :db,  %w{ubuntu@54.251.179.157}
 set :ssh_options, {
-  keys: %w(~/.ssh/hiranandani.pem),
+  keys: %w(~/.ssh/kp_1.pem),
   forward_agent: false,
   auth_methods: %w(publickey password)
 }
