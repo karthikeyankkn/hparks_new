@@ -13194,3 +13194,170 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 101ms (Views: 98.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-14 17:18:19 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 22ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-14 17:18:24 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (287.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 474ms (Views: 438.9ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-06-14 17:18:33 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3yeCd5KbEwsrlfUKlD0KikTSTfWr7qivhuRUJm91cXrU34aLnabsbPFUdebSIu6OZE5Fyg7K4cBzW2H9YYJO4w==", "user_detail"=>{"plot_details"=>"Plot size 600 sq.ft for Rupees 15 Lakhs", "name"=>"karthik raj krishnamoorthy", "number"=>"1234567890", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[36mUserDetail Create (15.1ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "karthik raj krishnamoorthy"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 600 sq.ft for Rupees 15 Lakhs"], ["number", 1234567890], ["created_at", "2018-06-14 11:48:33.481024"], ["updated_at", "2018-06-14 11:48:33.481024"]]
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:25
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 09563f42-a72a-4d54-833c-cda627418488) to Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fd374996958 @uri=#<URI::GID gid://hparks/UserDetail/32>>
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 08a991bd-5003-4683-92f0-f59b7f3ffa88) to Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fd374996958 @uri=#<URI::GID gid://hparks/UserDetail/32>>
+Redirected to http://localhost:3000/Plot-booking/thank-you/32
+Completed 302 Found in 162ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/Plot-booking/thank-you/32" for 127.0.0.1 at 2018-06-14 17:18:33 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUserDetail Load (7.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:53
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (3.8ms)
+  [1m[36mUserDetail Load (1.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (2.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88] Performing ActionMailer::DeliveryJob (Job ID: 08a991bd-5003-4683-92f0-f59b7f3ffa88) from Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fd372c5f768 @uri=#<URI::GID gid://hparks/UserDetail/32>>
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488] Performing ActionMailer::DeliveryJob (Job ID: 09563f42-a72a-4d54-833c-cda627418488) from Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007fd374d2df08 @uri=#<URI::GID gid://hparks/UserDetail/32>>
+[ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88]   Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88]   Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88] PaymentMailer#lead_post: processed outbound mail in 116.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488]   Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488]   Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488]   Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488]   Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488] PaymentMailer#lead_registration: processed outbound mail in 120.7ms
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 275ms (Views: 256.3ms | ActiveRecord: 10.2ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488] Sent mail to colkar99@gmail.com (3107.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488] Date: Thu, 14 Jun 2018 17:18:33 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: colkar99@gmail.com
+Message-ID: <5b225611dec5e_e1f03fe9ba4caaac228af@karthikrajs-MBP.mail>
+Subject: Thanks for choosing plot with us!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b225611dda5e_e1f03fe9ba4caaac22797";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b225611dda5e_e1f03fe9ba4caaac22797
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, karthik raj krishnamoorthy Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5b225611dda5e_e1f03fe9ba4caaac22797
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello, karthik raj krishnamoorthy Thanks for choosing plot with us</h3>
+
+
+
+<p> You have booked Plot size 600 sq.ft for Rupees 15 Lakhs,</p>
+<!-- <p>Once payment have done successfully you will receive a mail</p> -->
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5b225611dda5e_e1f03fe9ba4caaac22797--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [09563f42-a72a-4d54-833c-cda627418488] Performed ActionMailer::DeliveryJob (Job ID: 09563f42-a72a-4d54-833c-cda627418488) from Async(mailers) in 3231.27ms
+[ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88] Sent mail to karthikraj@spinircle.com, joshua.simon@spinircle.com (3766.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88] Date: Thu, 14 Jun 2018 17:18:33 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikraj@spinircle.com, 
+ joshua.simon@spinircle.com
+Message-ID: <5b225611d5006_e1f03fe9b946ca8422695@karthikrajs-MBP.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p>Plot size 600 sq.ft for Rupees 15 Lakhs</p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p>karthik raj krishnamoorthy</p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p>colkar99@gmail.com</p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>1234567890</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88] Performed ActionMailer::DeliveryJob (Job ID: 08a991bd-5003-4683-92f0-f59b7f3ffa88) from Async(mailers) in 3893.54ms
