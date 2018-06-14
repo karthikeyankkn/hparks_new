@@ -18,7 +18,7 @@ class PaymentMailer < ApplicationMailer
   end
   def lead_post(user)
   	 @user = user
-  	 mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<baskar@spinircle.com>,<colkar99@gmail.com>,<karthikeyan@spinircle.com>" , subject: "Lead response"
+  	 mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<contact@getspini.com>,<sprasad@hrealty.com>,<pvijay@hrealty.com>" , subject: "Lead response"
   end
   def payment_response_confirmation(user,payments)
   	 @user = user
@@ -27,6 +27,6 @@ class PaymentMailer < ApplicationMailer
   end
   def camp_lead_response_mail(lead_details)
      @lead_details = lead_details
-     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Hiranandani Parks - Google & Facebook Hiranandani Parks"
+     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<Pvijay@hrealty.com>,<Indiamediasem@gmail.com>,<Praveentkmenon@gmail.com>" , subject: "Hiranandani Parks - Google & Facebook Hiranandani Parks"
   end
 end
