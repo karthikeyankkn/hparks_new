@@ -106,5 +106,5 @@ Rails.application.configure do
     password: "hparks.9"
 
   }
-  config.action_mailer.default_url_options = { host: "http://hiranandaniparks.com"}
+  config.action_mailer.default_url_options = { host: "https://hiranandaniparks.com"}
 end
