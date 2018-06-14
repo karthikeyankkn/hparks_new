@@ -27,6 +27,6 @@ class PaymentMailer < ApplicationMailer
   end
   def camp_lead_response_mail(lead_details)
      @lead_details = lead_details
-     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<Pvijay@hrealty.com>,<Indiamediasem@gmail.com>,<Praveentkmenon@gmail.com>" , subject: "Hiranandani Parks - Google & Facebook Hiranandani Parks"
+     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Hiranandani Parks - Google & Facebook Hiranandani Parks"
   end
 end
