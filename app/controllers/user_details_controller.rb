@@ -30,7 +30,7 @@ def create
 		# redirect_to plot_booking_confirmation_success_path(@user_detail)
 		############# end #############################
 		# PaymentMailer.lead_registration(@user_detail).deliver_later
-		PaymentMailer.lead_post(@user_detail).deliver_later
+		PaymentMailer.lead_post(@user_detail).deliver_now
 		redirect_to plot_booking_thank_you_path(@user_detail)
 		# redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
  
