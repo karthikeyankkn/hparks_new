@@ -83,15 +83,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 ######################################
-# Enable serving of images, stylesheets, and JavaScripts from an asset server  
-config.action_controller.asset_host = "https://www.hiranandaniparks.com/main"
 
-# ActionMailer Config
-config.action_mailer.default_url_options = {
-    :host => "https://www.hiranandaniparks.com",
-    :only_path => false,
-    :script_name =>  "/main"
-}
 #######################################
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
