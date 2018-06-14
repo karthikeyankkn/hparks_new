@@ -102,9 +102,9 @@ Rails.application.configure do
     domain: "www.hiranandaniparks.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "noreplay.hparks@gmail.com",
+    user_name: "noreply.hiranandaniparks@gmail.com",
     password: "hparks.9"
 
   }
-  config.action_mailer.default_url_options = { host: "https://www.hiranandaniparks.com"}
+  config.action_mailer.default_url_options = { host: "https://www.hiranandaniparks.com/"}
 end
