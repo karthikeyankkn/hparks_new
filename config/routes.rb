@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :homes
 	# root :to => "payments#new"
 	# root :to => "user_details#new" use this for paymment gateway
-	get "Plot-booking", to: "user_details#new"
+	# match 'Plot-booking' => 'user_details#new', :as => :root
+	get "Plot-booking", to: "user_details#new", :as => "root"
 	post "Plot-booking-confirmation",to:  "user_details#create"
 	# get "Plot-booking/confirmation",to: "payments#edit"
 	get 'Plot-booking/confirmation/:id' => 'user_details#edit', as: 'plot_booking_confirmation_success'
