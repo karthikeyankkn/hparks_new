@@ -8,7 +8,7 @@ class PaymentMailer < ApplicationMailer
   def lead_registration(user)
     @user = user
 
-    mail to: @user.email , subject: "Thanks for registration"
+    mail to: @user.email , subject: "Thanks for choosing plot with us!"
   end
   def payment_user_confirmation(user,payments)
     # binding.pry
