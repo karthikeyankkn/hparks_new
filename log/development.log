@@ -13004,3 +13004,129 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-14 13:46:18 +0530
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 22ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-14 13:46:24 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (221.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 408ms (Views: 357.1ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-06-14 13:46:31 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cG/3tWAnrOcR8ypuIsVXRPCMz5f8t9egoGdA+KhDHXB7l/NJbxpTgMsyqoJk2rNA0BDHqFmTns9V2HUjprQi6Q==", "user_detail"=>{"plot_details"=>"Plot size 600 sq.ft for Rupees 13.2 Lakhs", "name"=>"karthik raj krishnamoorthy", "number"=>"1234567890", "email"=>"colkar99@gmail.com"}, "commit"=>"Submit & Payment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[36mUserDetail Create (6.3ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "karthik raj krishnamoorthy"], ["email", "colkar99@gmail.com"], ["plot_details", "Plot size 600 sq.ft for Rupees 13.2 Lakhs"], ["number", 1234567890], ["created_at", "2018-06-14 08:16:31.496583"], ["updated_at", "2018-06-14 08:16:31.496583"]]
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:25
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 93a4462d-2015-42a3-9647-1478741c26e8) to Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fbd99238eb8 @uri=#<URI::GID gid://hparks/UserDetail/31>>
+Redirected to http://localhost:3000/Plot-booking/thank-you/31
+Completed 302 Found in 194ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/Plot-booking/thank-you/31" for 127.0.0.1 at 2018-06-14 13:46:31 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mUserDetail Load (1.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:53
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/globalid-0.4.1/lib/global_id/locator.rb:130
+[ActiveJob] [ActionMailer::DeliveryJob] [93a4462d-2015-42a3-9647-1478741c26e8] Performing ActionMailer::DeliveryJob (Job ID: 93a4462d-2015-42a3-9647-1478741c26e8) from Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007fbd9cca9f98 @uri=#<URI::GID gid://hparks/UserDetail/31>>
+  Rendering user_details/thankyou.html.erb within layouts/application
+[ActiveJob] [ActionMailer::DeliveryJob] [93a4462d-2015-42a3-9647-1478741c26e8]   Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+  Rendered user_details/thankyou.html.erb within layouts/application (8.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [93a4462d-2015-42a3-9647-1478741c26e8]   Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [93a4462d-2015-42a3-9647-1478741c26e8] PaymentMailer#lead_post: processed outbound mail in 88.2ms
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 222ms (Views: 210.5ms | ActiveRecord: 1.1ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [93a4462d-2015-42a3-9647-1478741c26e8] Sent mail to karthikraj@spinircle.com, joshua.simon@spinircle.com (4861.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [93a4462d-2015-42a3-9647-1478741c26e8] Date: Thu, 14 Jun 2018 13:46:31 +0530
+From: 'HIRANANDANI PARKS' <noreplay.hparks@gmail.com>
+To: karthikraj@spinircle.com, 
+ joshua.simon@spinircle.com
+Message-ID: <5b22245fc85e8_d6cb3fdecc91c3d82081e@karthikrajs-MBP.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p>Plot size 600 sq.ft for Rupees 13.2 Lakhs</p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p>karthik raj krishnamoorthy</p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p>colkar99@gmail.com</p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>1234567890</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [93a4462d-2015-42a3-9647-1478741c26e8] Performed ActionMailer::DeliveryJob (Job ID: 93a4462d-2015-42a3-9647-1478741c26e8) from Async(mailers) in 4968.42ms
+Started GET "/" for 127.0.0.1 at 2018-06-14 13:47:07 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-14 13:47:07 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-14 13:47:14 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
