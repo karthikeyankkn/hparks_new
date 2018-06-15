@@ -13361,3 +13361,716 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [ActionMailer::DeliveryJob] [08a991bd-5003-4683-92f0-f59b7f3ffa88] Performed ActionMailer::DeliveryJob (Job ID: 08a991bd-5003-4683-92f0-f59b7f3ffa88) from Async(mailers) in 3893.54ms
+Started GET "/" for 127.0.0.1 at 2018-06-15 10:27:36 +0530
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikrajkrishnamoorthy/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/karthikrajkrishnamoorthy/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 24ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 10:27:37 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (215.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 389ms (Views: 330.3ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 10:28:18 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 97ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 10:28:42 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 10:29:26 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 150ms (Views: 144.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 10:53:18 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_disclaimer.html.erb (0.9ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 10:53:49 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 92ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:45:55 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (1.2ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 135ms (Views: 131.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:47:42 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 119ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:49:46 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (1.2ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:50:57 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:51:49 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.9ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (3.1ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:54:20 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:55:27 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:56:38 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:57:35 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:58:40 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 87ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 12:59:48 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:03:28 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 88ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:04:12 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 109ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:05:30 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 96ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:07:00 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 81ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:11:18 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 100ms (Views: 96.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:12:17 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 129ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:13:43 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:14:47 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 127ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:15:09 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 144ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:15:31 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 129ms (Views: 126.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:16:23 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.9ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 87ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:17:54 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 118ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:21:03 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 105ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:21:39 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:22:34 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 101ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:24:44 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:25:29 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:26:46 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:27:51 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 88ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:28:39 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:28:52 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 99ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:29:04 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (5.2ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 104.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:29:37 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.3ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 80ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:32:02 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 106.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:33:01 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 104ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:33:57 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:33:57 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 305ms (Views: 301.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:34:29 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:37:32 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.9ms)
+  Rendered layouts/_enquire.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 118ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:39:30 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 100ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:40:56 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 111ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:41:15 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:41:29 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 108ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:44:11 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (8.7ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:44:44 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 86ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:44:47 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 101ms (Views: 97.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:44:49 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 117ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:45:28 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:45:42 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:46:23 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 87ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:46:52 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:47:23 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 88ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:48:36 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:50:22 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:50:27 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:50:47 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_disclaimer.html.erb (0.3ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Plot-booking" for 127.0.0.1 at 2018-06-15 13:52:11 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+

@@ -28,24 +28,27 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="col-md-6">
-		<div class="col-md-12">
+	 <div class="col-md-6 border-right">
+		<div class="col-md-12 text-center">
 			<label style="display: block;">Layout</label>
-		<%= image_tag("layoutImg.png", :alt => "hiranandani-image",class: "img_class_layout",width: '500px') %>
+			<a class="position-alert" data-toggle="modal" data-target="#layoutImg"> <p class="large-window-alert">Click to see large in window</p><img src=" http://cdn.getspini.com/hira-img/plot-layout-small.jpg" class="img_class_layout" width="500px" alt="hiranandani-image" />
+				<!-- <p class="large-window-alert">Click to see large window</p> --></a>
+			<!-- <h3>Click to see large window</h3> -->
 		</div>
 		<div class="col-md-12 text-center">
-			<div class="row" style="padding-top: 175px;">
-				<button class="btn custom-btn btn-lg" >Download E-Brochure</button>
+			<div class="row mobile-row1">
+				<h3>Click the below button to check plots availability</h3>
+				<a href="http://cdn.getspini.com/hira-img/Hparks-Plots-Inventory.pdf" target="_blank" class="btn custom-btn btn-lg" >Download Plots Inventory</a>
 			</div>
 		</div>
-	</div> -->
-	<!-- <div class="col-md-6"> -->
+	</div>
+	<div class="col-md-6">
 		<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
 		<!-- <form method="POST" name="user_params" action="/create" validate> -->
 		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
 		<div class="row">
-			<label style="display: block;">Choose Plot*</label>
-				<div class="col-md-3 col-xs-6 box">
+			<label class="book-plot-heading">Choose Plot*</label>
+				<div class="col-md-6 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="http://cdn.getspini.com/hira-img/plot-booking/06.jpg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -53,7 +56,7 @@
 						<%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 15 Lakhs" ,id: 'item6' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
+				<div class="col-md-6 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="http://cdn.getspini.com/hira-img/plot-booking/01.jpg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -61,7 +64,7 @@
 						<%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 30 Lakhs" ,id: 'item1' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
+				<div class="col-md-6 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="http://cdn.getspini.com/hira-img/plot-booking/02.jpg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -69,7 +72,7 @@
 						<%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 37.5 Lakhs" ,id: 'item2' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
+				<div class="col-md-6 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="http://cdn.getspini.com/hira-img/plot-booking/03.jpg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -77,7 +80,7 @@
 						<%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 45 Lakhs" ,id: 'item3' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
+				<div class="col-md-6 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="http://cdn.getspini.com/hira-img/plot-booking/04.jpg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -85,7 +88,7 @@
 						<%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 52.5 Lakhs" ,id: 'item4' , autocomplete: 'off'  %>
 					</label>
 				</div>
-				<div class="col-md-3 col-xs-6 box">
+				<div class="col-md-6 col-xs-6 box">
 					<label class="btn btn-warning custom-label">
 						<img src="http://cdn.getspini.com/hira-img/plot-booking/05.jpg" alt="..." class="img-thumbnail img-check">
 						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -95,7 +98,7 @@
 				</div>
 		</div>
 		<div class="row" style="padding: 18px;">
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-md-12">
 				<label>Name:</label>
 				<div class="input-group">
 				   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -103,7 +106,7 @@
 				   <%= f.text_field :name, class:'form-control input-lg', placeholder:'Enter your name',required:true  %>
 				 </div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-md-12">
 				<label>Contact Number:</label>
 				<div class="input-group">
 				   <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -111,7 +114,7 @@
 				   <%= f.telephone_field :number, class:'form-control input-lg', placeholder:'Enter your 10 digit no' ,required:true %>
 				 </div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-md-12">
 				<label>Email id:</label>
 				<div class="input-group">
 				   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -141,13 +144,50 @@
 		</div>
 	<!-- </form> -->
 	<% end %>
-	<!-- </div> -->
+	</div>
 	
 </div>
 
+<!-- Modal -->
+<div id="layoutImg" class="modal fade" role="dialog">
+  <div class="modal-dialog model-own">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+        	<img src="http://cdn.getspini.com/hira-img/plot-layout-big.jpg" alt="Hiranandani-plots" width="100%">
+        </div>
+      </div>
+      <div class="modal-footer">
+      	<div class="row">
+      		<div class="col-md-12 text-center">
+      			<a  href="http://cdn.getspini.com/hira-img/plot-layout-big.jpg" target="_blank" class="btn btn-default">Download</a>
+      		</div>
+      	</div>
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+      </div>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <style type="text/css">
+.book-plot-heading{
+	display: block;
+	padding-left: 30px;
+
+}
+.mobile-row1{
+	padding-top:  50px;
+}
+.model-own{
+	width:95%;
+}
 .custom-label{
 	position: relative;
 }
@@ -199,12 +239,13 @@
     color: #fff;
 }
 .img_class_layout{
-	 opacity: 0.5;
-    filter: alpha(opacity=50);
-    cursor: pointer;
+	opacity: 1;
+    height: 683px;
 }
 .img_class_layout:hover{
-	    opacity: 1;
+	    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: pointer;
     
 }
 .img_class_model_img{
@@ -213,6 +254,20 @@
 }
 .model-width{
 	width: 100%;
+}
+.border-right{
+	border-right: 2px dashed #f4ad33;
+}
+.large-window-alert{
+	display: none;
+	position: absolute;
+    top: 100%;
+    font-size: 30px;
+    color: #f4ad33;
+    left: 14%;
+}
+.position-alert {
+	position: relative;
 }
 @media only screen and (max-width: 500px) {
 	.new_class{
@@ -225,9 +280,38 @@
 	}
 	.img_class_layout{
 		width: 240px;
+		height: auto;
 	}
 	.model-width{
 		width: 95%;
+	}
+	.large-window-alert{
+		font-size: 15px;
+	}
+	.mobile-row1{
+		padding-top: 5px;
+		padding-bottom: 10px;
+	}
+	.mobile-row1 > h3 {
+		font-size: 20px;
+	}
+	.mobile-row1 > a {
+		font-size: 15px;
+	}
+	.border-right{ 
+		border-bottom: 2px dashed #f4ad33;
+	}
+	.book-plot-heading{
+		 text-align: center;
+    padding-top: 20px;
+	     padding-left: 0px; 
+	}
+    text-align: center;
+    padding-top: 20px;
+}
+@media only screen and (max-width: 780px) { 
+	.border-right{
+	 border-right: none;
 	}
 }
 </style>
@@ -243,6 +327,12 @@
             .siblings('.newimg').removeClass('newimg').addClass('new_class');
     });
 			$('input[type=radio]').hide();
+		$('.img_class_layout').mouseover(function(){
+			$('.large-window-alert').show();
+		});
+		$('.img_class_layout').mouseout(function(){
+			$('.large-window-alert').hide();
+		});
 			
 	});
 </script>
