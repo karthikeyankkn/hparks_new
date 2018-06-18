@@ -9,4 +9,12 @@ class CampLead < ApplicationRecord
 				format: {with: VALID_EMAIL_REGEX}
     validates :plot_size,:presence => true
 
+    def self.to_csv(options = {})
+    	CSV.generate(options) do |csv|
+    		csv << column_names
+    		all.each do |camp_leads|
+    			csv << camp_leads.attributes.values_at(*column_names) 
+    		end
+    	end
+	end
 end
