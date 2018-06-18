@@ -1,4 +1,5 @@
 class CampLead < ApplicationRecord
+	# include HTTParty
 	validates :phone_number,:presence => true,
                  :length => { :minimum => 10, :maximum => 15 }
     validates :from,:presence => true

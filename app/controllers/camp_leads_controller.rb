@@ -1,5 +1,8 @@
+# require 'httparty'
 class CampLeadsController < ApplicationController
 	 skip_before_action :verify_authenticity_token
+	 # include HTTParty
+	 include HTTParty
 
 	def index
 		# binding.pry
@@ -24,6 +27,88 @@ class CampLeadsController < ApplicationController
 		else
 			render json: @camp_lead.errors, status: :unprocessable_entity
 		end
+		# binding.pry
+		if @camp_lead.from == "facebook"
+		@data = { api_key: "1448606074",
+				sell_do: {
+					form: {
+						lead: {
+							first_name: @camp_lead[:name],
+							last_name: "",
+							email: @camp_lead[:email],
+							phone: @camp_lead[:phone_number],
+							project_id: "56659cb03bb2f8f46900001b"
+							},
+						note:{
+							content:  @camp_lead[:queries]
+							},
+						address:{
+							address1: "",
+							address2: "",
+							country: "India",
+							state: "tamilnadu",
+							city: "city",
+							zip: "0"
+							},
+						requirement:{
+							property_types: [@camp_lead[:plot_size]],
+							locations: [],
+							bhk: ["2","2.5"],
+							min_budget: 0,
+							max_budget: 0,
+							min_possession: "",
+							max_possession: ""
+							}
+						},
+					sell_do: { campaign: { srd: "5b2797e7923d4a6acb8cb241" }}
+					}
+				}
+			else
+				@data = { api_key: "1448606074",
+				sell_do: {
+					form: {
+						lead: {
+							first_name: @camp_lead[:name],
+							last_name: "",
+							email: @camp_lead[:email],
+							phone: @camp_lead[:phone_number],
+							project_id: "56659cb03bb2f8f46900001b"
+							},
+						note:{
+							content:  @camp_lead[:queries]
+							},
+						address:{
+							address1: "",
+							address2: "",
+							country: "India",
+							state: "tamilnadu",
+							city: "city",
+							zip: "0"
+							},
+						requirement:{
+							property_types: [@camp_lead[:plot_size]],
+							locations: [],
+							bhk: ["2","2.5"],
+							min_budget: 0,
+							max_budget: 0,
+							min_possession: "",
+							max_possession: ""
+							}
+						},
+					sell_do: { campaign: { srd: "5b279800923d4a388d1bb2c2" }}
+					}
+				}
+			end
+
+		@response = HTTParty.post('https://app.sell.do/api/leads/create',
+			{ 
+    			:body => @data.to_json,
+    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  			});
+  # @eee = Net::HTTP.post_form(URI.parse('https://app.sell.do/api/leads/create'), @data.to_json)
+    	# binding.pry
+		
+
 	end
 
 	private
