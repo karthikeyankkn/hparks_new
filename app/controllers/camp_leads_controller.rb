@@ -8,7 +8,12 @@ class CampLeadsController < ApplicationController
 		# binding.pry
 		@start_date = params[:start_date]
 		@end_date = params[:end_date]
-		@camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
+		if params[:type] == "web-lead"
+			@camp_leads = UserDetail.where("created_at between (?) and (?)",@start_date ,@end_date )
+		else
+			@camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
+		end			
+		# @camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 		# @camp_leads = CampLead.all
 		# render json: @camp_leads , status: :ok
 		respond_to do |format|
