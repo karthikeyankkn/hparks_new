@@ -48,15 +48,17 @@ class PaymentsController < ApplicationController
         @resultData["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
       end
       @user = UserDetail.find(@resultData["order_id"])
-      
+      @user[:payment_status] = true
+      @user.save
 
       # @user.each do |key,value| 
       #   @resultData["#{key}"] = value 
       # end
-      
+      ###############################
       @order_status = @resultData["order_status"]
-      PaymentMailer.payment_user_confirmation(@user,@resultData).deliver_later
-      PaymentMailer.payment_response_confirmation(@user,@resultData).deliver_later
+      # PaymentMailer.payment_user_confirmation(@user,@resultData).deliver_later
+      # PaymentMailer.payment_response_confirmation(@user,@resultData).deliver_later
+      ################################# 
       # @order_id = @result["order_id"]
       # @user_id = @decResp[:order_id]
   end
