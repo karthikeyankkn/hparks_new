@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
 
 
   def requestHandler
-    @user = UserDetail.find(params[:user_id])
+    @user = UserDetail.find(params[:id])
     # @user[:order_id] = (Time.now.to_f * 1000).to_i
     @order = Order.new
     @order[:order_placed_id] = (Time.now.to_f * 1000).to_i

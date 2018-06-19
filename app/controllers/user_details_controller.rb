@@ -16,7 +16,7 @@ def new
 end
 def redirect
 	# binding.pry
-	redirect_to controller: 'payments', action: 'requestHandler', user_id: params[:id] 
+	redirect_to controller: 'payments', action: 'requestHandler', id: params[:id] 
 end
 def create
 	# binding.pry
