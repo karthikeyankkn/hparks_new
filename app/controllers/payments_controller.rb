@@ -5,7 +5,7 @@ class PaymentsController < ApplicationController
   def requestHandler
     @user = UserDetail.find(params[:user_id])
     # @user[:order_id] = (Time.now.to_f * 1000).to_i
-    @order = Order.new(orders)
+    @order = Order.new
     @order[:order_placed_id] = (Time.now.to_f * 1000).to_i
     @order[:user_detail_id] = params[:user_id]
     if @order.save
@@ -83,10 +83,5 @@ class PaymentsController < ApplicationController
   def user_detail
     params.require(:params).permit(:name, :email, :plot_details,:number,:payment_status,:description)
   end
-  def orders
-    params.require(:order).permit(:user_detail_id, :amount , :user_id)
-  end
-  
-
   
 end
