@@ -16,7 +16,7 @@ def new
 end
 def redirect
 	# binding.pry
-	redirect_to controller: 'payments', action: 'requestHandler', order_id: params[:id] 
+	redirect_to controller: 'payments', action: 'requestHandler', user_id: params[:id] 
 end
 def create
 	# binding.pry
@@ -78,11 +78,11 @@ def create
 					sell_do: { campaign: { srd: "5b2793ea923d4a68368cb3b6" }}
 					}
 				}
-			@response = HTTParty.post('https://app.sell.do/api/leads/create',
-			{ 
-    			:body => @data.to_json,
-    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
-  			});	
+			# @response = HTTParty.post('https://app.sell.do/api/leads/create',
+			# { 
+   #  			:body => @data.to_json,
+   #  			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  	# 		});	
   			# binding.pry
 end
 def edit
