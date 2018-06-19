@@ -84,7 +84,7 @@ class PaymentsController < ApplicationController
     params.require(:params).permit(:name, :email, :plot_details,:number,:payment_status,:description)
   end
   def orders
-    params.require(:params).permit(:user_detail_id, :amount , :user_id)
+    params.require(:order).permit(:user_detail_id, :amount , :user_id)
   end
   
 
