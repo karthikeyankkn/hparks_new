@@ -53,6 +53,8 @@ class PaymentsController < ApplicationController
         @resultData["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
       end
       @order = Order.find_by_order_placed_id(@resultData["order_id"])
+      @order[:payment_status] = true
+      @order.save
       @user = @order.user_detail
       # @user = UserDetail.find_by_order_id(@resultData["order_id"])
 
