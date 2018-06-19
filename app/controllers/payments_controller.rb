@@ -4,9 +4,12 @@ class PaymentsController < ApplicationController
 
   def requestHandler
     @user = UserDetail.find(params[:user_id])
-    @user[:order_id] = (Time.now.to_f * 1000).to_i
-    if @user.save
-      @merchantData="order_id=#{@user[:order_id]}&merchant_id=168876&amount=20000&currency=INR&redirect_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&cancel_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&language=EN"
+    # @user[:order_id] = (Time.now.to_f * 1000).to_i
+    @order = Order.new(orders)
+    @order[:order_placed_id] = (Time.now.to_f * 1000).to_i
+    @order[:user_detail_id] = params[:user_id]
+    if @order.save
+      @merchantData="order_id=#{@order[:order_placed_id]}&merchant_id=168876&amount=20000&currency=INR&redirect_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&cancel_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&language=EN"
       @working_key="28177749CE3784F5BECC20C6A20DBF1B"   #Put in the 32 Bit Working Key provided by CCAVENUES.  
       @access_code="AVJW01FC55BA81WJAB"   #Put in the Access Code in quotes provided by CCAVENUES.
         # params.each do |key,value|
@@ -49,7 +52,9 @@ class PaymentsController < ApplicationController
       @decResp.each do |key|
         @resultData["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
       end
-      @user = UserDetail.find_by_order_id(@resultData["order_id"])
+      @order = Order.find_by_order_placed_id(@resultData["order_id"])
+      @user = @order.user_detail
+      # @user = UserDetail.find_by_order_id(@resultData["order_id"])
 
       # @user.each do |key,value| 
       #   @resultData["#{key}"] = value 
@@ -77,6 +82,9 @@ class PaymentsController < ApplicationController
   private
   def user_detail
     params.require(:params).permit(:name, :email, :plot_details,:number,:payment_status,:description)
+  end
+  def orders
+    params.require(:params).permit(:user_detail_id, :amount , :user_id)
   end
   
 
