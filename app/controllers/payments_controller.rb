@@ -49,7 +49,7 @@ class PaymentsController < ApplicationController
       @decResp.each do |key|
         @resultData["#{key.from(0).to(key.index("=")-1)}"] = "#{key.from(key.index("=")+1).to(-1)}"
       end
-      @user = UserDetail.find(@resultData["order_id"])
+      @user = UserDetail.find_by_order_id(@resultData["order_id"])
 
       # @user.each do |key,value| 
       #   @resultData["#{key}"] = value 
