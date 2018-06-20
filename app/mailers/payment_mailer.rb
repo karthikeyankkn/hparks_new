@@ -29,4 +29,8 @@ class PaymentMailer < ApplicationMailer
      @lead_details = lead_details
      mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<Pvijay@hrealty.com>,<Indiamediasem@gmail.com>,<Praveentkmenon@gmail.com>" , subject: "Hiranandani Parks - Google & Facebook Hiranandani Parks"
   end
+  def spini_camp_leads(lead_details)
+     @lead_details = lead_details
+     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Spini Campaign Leads"
+  end
 end
