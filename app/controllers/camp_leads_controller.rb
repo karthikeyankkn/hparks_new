@@ -48,8 +48,8 @@ class CampLeadsController < ApplicationController
 							first_name: @camp_lead[:name],
 							last_name: "",
 							email: @camp_lead[:email],
-							phone: @camp_lead[:phone_number],
-							project_id: "56659cb03bb2f8f46900001b"
+							phone: @camp_lead[:phone_number]
+							# project_id: "56659cb03bb2f8f46900001b"
 							},
 						note:{
 							content:  @camp_lead[:queries]
@@ -89,8 +89,8 @@ class CampLeadsController < ApplicationController
 							first_name: @camp_lead[:name],
 							last_name: "",
 							email: @camp_lead[:email],
-							phone: @camp_lead[:phone_number],
-							project_id: "56659cb03bb2f8f46900001b"
+							phone: @camp_lead[:phone_number]
+							# project_id: "56659cb03bb2f8f46900001b"
 							},
 						note:{
 							content:  @camp_lead[:queries]
