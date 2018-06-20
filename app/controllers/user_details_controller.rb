@@ -27,11 +27,11 @@ def create
 		############use this if paymet needed
 		# PaymentMailer.lead_registration(@user_detail).deliver_later
 		# PaymentMailer.lead_post(@user_detail).deliver_later
-		redirect_to plot_booking_confirmation_success_path(@user_detail)
+		# redirect_to plot_booking_confirmation_success_path(@user_detail)
 		############# end cuurent prodution down #############################
-		# PaymentMailer.lead_registration(@user_detail).deliver_later
-		# PaymentMailer.lead_post(@user_detail).deliver_later
-		# redirect_to plot_booking_thank_you_path(@user_detail)
+		PaymentMailer.lead_registration(@user_detail).deliver_later
+		PaymentMailer.lead_post(@user_detail).deliver_later
+		redirect_to plot_booking_thank_you_path(@user_detail)
 		##################################################
 		# redirect_to controller: 'payments', action: 'requestHandler', order_id: @user_detail[:id] 
  
@@ -73,9 +73,12 @@ def create
 							max_budget: 0,
 							min_possession: "",
 							max_possession: ""
+							},
+							campaign: {
+							 srd: "5b2793ea923d4a68368cb3b6" 
 							}
-						},
-					sell_do: { campaign: { srd: "5b2793ea923d4a68368cb3b6" }}
+						}
+					# sell_do: { campaign: { srd: "5b2793ea923d4a68368cb3b6" }}
 					}
 				}
 			# @response = HTTParty.post('https://app.sell.do/api/leads/create',
