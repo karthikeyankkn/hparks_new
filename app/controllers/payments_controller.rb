@@ -6,8 +6,8 @@ class PaymentsController < ApplicationController
     @user = UserDetail.find(params[:id])
     # @user[:order_id] = (Time.now.to_f * 1000).to_i
     @order = Order.new
-    @order[:order_placed_id] = (Time.now.to_f * 1000).to_i
-    @order[:user_detail_id] = params[:user_id]
+    @order[:order_placed_id] = (Time.now.to_f * 10).to_i
+    @order[:user_detail_id] = params[:id]
     if @order.save
       @merchantData="order_id=#{@order[:order_placed_id]}&merchant_id=168876&amount=20000&currency=INR&redirect_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&cancel_url=https://hparks.getspini.in/Plot-booking/transaction/ccavResponseHandler&language=EN"
       @working_key="28177749CE3784F5BECC20C6A20DBF1B"   #Put in the 32 Bit Working Key provided by CCAVENUES.  
