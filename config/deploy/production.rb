@@ -73,11 +73,11 @@ set :ssh_options, {
 
 
 ##########staging code############hparks.getspini.in
-# role :app, %w{ubuntu@54.251.179.157}
-# role :web, %w{ubuntu@54.251.179.157}
-# role :db,  %w{ubuntu@54.251.179.157}
-# set :ssh_options, {
-#   keys: %w(~/.ssh/kp_1.pem),
-#   forward_agent: false,
-#   auth_methods: %w(publickey password)
-# }
+role :app, %w{ubuntu@54.251.179.157}
+role :web, %w{ubuntu@54.251.179.157}
+role :db,  %w{ubuntu@54.251.179.157}
+set :ssh_options, {
+  keys: %w(~/.ssh/kp_1.pem),
+  forward_agent: false,
+  auth_methods: %w(publickey password)
+}
