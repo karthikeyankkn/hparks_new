@@ -66,8 +66,8 @@ class PaymentsController < ApplicationController
         # @user[:payment_status] = true
         @order[:payment_status] = true
         # @user.save
-        @order.save
       end
+      @order.save
       # PaymentMailer.payment_user_confirmation(@user,@resultData).deliver_later
       # PaymentMailer.payment_response_confirmation(@user,@resultData).deliver_later
       ################################# 
