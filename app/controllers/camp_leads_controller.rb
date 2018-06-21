@@ -70,11 +70,11 @@ class CampLeadsController < ApplicationController
 							max_budget: 0,
 							min_possession: "",
 							max_possession: ""
-							},
-							campaign: {
+							}
+						},
+						campaign: {
 							 srd: "5b2797cb923d4a68368cb4c6" 
 							}
-						}
 					# sell_do: { campaign: { srd: "5b2797cb923d4a68368cb4c6" }}
 					}
 				}
@@ -114,11 +114,11 @@ class CampLeadsController < ApplicationController
 							max_budget: 0,
 							min_possession: "",
 							max_possession: ""
-							},
-							campaign: { 
+							}
+						},
+						campaign: { 
 								srd: "5b279800923d4a388d1bb2c2"
 							}
-						}
 					# sell_do: { campaign: { srd: "5b279800923d4a388d1bb2c2" }}
 					}
 				}

@@ -73,19 +73,19 @@ def create
 							max_budget: 0,
 							min_possession: "",
 							max_possession: ""
-							},
-							campaign: {
-							 srd: "5b2793ea923d4a68368cb3b6" 
 							}
+						},
+						campaign: {
+							 srd: "5b2793ea923d4a68368cb3b6" 
 						}
 					# sell_do: { campaign: { srd: "5b2793ea923d4a68368cb3b6" }}
 					}
 				}
-			# @response = HTTParty.post('https://app.sell.do/api/leads/create',
-			# { 
-   #  			:body => @data.to_json,
-   #  			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
-  	# 		});	
+			@response = HTTParty.post('https://app.sell.do/api/leads/create',
+			{ 
+    			:body => @data.to_json,
+    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  			});	
   			# binding.pry
 end
 def edit
