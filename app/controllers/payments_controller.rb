@@ -54,6 +54,7 @@ class PaymentsController < ApplicationController
       end
       @order = Order.find_by_order_placed_id(@resultData["order_id"])
       @user = @order.user_detail
+      @order[:amount] = @resultData["amount"]
       # @user = UserDetail.find_by_order_id(@resultData["order_id"])
 
       # @user.each do |key,value| 
@@ -64,11 +65,9 @@ class PaymentsController < ApplicationController
       if @order_status == "Success"
         # @user[:payment_status] = true
         @order[:payment_status] = true
-        @order[:amount] = @resultData["amount"]
         # @user.save
         @order.save
       end
-      @order[:amount] = @resultData["amount"]
       # PaymentMailer.payment_user_confirmation(@user,@resultData).deliver_later
       # PaymentMailer.payment_response_confirmation(@user,@resultData).deliver_later
       ################################# 
