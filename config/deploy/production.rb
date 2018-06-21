@@ -61,14 +61,14 @@
 #   }
 
 ##production code ################hiranandaniparks.com
-role :app, %w{ubuntu@13.126.86.237}
-role :web, %w{ubuntu@13.126.86.237}
-role :db,  %w{ubuntu@13.126.86.237}
-set :ssh_options, {
-  keys: %w(~/.ssh/hiranandani.pem),
-  forward_agent: false,
-  auth_methods: %w(publickey password)
-}
+# role :app, %w{ubuntu@13.126.86.237}
+# role :web, %w{ubuntu@13.126.86.237}
+# role :db,  %w{ubuntu@13.126.86.237}
+# set :ssh_options, {
+#   keys: %w(~/.ssh/hiranandani.pem),
+#   forward_agent: false,
+#   auth_methods: %w(publickey password)
+# }
 
 
 
