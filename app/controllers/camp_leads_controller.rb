@@ -37,10 +37,10 @@ class CampLeadsController < ApplicationController
 			# binding.pry
 			if @camp_lead[:from] != "google" && @camp_lead[:from] != "facebook"
 				# binding.pry
-				# PaymentMailer.spini_camp_leads(@camp_lead).deliver_later
+				PaymentMailer.spini_camp_leads(@camp_lead).deliver_later
 				render json: @camp_lead, status: :created
 			else
-				# PaymentMailer.camp_lead_response_mail(@camp_lead).deliver_later
+				PaymentMailer.camp_lead_response_mail(@camp_lead).deliver_later
 				render json: @camp_lead, status: :created
 			end
 		else
