@@ -20,7 +20,7 @@ class CampLeadsController < ApplicationController
 					@tests = @camp_leads
 					@tests.each do |testing|
 					if testing[:from] != "google" && testing[:from] != "facebook"
-						@filterLeads.push(testing)
+						# @filterLeads.push(testing)
 					end
 			end
 		end			
