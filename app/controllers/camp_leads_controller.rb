@@ -18,10 +18,10 @@ class CampLeadsController < ApplicationController
 				@filterLeads = @camp_leads.where(from:"facebook")
 			elsif params[:from] == "spini"
 					@tests = @camp_leads
-					@tests.each do |testing|
-					if testing[:from] != "google" && testing[:from] != "facebook"
+					# @tests.each do |testing|
+					# if testing[:from] != "google" && testing[:from] != "facebook"
 						# @filterLeads.push(testing)
-					end
+					# end
 			end
 		end			
 		# @camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
