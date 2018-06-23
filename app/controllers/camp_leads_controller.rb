@@ -17,7 +17,9 @@ class CampLeadsController < ApplicationController
 			elsif params[:from] == "facebook"
 				@filterLeads = @camp_leads.where(from:"facebook")
 			elsif params[:from] == "spini"
-					@tests = @camp_leads
+					@test1 = @camp_leads.where.not(from:"google")
+					@test2 = @test1.where.not(from:"facebook")
+					@filterLeads = @test2
 					# @tests.each do |testing|
 					# if testing[:from] != "google" && testing[:from] != "facebook"
 						# @filterLeads.push(testing)
