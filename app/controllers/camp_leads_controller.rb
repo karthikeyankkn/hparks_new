@@ -10,15 +10,22 @@ class CampLeadsController < ApplicationController
 		@end_date = params[:end_date]
 		if params[:type] == "web-lead"
 			@camp_leads = UserDetail.where("created_at between (?) and (?)",@start_date ,@end_date )
+			if params[:from] == "google"
+				@filterLeads = @camp_leads.where(from:"google")
+			elsif params[:from] == "facebook"
+				@filterLeads = @camp_leads.where(from:"facebook")
+			else
+				@filterLeads = @camp_leads
+			end
 		else
-			@camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
+			@filterLeads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 		end			
 		# @camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 		# @camp_leads = CampLead.all
 		# render json: @camp_leads , status: :ok
 		respond_to do |format|
-			format.csv { send_data @camp_leads.to_csv}
-			format.xls { send_data @camp_leads.to_csv(col_sep: "\t")}
+			format.csv { send_data @filterLeads.to_csv}
+			format.xls { send_data @filterLeads.to_csv(col_sep: "\t")}
 
 		end
 		
@@ -78,11 +85,11 @@ class CampLeadsController < ApplicationController
 					# sell_do: { campaign: { srd: "5b2797cb923d4a68368cb4c6" }}
 					}
 				}
-			# @response = HTTParty.post('https://app.sell.do/api/leads/create',
-			# 	{ 
-   #  			:body => @data.to_json,
-   #  			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
-  	# 			});
+			@response = HTTParty.post('https://app.sell.do/api/leads/create',
+				{ 
+    			:body => @data.to_json,
+    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  				});
 
 			elsif @camp_lead.from == "google"
 				@data = { api_key: "1bd54866736339b8f49efe4cbd3404b8",
@@ -122,11 +129,11 @@ class CampLeadsController < ApplicationController
 					# sell_do: { campaign: { srd: "5b279800923d4a388d1bb2c2" }}
 					}
 				}
-				# @response = HTTParty.post('https://app.sell.do/api/leads/create',
-				# { 
-    # 			:body => @data.to_json,
-    # 			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
-  		# 		});
+				@response = HTTParty.post('https://app.sell.do/api/leads/create',
+				{ 
+    			:body => @data.to_json,
+    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  				});
 			else
 				# binding.pry
 			end
