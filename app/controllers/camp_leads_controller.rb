@@ -16,7 +16,7 @@ class CampLeadsController < ApplicationController
 				@filterLeads = @camp_leads.where(from:"google")
 			elsif params[:from] == "facebook"
 				@filterLeads = @camp_leads.where(from:"facebook")
-			else
+			elsif params[:from] == "spini"
 				@filterLeads = @camp_leads
 			end
 		end			
