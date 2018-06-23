@@ -9,7 +9,9 @@ class CampLeadsController < ApplicationController
 		@start_date = params[:start_date]
 		@end_date = params[:end_date]
 		if params[:type] == "web-lead"
-			@camp_leads = UserDetail.where("created_at between (?) and (?)",@start_date ,@end_date )
+			@filterLeads = UserDetail.where("created_at between (?) and (?)",@start_date ,@end_date )
+		else
+			@camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 			if params[:from] == "google"
 				@filterLeads = @camp_leads.where(from:"google")
 			elsif params[:from] == "facebook"
@@ -17,8 +19,6 @@ class CampLeadsController < ApplicationController
 			else
 				@filterLeads = @camp_leads
 			end
-		else
-			@filterLeads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 		end			
 		# @camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 		# @camp_leads = CampLead.all
