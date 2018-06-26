@@ -9,6 +9,8 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :rvm_ruby_version, '2.4.1'
 set :rvm_type, :system
 set :passenger_environment_variables, { :path => '/path-to-passenger/bin:$PATH' }
+set :branch, ENV['BRANCH'] if ENV['BRANCH']
+
 # set :passenger_restart_command, '/path-to-passenger/bin/passenger-config restart-app'
 
 # Default branch is :master
