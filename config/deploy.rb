@@ -2,7 +2,7 @@
 lock "~> 3.10.2"
 
 set :application, "hparks"
-set :repo_url, "git@github.com:karthikrajk1992/hparks_new.git"
+set :repo_url, "https://github.com/karthikeyankkn/hparks_new.git"
 # set :deploy_to, '/home/ubuntu/hparks'
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
