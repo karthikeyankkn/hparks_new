@@ -86,7 +86,7 @@ def create
     			:body => @data.to_json,
     			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
   			});	
-  			binding.pry
+  			# binding.pry
 end
 def edit
 	# binding.pry
