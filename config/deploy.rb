@@ -10,9 +10,6 @@ set :rvm_ruby_version, '2.4.1'
 set :rvm_type, :system
 set :passenger_environment_variables, { :path => '/path-to-passenger/bin:$PATH' }
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
-
-set :branch, `git describe --tags $(git rev-list --tags --max-count=1)`.chomp
-
 # set :passenger_restart_command, '/path-to-passenger/bin/passenger-config restart-app'
 
 # Default branch is :master
