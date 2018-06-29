@@ -18,19 +18,19 @@ class PaymentMailer < ApplicationMailer
   end
   def lead_post(user)
   	 @user = user
-  	 mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<contact@getspini.com>,<sprasad@hrealty.com>,<pvijay@hrealty.com>" , subject: "Lead response"
+  	 mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<contact@getspini.com>,<sprasad@hrealty.com>,<pvijay@hrealty.com>" , subject: "Lead response"
   end
   def payment_response_confirmation(user,payments)
   	 @user = user
   	 @payments = payments
-  	 mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Lead Payment Details"
+  	 mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Lead Payment Details"
   end
   def camp_lead_response_mail(lead_details)
      @lead_details = lead_details
-     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<Pvijay@hrealty.com>,<Indiamediasem@gmail.com>,<Praveentkmenon@gmail.com>" , subject: "Hiranandani Parks - Google & Facebook Hiranandani Parks"
+     mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<Pvijay@hrealty.com>,<Indiamediasem@gmail.com>,<Praveentkmenon@gmail.com>" , subject: "Hiranandani Parks - Google & Facebook Hiranandani Parks"
   end
   def spini_camp_leads(lead_details)
      @lead_details = lead_details
-     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<sathesh@spinircle.com>,<anand.kumar@spinircle.com>" , subject: "Spini Campaign Leads"
+     mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<sathesh@spinircle.com>,<anand.kumar@spinircle.com>" , subject: "Spini Campaign Leads"
   end
 end
