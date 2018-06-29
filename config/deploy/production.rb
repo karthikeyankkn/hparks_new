@@ -70,7 +70,7 @@
 #   auth_methods: %w(publickey password)
 # }
 
-set :branch, "kknstaging"
+
 
 ##########staging code############hparks.getspini.in##################
 role :app, %w{ubuntu@54.169.244.126}
