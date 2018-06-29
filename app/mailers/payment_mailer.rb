@@ -31,6 +31,6 @@ class PaymentMailer < ApplicationMailer
   end
   def spini_camp_leads(lead_details)
      @lead_details = lead_details
-     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>" , subject: "Spini Campaign Leads"
+     mail to: "<karthikraj@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<sathesh@spinircle.com>,<anand.kumar@spinircle.com>" , subject: "Spini Campaign Leads"
   end
 end
