@@ -12,7 +12,7 @@ set :passenger_environment_variables, { :path => '/path-to-passenger/bin:$PATH' 
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
 # set :passenger_restart_command, '/path-to-passenger/bin/passenger-config restart-app'
 
-Default branch is :kknstaging
+# Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
