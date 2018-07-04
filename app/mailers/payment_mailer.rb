@@ -18,7 +18,9 @@ class PaymentMailer < ApplicationMailer
   end
   def lead_post(user)
   	 @user = user
-  	 mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<contact@getspini.com>,<sprasad@hrealty.com>,<pvijay@hrealty.com>" , subject: "Lead response"
+  	 # mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<contact@getspini.com>,<sprasad@hrealty.com>,<pvijay@hrealty.com>" , subject: "Lead response"
+     mail to: "<karthikeyan@spinircle.com>" , subject: "Lead response"
+
   end
   def payment_response_confirmation(user,payments)
   	 @user = user

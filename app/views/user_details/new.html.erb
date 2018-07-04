@@ -6,330 +6,364 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <section class="bg-about" style="margin-top: 50px;">
- <div class="row">
- 	<div class="col-xs-10 col-xs-offset-1">
- 		<% flash.each do |name,msg|%>
- 		<div class='alert alert-<%= "#{name}"%>'>
- 			<a href="#" class="close" data-dismiss='alert'>&#215;</a>
- 			<%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
- 		</div>
- 		<% end %>
- 	</div>
- </div>
-<div class="container" style="padding: 40px;">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="text-center">
-				<%= image_tag("line-top.png", :alt => "hiranandani-image") %>
-
-					<h1>Online Plot Booking</h1>
-					<!-- <h3>Oragadam, Chennai</h3> -->
-				<%= image_tag("line-bottom.png", :alt => "hiranandani-image") %>
-			</div>
-		</div>
-	</div>
-	<!--  <div class="col-md-6 border-right">
-		<div class="col-md-12 text-center">
-			<label style="display: block;">Layout</label>
-			<a class="position-alert" data-toggle="modal" data-target="#layoutImg"> <p class="large-window-alert">Click to see large in window</p><img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-layout-small.jpg" class="img_class_layout" width="500px" alt="hiranandani-image" />
- 		</div>
-		<div class="col-md-12 text-center">
-			<div class="row mobile-row1">
-				<a href="http://cdn.getspini.com/hira-img/Hparks-Available-Plots.pdf" target="_blank" class="btn custom-btn btn-lg" >Available Plots</a>
-			</div>
-		</div>
-	</div> -->
-	<div class="col-md-12">
-		<!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
-		<!-- <form method="POST" name="user_params" action="/create" validate> -->
-		<%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-		<div class="row">
-			<label class="book-plot-heading">Choose Plot*</label>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning custom-label">
-						<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/06.jpg" alt="..." class="img-thumbnail img-check">
-						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
-						
-						<%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 15 Lakhs" ,id: 'item6' , autocomplete: 'off'  %>
-					</label>
-				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning custom-label">
-						<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/01.jpg" alt="..." class="img-thumbnail img-check">
-						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
-						
-						<%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 30 Lakhs" ,id: 'item1' , autocomplete: 'off'  %>
-					</label>
-				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning custom-label">
-						<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/02.jpg" alt="..." class="img-thumbnail img-check">
-						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
-						
-						<%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 37.5 Lakhs" ,id: 'item2' , autocomplete: 'off'  %>
-					</label>
-				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning custom-label">
-						<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/03.jpg" alt="..." class="img-thumbnail img-check">
-						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
-						
-						<%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 45 Lakhs" ,id: 'item3' , autocomplete: 'off'  %>
-					</label>
-				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning custom-label">
-						<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/04.jpg" alt="..." class="img-thumbnail img-check">
-						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
-						
-						<%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 52.5 Lakhs" ,id: 'item4' , autocomplete: 'off'  %>
-					</label>
-				</div>
-				<div class="col-md-3 col-xs-6 box">
-					<label class="btn btn-warning custom-label">
-						<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/05.jpg" alt="..." class="img-thumbnail img-check">
-						<%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
-						
-						<%= f.radio_button :plot_details , "Plot size 2400 sq.ft for Rupees 60 Lakhs" ,id: 'item5' , autocomplete: 'off'  %>
-					</label>
-				</div>
-		</div>
-		<div class="row" style="padding:18px;">
-			<div class="col-md-8 col-md-offset-2">
-				<label>Name:</label>
-				<div class="input-group">
-				   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-				   <!-- <input id="name" type="text" class="form-control" name="name" placeholder="Email"> -->
-				   <%= f.text_field :name, class:'form-control input-md', placeholder:'Enter your name',required:true  %>
-				 </div>
-			</div>
-			<div class="col-md-8 col-md-offset-2 col-sm-4 col-xs-12">
-				<label>Contact Number:</label>
-				<div class="input-group">
-				   <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-				   <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
-				   <%= f.telephone_field :number, class:'form-control input-md', placeholder:'Enter your 10 digit no' ,required:true %>
-				 </div>
-			</div>
-			<div class="col-md-8 col-md-offset-2 col-sm-4 col-xs-12">
-				<label>Email id:</label>
-				<div class="input-group">
-				   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-				   <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
-				   <%= f.email_field :email, class:'form-control input-md', placeholder:'Enter your email',required:true %>
-				 </div>
-			</div>
-		</div>
-		<!--Hidden details for payments start -->
-
-			<!-- <div class="col-md-12 box" style="display: none;">
-				<input class="input-name" type="text" name="merchant_id" value="168876">
-				<input class="input-name" type="text" name="order_id" value="12346">
-				<input class="input-name" type="text" name="amount" value="30000">
-				<input type="text" id="text" name="currency" value="INR">
-				<input type="text" class="form-control" id="text" name="redirect_url" value="http://hparks.getspini.in/transaction/ccavResponseHandler">
-				<input type="text" class="form-control" id="text" name="redirect_url" value="http://hparks.getspini.in/transaction/ccavResponseHandler">
-				<input type="text" class="form-control" id="text" name="language" value="EN">
-			</div> -->
-		
-		<!--Hidden details for payments end -->
-		<div class="row" style="padding: 25px;">
-			<div class="col-md-12 box text-center">
-				<!-- <button class="btn btn-warning btn-lg" TYPE="submit" value="CheckOut" style="margin-top: 10px">Submit & Payment</button> -->
-				<%= f.submit "Submit",class:'btn custom-btn btn-lg'  %>
-			</div>
-		</div>
-	<!-- </form> -->
-	<% end %>
-	</div>
-	
-</div>
-
-<!-- Modal -->
-<div id="layoutImg" class="modal fade" role="dialog">
-  <div class="modal-dialog model-own">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <% flash.each do |name,msg|%>
+      <div class='alert alert-<%= "#{name}"%>'>
+        <a href="#" class="close" data-dismiss='alert'>&#215;</a>
+        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
       </div>
-      <div class="modal-body">
-        <div class="row">
-        	<img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-layout-big.jpg" alt="Hiranandani-plots" width="100%">
+      <% end %>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="col-md-6 hira-side-img">
+      <img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/02.jpg" alt="hiranandani-image" width="100%">
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <%= image_tag("line-top.png", :alt => "hiranandani-image") %>
+            <h1>Online Plot Booking</h1>
+            <!-- <h3>Oragadam, Chennai</h3> -->
+            <%= image_tag("line-bottom.png", :alt => "hiranandani-image") %>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-      	<div class="row">
-      		<div class="col-md-12 text-center">
-      			<a  href="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-layout-big.jpg" target="_blank" class="btn btn-default">Download</a>
-      		</div>
-      	</div>
-        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+      <!--  <div class="col-md-6 border-right">
+        <div class="col-md-12 text-center">
+          <label style="display: block;">Layout</label>
+          <a class="position-alert" data-toggle="modal" data-target="#layoutImg"> <p class="large-window-alert">Click to see large in window</p><img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-layout-small.jpg" class="img_class_layout" width="500px" alt="hiranandani-image" />
+          </div>
+        <div class="col-md-12 text-center">
+          <div class="row mobile-row1">
+            <a href="http://cdn.getspini.com/hira-img/Hparks-Available-Plots.pdf" target="_blank" class="btn custom-btn btn-lg" >Available Plots</a>
+          </div>
+        </div>
+        </div> -->
+      <div class="col-md-12">
+        <!-- <form method="POST" name="user_params" action="/transaction/ccavRequestHandler" validate> -->
+        <!-- <form method="POST" name="user_params" action="/create" validate> -->
+        <%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+        <div class="row">
+          <label class="book-plot-heading">Choose Plot*</label>
+          <div class="col-md-6 col-xs-6 box">
+            <label class="btn btn-warning custom-label">
+            <img medium-img="https://i.stack.imgur.com/Of2w5.jpg" large-img="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/06.jpg" alt="..." class="img-thumbnail img-check" >
+            <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
+            <%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 15 Lakhs" ,id: 'item6' , autocomplete: 'off'  %>
+            </label>
+          </div>
+          <div class="col-md-6 col-xs-6 box">
+            <label class="btn btn-warning custom-label">
+            <img medium-img="https://i.stack.imgur.com/Of2w5.jpg" large-img="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/01.jpg" alt="..." class="img-thumbnail img-check">
+            <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
+            <%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 30 Lakhs" ,id: 'item1' , autocomplete: 'off'  %>
+            </label>
+          </div>
+          <div class="col-md-6 col-xs-6 box">
+            <label class="btn btn-warning custom-label">
+            <img medium-img="https://i.stack.imgur.com/Of2w5.jpg" large-img="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/02.jpg" alt="..." class="img-thumbnail img-check">
+            <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
+            <%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 37.5 Lakhs" ,id: 'item2' , autocomplete: 'off'  %>
+            </label>
+          </div>
+          <div class="col-md-6 col-xs-6 box">
+            <label class="btn btn-warning custom-label">
+            <img medium-img="https://i.stack.imgur.com/Of2w5.jpg" large-img="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/03.jpg" alt="..." class="img-thumbnail img-check">
+            <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
+            <%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 45 Lakhs" ,id: 'item3' , autocomplete: 'off'  %>
+            </label>
+          </div>
+          <div class="col-md-6 col-xs-6 box">
+            <label class="btn btn-warning custom-label">
+            <img medium-img="https://i.stack.imgur.com/Of2w5.jpg" large-img="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/04.jpg" alt="..." class="img-thumbnail img-check">
+            <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
+            <%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 52.5 Lakhs" ,id: 'item4' , autocomplete: 'off'  %>
+            </label>
+          </div>
+          <div class="col-md-6 col-xs-6 box">
+            <label class="btn btn-warning custom-label">
+            <img medium-img="https://i.stack.imgur.com/Of2w5.jpg" large-img="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/05.jpg" alt="..." class="img-thumbnail img-check">
+            <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
+            <%= f.radio_button :plot_details , "Plot size 2400 sq.ft for Rupees 60 Lakhs" ,id: 'item5' , autocomplete: 'off'  %>
+            </label>
+          </div>
+        </div>
+        <div class="row" style="padding:18px;">
+          <div class="col-xs-12">
+            <label>Name:</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <!-- <input id="name" type="text" class="form-control" name="name" placeholder="Email"> -->
+              <%= f.text_field :name, class:'form-control input-md', placeholder:'Enter your name',required:true  %>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <label>Contact Number:</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+              <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
+              <%= f.telephone_field :number, class:'form-control input-md', placeholder:'Enter your 10 digit no' ,required:true %>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <label>Email id:</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
+              <%= f.email_field :email, class:'form-control input-md', placeholder:'Enter your email',required:true %>
+            </div>
+          </div>
+        </div>
+        <!--Hidden details for payments start -->
+        <!-- <div class="col-md-12 box" style="display: none;">
+          <input class="input-name" type="text" name="merchant_id" value="168876">
+          <input class="input-name" type="text" name="order_id" value="12346">
+          <input class="input-name" type="text" name="amount" value="30000">
+          <input type="text" id="text" name="currency" value="INR">
+          <input type="text" class="form-control" id="text" name="redirect_url" value="http://hparks.getspini.in/transaction/ccavResponseHandler">
+          <input type="text" class="form-control" id="text" name="redirect_url" value="http://hparks.getspini.in/transaction/ccavResponseHandler">
+          <input type="text" class="form-control" id="text" name="language" value="EN">
+          </div> -->
+        <!--Hidden details for payments end -->
+        <div class="row" style="padding: 25px;">
+          <div class="col-md-12 box text-center">
+            <!-- <button class="btn btn-warning btn-lg" TYPE="submit" value="CheckOut" style="margin-top: 10px">Submit & Payment</button> -->
+            <%= f.submit "Submit",class:'btn custom-btn btn-lg'  %>
+          </div>
+        </div>
+        <!-- </form> -->
+        <% end %>
       </div>
     </div>
-
   </div>
-</div>
+  <!-- Modal -->
+  <div id="layoutImg" class="modal fade" role="dialog">
+    <div class="modal-dialog model-own">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <img src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-layout-big.jpg" alt="Hiranandani-plots" width="100%">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <a  href="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-layout-big.jpg" target="_blank" class="btn btn-default">Download</a>
+            </div>
+          </div>
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Zoom in Modal -->
+<div id="zoomModal">
+  <img src="" alt="hiranandani-image" class="zoom-img" width="100%"/>
+  <i>X</i>
+</div>
+
+
 <style type="text/css">
-.book-plot-heading{
-	display: block;
-	padding-left: 30px;
-
-}
-.mobile-row1{
-	padding-top:  100px;
-}
-.model-own{
-	width:95%;
-}
-.custom-label{
-	position: relative;
-}
-.newimg{
-	display: none;
-	
-}
-.new_class{
-	display: block;
+  #zoomModal{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1031;
+    display: none;
+  }
+  #zoomModal i{
+    color: #fff;
+    font-size: 20px;
+    float: right;
+    background: #33333347;
+    padding: 10px 18px;
+    border-radius: 50%;
     position: absolute;
-    top: 17%;
-    left: 30%;
-    height: 80px;
-    width: 50%;
-}
-.check
-{
-    /*opacity:0.5;*/
-	/*color:#996;*/
-	/*background-color: #f0ad4e;
-    border-color: #eea236;*/
-   /* background-color: #ec971f;
-    border-color: #d58512;*/
-
-}
-.box{
-    margin-bottom:5px;
-}
-.input-name{
-	/*width: 313%;*/
-    background: transparent;
-    border-radius: 5%;
-    height: 60px;
-    font-size: 40px;
-}
-.hidden{
-	display:none !important;
-}
-.btn-warning {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent;
-    border: 5px solid transparent;
-}
-
-.custom-btn{
-	background-color: #f0ad4e;
-    border-color: #eea236;
-    color: #fff;
-}
-.img_class_layout{
-	opacity: 1;
-    height: 683px;
-}
-.img_class_layout:hover{
-	    opacity: 0.5;
-    filter: alpha(opacity=50);
+    z-index: 1032;
+    right: 15px;
+    top: 30px;
     cursor: pointer;
-    
-}
-.img_class_model_img{
-	 width: 100%;
-    height: auto;
-}
-.model-width{
-	width: 100%;
-}
-.border-right{
-	border-right: 2px dashed #f4ad33;
-}
-.large-window-alert{
-	display: none;
-	position: absolute;
-    top: 100%;
-    font-size: 30px;
-    color: #f4ad33;
-    left: 14%;
-}
-.position-alert {
-	position: relative;
-}
-@media only screen and (max-width: 500px) {
-	.new_class{
-		display: block;
-	    position: absolute;
-	    top: 12%;
-    	left: 30%;
-    	height: 41px;
-    	width: 50%;
-	}
-	.img_class_layout{
-		width: 240px;
-		height: auto;
-	}
-	.model-width{
-		width: 95%;
-	}
-	.large-window-alert{
-		font-size: 15px;
-	}
-	.mobile-row1{
-		padding-top: 5px;
-		padding-bottom: 10px;
-	}
-	.mobile-row1 > h3 {
-		font-size: 20px;
-	}
-	.mobile-row1 > a {
-		font-size: 15px;
-	}
-	.border-right{ 
-		border-bottom: 2px dashed #f4ad33;
-	}
-	.book-plot-heading{
-		 text-align: center;
-    padding-top: 20px;
-	     padding-left: 0px; 
-	}
-    text-align: center;
-    padding-top: 20px;
-}
-@media only screen and (max-width: 780px) { 
-	.border-right{
-	 border-right: none;
-	}
-}
+  }
+  .book-plot-heading{
+  display: block;
+  padding-left: 30px;
+  }
+  .mobile-row1{
+  padding-top:  100px;
+  }
+  .model-own{
+  width:95%;
+  }
+  .custom-label{
+  position: relative;
+  }
+  .newimg{
+  display: none;
+  }
+  .new_class{
+  display: block;
+  position: absolute;
+  top: 17%;
+  left: 30%;
+  height: 80px;
+  width: 50%;
+  }
+  .check
+  {
+  /*opacity:0.5;*/
+  /*color:#996;*/
+  /*background-color: #f0ad4e;
+  border-color: #eea236;*/
+  /* background-color: #ec971f;
+  border-color: #d58512;*/
+  }
+  .box{
+  margin-bottom:5px;
+  }
+  .input-name{
+  /*width: 313%;*/
+  background: transparent;
+  border-radius: 5%;
+  height: 60px;
+  font-size: 40px;
+  }
+  .hidden{
+  display:none !important;
+  }
+  .btn-warning {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+  border: 5px solid transparent;
+  }
+  .custom-btn{
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  color: #fff;
+  }
+  .img_class_layout{
+  opacity: 1;
+  height: 683px;
+  }
+  .img_class_layout:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: pointer;
+  }
+  .img_class_model_img{
+  width: 100%;
+  height: auto;
+  }
+  .model-width{
+  width: 100%;
+  }
+  .border-right{
+  border-right: 2px dashed #f4ad33;
+  }
+  .large-window-alert{
+  display: none;
+  position: absolute;
+  top: 100%;
+  font-size: 30px;
+  color: #f4ad33;
+  left: 14%;
+  }
+  .position-alert {
+  position: relative;
+  }
+  @media only screen and (max-width: 500px) {
+  .new_class{
+  display: block;
+  position: absolute;
+  top: 12%;
+  left: 30%;
+  height: 41px;
+  width: 50%;
+  }
+  .img_class_layout{
+  width: 240px;
+  height: auto;
+  }
+  .model-width{
+  width: 95%;
+  }
+  .large-window-alert{
+  font-size: 15px;
+  }
+  .mobile-row1{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  }
+  .mobile-row1 > h3 {
+  font-size: 20px;
+  }
+  .mobile-row1 > a {
+  font-size: 15px;
+  }
+  .border-right{ 
+  border-bottom: 2px dashed #f4ad33;
+  }
+  .book-plot-heading{
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 0px; 
+  }
+  text-align: center;
+  padding-top: 20px;
+  }
+  @media only screen and (max-width: 780px) { 
+  .border-right{
+  border-right: none;
+  }
+  }
 </style>
 <script type="text/javascript">
-	$(document).ready(function(e){
-    		
-			$('.img-check').click(function(e) {
-        $('.img-check')
-    		.siblings('input').prop('checked',false)
-    		.siblings('.new_class').removeClass('new_class').addClass('newimg');
-    	$(this)
-            .siblings('input').prop('checked',true)
-            .siblings('.newimg').removeClass('newimg').addClass('new_class');
+  $(document).ready(function(e) {
+
+    $('.img-check').click(function(e) {
+      $('.img-check')
+        .siblings('input').prop('checked', false)
+        .siblings('.new_class').removeClass('new_class').addClass('newimg');
+      $(this)
+        .siblings('input').prop('checked', true)
+        .siblings('.newimg').removeClass('newimg').addClass('new_class');
+
+        //script for medium size img
+        var medium_img = $(this).attr("src");
+        var large_img = $(this).attr("large-img");
+        $(".hira-side-img").children("img").attr("src", medium_img).attr("large-img", large_img);
+
     });
-			$('input[type=radio]').hide();
-		$('.img_class_layout').mouseover(function(){
-			$('.large-window-alert').show();
-		});
-		$('.img_class_layout').mouseout(function(){
-			$('.large-window-alert').hide();
-		});
-			
-	});
+    $('input[type=radio]').hide();
+    $('.img_class_layout').mouseover(function() {
+      $('.large-window-alert').show();
+    });
+    $('.img_class_layout').mouseout(function() {
+      $('.large-window-alert').hide();
+    });
+
+    ///////////////////////=====/////////////////////////////
+    $(".hira-side-img").click(function() {
+      debugger
+      var large_img = $(this).children("img").attr("large-img");
+      $(".zoom-img").attr("src", large_img);
+      $("#zoomModal").fadeIn();
+    });
+    $("#zoomModal i").click(function(){
+      $("#zoomModal").fadeOut();
+    });
+
+  });
 </script>
