@@ -7,7 +7,7 @@ set :repo_url, "https://github.com/karthikeyankkn/hparks_new.git"
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 set :rvm_ruby_version, '2.4.1'
-set :rvm_type, :system
+set :rvm_type, :auto
 set :passenger_environment_variables, { :path => '/path-to-passenger/bin:$PATH' }
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
 # set :passenger_restart_command, '/path-to-passenger/bin/passenger-config restart-app'
