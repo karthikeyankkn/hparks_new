@@ -51,7 +51,7 @@ def create
 							first_name: @user_detail[:name],
 							last_name: "",
 							email: @user_detail[:email],
-							phone: @user_detail[:number]
+							phone: "+91#{@user_detail[:number]}"
 							# project_id: "56659cb03bb2f8f46900001b"
 							},
 						note:{
@@ -81,11 +81,12 @@ def create
 					# sell_do: { campaign: { srd: "5b2793ea923d4a68368cb3b6" }}
 					}
 				}
-			# @response = HTTParty.post('https://app.sell.do/api/leads/create',
-			# { 
-   #  			:body => @data.to_json,
-   #  			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
-  	# 		});	
+				debugger
+			@response = HTTParty.post('https://app.sell.do/api/leads/create',
+			{ 
+    			:body => @data.to_json,
+    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  			});	
   			# binding.pry
 end
 def edit
