@@ -12,16 +12,16 @@ class CampLeadsController < ApplicationController
 			@filterLeads = UserDetail.where("created_at between (?) and (?)",@start_date ,@end_date )
 		else
 			@camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
-			if params[:source] == "google"
-				@filterLeads = @camp_leads.where(source:"google")
-			elsif params[:source] == "facebook"
-				@filterLeads = @camp_leads.where(source:"facebook")
-			elsif params[:source] == "spini"
-					@test1 = @camp_leads.where.not(source:"google")
-					@test2 = @test1.where.not(source:"facebook")
+			if params[:from] == "google"
+				@filterLeads = @camp_leads.where(from:"google")
+			elsif params[:from] == "facebook"
+				@filterLeads = @camp_leads.where(from:"facebook")
+			elsif params[:from] == "spini"
+					@test1 = @camp_leads.where.not(from:"google")
+					@test2 = @test1.where.not(from:"facebook")
 					@filterLeads = @test2
 					# @tests.each do |testing|
-					# if testing[:source] != "google" && testing[:source] != "facebook"
+					# if testing[:from] != "google" && testing[:from] != "facebook"
 						# @filterLeads.push(testing)
 					# end
 			end
@@ -41,7 +41,7 @@ class CampLeadsController < ApplicationController
 
 		if @camp_lead.save
 			# binding.pry
-			if @camp_lead[:source] != "google" && @camp_lead[:source] != "facebook"
+			if @camp_lead[:from] != "google" && @camp_lead[:from] != "facebook"
 				# binding.pry
 				PaymentMailer.spini_camp_leads(@camp_lead).deliver_later
 				render json: @camp_lead, status: :created
@@ -53,7 +53,7 @@ class CampLeadsController < ApplicationController
 			render json: @camp_lead.errors, status: :unprocessable_entity
 		end
 		# binding.pry
-		if @camp_lead.source == "facebook"
+		if @camp_lead.from == "facebook"
 		@data = { api_key: "1bd54866736339b8f49efe4cbd3404b8",
 				sell_do: {
 					form: {
@@ -97,7 +97,7 @@ class CampLeadsController < ApplicationController
     			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
   				});
 
-			elsif @camp_lead.source == "google"
+			elsif @camp_lead.from == "google"
 				@data = { api_key: "1bd54866736339b8f49efe4cbd3404b8",
 				sell_do: {
 					form: {
@@ -201,6 +201,6 @@ class CampLeadsController < ApplicationController
 
 	def camp_lead_params
 		# binding.pry
-		params.require(:camp_lead).permit(:source,:name,:email,:phone_number,:queries ,:plot_size)
+		params.require(:camp_lead).permit(:from,:name,:email,:phone_number,:queries ,:plot_size)
 	end
 end
