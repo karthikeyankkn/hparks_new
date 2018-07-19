@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :homes
-	# root :to => "user_details#new"
+	root :to => "user_details#new"
 	# root :to => "user_details#new" use this for paymment gateway
 	# match 'Plot-booking' => 'user_details#new', :as => :root
 	get "Plot-booking", to: "user_details#new"
