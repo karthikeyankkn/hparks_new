@@ -25,3 +25,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 config/database.yml
+
+#ignore log and cahe files
+log/development.log
+tmp/cache/bootsnap-load-path-cache
