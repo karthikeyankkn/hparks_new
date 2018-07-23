@@ -18,8 +18,8 @@ class PaymentMailer < ApplicationMailer
   end
   def lead_post(user)
   	 @user = user
-  	 # mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<contact@getspini.com>,<sprasad@hrealty.com>,<pvijay@hrealty.com>" , subject: "Lead response"
-     mail to: "<karthikeyan@spinircle.com>" , subject: "Lead response"
+  	 mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<contact@getspini.com>,<sprasad@hrealty.com>,<pvijay@hrealty.com>" , subject: "Lead response"
+     # mail to: "<karthikeyan@spinircle.com>" , subject: "Lead response"
 
   end
   def payment_response_confirmation(user,payments)
@@ -34,5 +34,10 @@ class PaymentMailer < ApplicationMailer
   def spini_camp_leads(lead_details)
      @lead_details = lead_details
      mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<sathesh@spinircle.com>,<anand.kumar@spinircle.com>" , subject: "Spini Campaign Leads"
+  end
+  def spini_enquire_leads(lead_details)
+     @lead_details = lead_details
+     mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<sathesh@spinircle.com>,<anand.kumar@spinircle.com>" , subject: "Spini Campaign Leads"
+      # mail to: "<karthikeyan@spinircle.com>" , subject: "Lead from Enquire Form"
   end
 end

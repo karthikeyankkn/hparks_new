@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_103357) do
+ActiveRecord::Schema.define(version: 2018_07_23_063924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "camp_leads", force: :cascade do |t|
-    t.string "from"
+    t.string "source"
     t.string "name"
     t.string "email"
     t.string "plot_size"
@@ -26,10 +26,11 @@ ActiveRecord::Schema.define(version: 2018_06_19_103357) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "enquires", force: :cascade do |t|
+  create_table "enquire_leads", force: :cascade do |t|
+    t.string "from"
     t.string "name"
     t.string "email"
-    t.bigint "number"
+    t.string "phone_number"
     t.text "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -111,7 +112,6 @@ ActiveRecord::Schema.define(version: 2018_06_19_103357) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "full_message"
-    t.bigint "order_id"
   end
 
 end

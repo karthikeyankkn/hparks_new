@@ -14717,3 +14717,894 @@ Processing by UserDetailsController#thankyou as HTML
 Completed 200 OK in 132ms (Views: 80.4ms | ActiveRecord: 0.7ms)
 
 
+  [1m[36mCampLead Load (5.8ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to EnquireLeads (20180723063924)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (61.4ms)[0m  [1m[35mCREATE TABLE "enquire_leads" ("id" bigserial primary key, "from" character varying, "name" character varying, "email" character varying, "phone_number" character varying, "comments" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180723063924_enquire_leads.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180723063924"]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (22.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mEnquireLead Load (5.8ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnquireLead Create (2.1ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "karthikeyan"], ["created_at", "2018-07-23 06:54:30.083837"], ["updated_at", "2018-07-23 06:54:30.083837"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEnquireLead Load (0.5ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" ORDER BY "enquire_leads"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnquireLead Create (0.8ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "enquire_form"], ["name", "karthikeyan"], ["email", "kkn@hotmail.com"], ["phone_number", "9393939393"], ["created_at", "2018-07-23 07:01:09.616163"], ["updated_at", "2018-07-23 07:01:09.616163"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnquireLead Create (0.5ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "enquire_form"], ["name", "karthikeyan"], ["email", "kkn@hotmail.com"], ["phone_number", "9393939393"], ["created_at", "2018-07-23 07:01:32.517614"], ["updated_at", "2018-07-23 07:01:32.517614"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to CreateEnquireLeads (20180723065206)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (28.9ms)[0m  [1m[35mCREATE TABLE "enquire_leads" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180723065206_create_enquire_leads.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to CreateEnquireLeads (20180723065206)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "enquire_leads" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180723065206_create_enquire_leads.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnquireLead Create (0.7ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "enquire_form"], ["name", "karthikeyan"], ["email", "kkn@hotmail.com"], ["phone_number", "9393939393"], ["created_at", "2018-07-23 07:17:52.855439"], ["updated_at", "2018-07-23 07:17:52.855439"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEnquireLead Load (1.2ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateEnquireLeads (20180723065206)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "enquire_leads" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180723065206_create_enquire_leads.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateEnquireLeads (20180723065206)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "enquire_leads" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180723065206_create_enquire_leads.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+Started GET "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 12:53:18 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/Plot-booking/enquire_lead/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 12:53:35 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"test", "name"=>"kkn", "email"=>"kkn1@gmail.com", "phone_number"=>"8056756218", "comment"=>"have some queries"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.0) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.0) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.0) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 12:56:33 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"from"=>"test", "name"=>"kkn", "email"=>"kkn1@gmail.com", "phone_number"=>"8056756218", "comment"=>"have some queries", "enquire_lead"=>{"from"=>"test", "name"=>"kkn", "email"=>"kkn1@gmail.com", "phone_number"=>"8056756218"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.0) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.0) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.0) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:01:57 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"test", "name"=>"kkn", "email"=>"kkn1@gmail.com", "phone_number"=>"8056756218", "comment"=>"have some queries"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[36mEnquireLead Create (0.7ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "test"], ["name", "kkn"], ["email", "kkn1@gmail.com"], ["phone_number", "8056756218"], ["created_at", "2018-07-23 07:31:57.715137"], ["updated_at", "2018-07-23 07:31:57.715137"]]
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+Completed 201 Created in 25ms (Views: 2.3ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:03:17 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"kkntest", "name"=>"kkn", "email"=>"kkn1@gmail.com", "phone_number"=>"8056756218", "comment"=>"have some queries"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[36mEnquireLead Create (0.4ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "kkntest"], ["name", "kkn"], ["email", "kkn1@gmail.com"], ["phone_number", "8056756218"], ["created_at", "2018-07-23 07:33:17.221676"], ["updated_at", "2018-07-23 07:33:17.221676"]]
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+Completed 201 Created in 21ms (Views: 0.6ms | ActiveRecord: 9.7ms)
+
+
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:03:25 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"", "name"=>"kkn", "email"=>"kkn1@gmail.com", "phone_number"=>"8056756218", "comment"=>"have some queries"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+Completed 400 Bad Request in 8ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:03:36 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"kkntest", "name"=>"kkn", "email"=>"kkn1@gmail.com", "phone_number"=>"056756218", "comment"=>"have some queries"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+Completed 400 Bad Request in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:04:31 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"kkntest", "name"=>"baskar", "email"=>"baskar@spinircle.com", "phone_number"=>"8056756218", "comment"=>"Need some good homes for live"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[36mEnquireLead Create (0.6ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "kkntest"], ["name", "baskar"], ["email", "baskar@spinircle.com"], ["phone_number", "8056756218"], ["created_at", "2018-07-23 07:34:31.434764"], ["updated_at", "2018-07-23 07:34:31.434764"]]
+  ↳ app/controllers/enquire_leads_controller.rb:7
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:7
+Completed 201 Created in 9ms (Views: 0.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:16:55 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"kkntestwith mail", "name"=>"baskar", "email"=>"baskar@spinircle.com", "phone_number"=>"8056756218", "comment"=>"Need some good homes for live"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (0.8ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "kkntestwith mail"], ["name", "baskar"], ["email", "baskar@spinircle.com"], ["phone_number", "8056756218"], ["created_at", "2018-07-23 07:46:55.980270"], ["updated_at", "2018-07-23 07:46:55.980270"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 4cfc78c1-b3ca-49ce-8d92-efd8400698cb) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc323b66230 @uri=#<URI::GID gid://hparks/EnquireLead/8>>
+Completed 201 Created in 3189ms (Views: 0.7ms | ActiveRecord: 13.7ms)
+
+
+  [1m[36mEnquireLead Load (0.7ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [4cfc78c1-b3ca-49ce-8d92-efd8400698cb] Performing ActionMailer::DeliveryJob (Job ID: 4cfc78c1-b3ca-49ce-8d92-efd8400698cb) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc3238004d8 @uri=#<URI::GID gid://hparks/EnquireLead/8>>
+[ActiveJob] [ActionMailer::DeliveryJob] [4cfc78c1-b3ca-49ce-8d92-efd8400698cb] PaymentMailer#spini_enquire_leads: processed outbound mail in 55.7ms
+[ActiveJob] [ActionMailer::DeliveryJob] [4cfc78c1-b3ca-49ce-8d92-efd8400698cb] Error performing ActionMailer::DeliveryJob (Job ID: 4cfc78c1-b3ca-49ce-8d92-efd8400698cb) from Async(mailers) in 61.41ms: ActionView::MissingTemplate (Missing template payment_mailer/spini_enquire_leads with "mailer". Searched in:
+  * "payment_mailer"
+):
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:952:in `each_template'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:940:in `collect_responses_from_templates'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:925:in `collect_responses'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:828:in `mail'
+/Users/karthikeyan/Documents/rails_projects/hparks_new/app/mailers/payment_mailer.rb:41:in `spini_enquire_leads'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:194:in `process_action'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:98:in `run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:134:in `process'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:25:in `block in process'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:24:in `process'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionview-5.2.0/lib/action_view/rendering.rb:32:in `process'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:607:in `block in process'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:606:in `process'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:123:in `block in processed_mailer'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:122:in `tap'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:122:in `processed_mailer'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.2.0/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:27:25 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"kkn-test with mail 1", "name"=>"baskar", "email"=>"baskar@spinircle.com", "phone_number"=>"8056756218", "comment"=>"Need some good homes for live"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (0.9ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "kkn-test with mail 1"], ["name", "baskar"], ["email", "baskar@spinircle.com"], ["phone_number", "8056756218"], ["created_at", "2018-07-23 07:57:25.781788"], ["updated_at", "2018-07-23 07:57:25.781788"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 8890d6ff-cfbb-429c-ad5c-852733b28517) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc321355908 @uri=#<URI::GID gid://hparks/EnquireLead/9>>
+  [1m[36mEnquireLead Load (1.1ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [8890d6ff-cfbb-429c-ad5c-852733b28517] Performing ActionMailer::DeliveryJob (Job ID: 8890d6ff-cfbb-429c-ad5c-852733b28517) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc32382b750 @uri=#<URI::GID gid://hparks/EnquireLead/9>>
+[ActiveJob] [ActionMailer::DeliveryJob] [8890d6ff-cfbb-429c-ad5c-852733b28517]   Rendering payment_mailer/spini_enquire_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [8890d6ff-cfbb-429c-ad5c-852733b28517]   Rendered payment_mailer/spini_enquire_leads.html.erb within layouts/mailer (0.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8890d6ff-cfbb-429c-ad5c-852733b28517] PaymentMailer#spini_enquire_leads: processed outbound mail in 84.3ms
+Completed 201 Created in 3784ms (Views: 0.6ms | ActiveRecord: 2.5ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [8890d6ff-cfbb-429c-ad5c-852733b28517] Sent mail to karthikeyan@spinircle.com (3846.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8890d6ff-cfbb-429c-ad5c-852733b28517] Date: Mon, 23 Jul 2018 13:27:25 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b558a65dd150_b483fe191db2fb024684@KarthikeyansAir.mail>
+Subject: Lead from Enquire Form
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: kkn-test with mail 1</h4>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>baskar</td>
+    <td>baskar@spinircle.com</td>
+    <td>8056756218</td>
+   <td></td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [8890d6ff-cfbb-429c-ad5c-852733b28517] Performed ActionMailer::DeliveryJob (Job ID: 8890d6ff-cfbb-429c-ad5c-852733b28517) from Async(mailers) in 3931.87ms
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:32:48 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"spini-enquire-form", "name"=>"SpiniAdmin", "email"=>"karthikeyan@spinircle.com", "phone_number"=>"9090909090", "comment"=>"something"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (0.7ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "spini-enquire-form"], ["name", "SpiniAdmin"], ["email", "karthikeyan@spinircle.com"], ["phone_number", "9090909090"], ["created_at", "2018-07-23 08:02:48.908291"], ["updated_at", "2018-07-23 08:02:48.908291"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 7eee2250-f8e4-4f83-a090-e299f2c03aac) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc3205f44d0 @uri=#<URI::GID gid://hparks/EnquireLead/10>>
+  [1m[36mEnquireLead Load (0.8ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [7eee2250-f8e4-4f83-a090-e299f2c03aac] Performing ActionMailer::DeliveryJob (Job ID: 7eee2250-f8e4-4f83-a090-e299f2c03aac) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc31f3556d0 @uri=#<URI::GID gid://hparks/EnquireLead/10>>
+[ActiveJob] [ActionMailer::DeliveryJob] [7eee2250-f8e4-4f83-a090-e299f2c03aac]   Rendering payment_mailer/spini_enquire_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [7eee2250-f8e4-4f83-a090-e299f2c03aac]   Rendered payment_mailer/spini_enquire_leads.html.erb within layouts/mailer (0.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [7eee2250-f8e4-4f83-a090-e299f2c03aac] PaymentMailer#spini_enquire_leads: processed outbound mail in 32.3ms
+Completed 201 Created in 3014ms (Views: 0.6ms | ActiveRecord: 2.1ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [7eee2250-f8e4-4f83-a090-e299f2c03aac] Sent mail to karthikeyan@spinircle.com (3013.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [7eee2250-f8e4-4f83-a090-e299f2c03aac] Date: Mon, 23 Jul 2018 13:32:48 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b558ba8ebef8_b483fe191db2fb024727@KarthikeyansAir.mail>
+Subject: Lead from Enquire Form
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: spini-enquire-form</h4>
+
+
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>SpiniAdmin</td>
+    <td>karthikeyan@spinircle.com</td>
+    <td>9090909090</td>
+   <td></td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [7eee2250-f8e4-4f83-a090-e299f2c03aac] Performed ActionMailer::DeliveryJob (Job ID: 7eee2250-f8e4-4f83-a090-e299f2c03aac) from Async(mailers) in 3047.22ms
+Started GET "/" for 127.0.0.1 at 2018-07-23 13:38:26 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (774.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 984ms (Views: 955.8ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 13:43:49 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"spini-enquire-form", "name"=>"", "email"=>"karthikeyan@spinircle.com", "phone_number"=>"9090909090", "comment"=>"something"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 20ms (Views: 0.2ms | ActiveRecord: 7.8ms)
+
+
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:06:21 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"", "email"=>"", "phone_number"=>"", "comment"=>""}}
+Unpermitted parameter: :comment
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 9ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:08:12 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"karthikeyan", "email"=>"kknmalar2@gmail.com", "phone_number"=>"8148303123", "comment"=>"I need plot for 1500sqft.  Pleast let me know the detailed information about the plots are available.\n"}}
+Unpermitted parameter: :comment
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (3.3ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["from", "Spini-Enquire-Form"], ["name", "karthikeyan"], ["email", "kknmalar2@gmail.com"], ["phone_number", "8148303123"], ["created_at", "2018-07-23 10:38:12.571239"], ["updated_at", "2018-07-23 10:38:12.571239"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc3216cdab8 @uri=#<URI::GID gid://hparks/EnquireLead/11>>
+Completed 201 Created in 115ms (Views: 3.8ms | ActiveRecord: 11.2ms)
+
+
+  [1m[36mEnquireLead Load (0.8ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f] Performing ActionMailer::DeliveryJob (Job ID: a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc325ab8c00 @uri=#<URI::GID gid://hparks/EnquireLead/11>>
+[ActiveJob] [ActionMailer::DeliveryJob] [a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f]   Rendering payment_mailer/spini_enquire_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f]   Rendered payment_mailer/spini_enquire_leads.html.erb within layouts/mailer (0.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f] PaymentMailer#spini_enquire_leads: processed outbound mail in 40.8ms
+[ActiveJob] [ActionMailer::DeliveryJob] [a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f] Sent mail to karthikeyan@spinircle.com (3950.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f] Date: Mon, 23 Jul 2018 16:08:12 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b55b014b81dc_b483fe191db2fb0248e5@Karthikeyans-MacBook-Air.local.mail>
+Subject: Lead from Enquire Form
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Spini-Enquire-Form</h4>
+
+
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>karthikeyan</td>
+    <td>kknmalar2@gmail.com</td>
+    <td>8148303123</td>
+   <td></td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f] Performed ActionMailer::DeliveryJob (Job ID: a9d7b7fb-3c9c-4305-8ec2-21e651d0c41f) from Async(mailers) in 3992.85ms
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:30:20 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"spinions test", "email"=>"email@gmail.com", "phone_number"=>"9303030303", "comments"=>"ksdfjlksdjflk lksdjflkjsdkfjsd dsf sdf "}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (0.9ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["from", "Spini-Enquire-Form"], ["name", "spinions test"], ["email", "email@gmail.com"], ["phone_number", "9303030303"], ["comments", "ksdfjlksdjflk lksdjflkjsdkfjsd dsf sdf "], ["created_at", "2018-07-23 11:00:21.237143"], ["updated_at", "2018-07-23 11:00:21.237143"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: bf546d21-9f76-43cd-b64c-5b626fabeed3) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc31febb0b0 @uri=#<URI::GID gid://hparks/EnquireLead/12>>
+Completed 201 Created in 65ms (Views: 0.8ms | ActiveRecord: 13.6ms)
+
+
+  [1m[36mEnquireLead Load (0.5ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [bf546d21-9f76-43cd-b64c-5b626fabeed3] Performing ActionMailer::DeliveryJob (Job ID: bf546d21-9f76-43cd-b64c-5b626fabeed3) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc325b5fd20 @uri=#<URI::GID gid://hparks/EnquireLead/12>>
+[ActiveJob] [ActionMailer::DeliveryJob] [bf546d21-9f76-43cd-b64c-5b626fabeed3]   Rendering payment_mailer/spini_enquire_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [bf546d21-9f76-43cd-b64c-5b626fabeed3]   Rendered payment_mailer/spini_enquire_leads.html.erb within layouts/mailer (0.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [bf546d21-9f76-43cd-b64c-5b626fabeed3] PaymentMailer#spini_enquire_leads: processed outbound mail in 44.5ms
+[ActiveJob] [ActionMailer::DeliveryJob] [bf546d21-9f76-43cd-b64c-5b626fabeed3] Sent mail to karthikeyan@spinircle.com (3376.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [bf546d21-9f76-43cd-b64c-5b626fabeed3] Date: Mon, 23 Jul 2018 16:30:21 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b55b5455d9a8_b483fe191db2fb024922@Karthikeyans-MacBook-Air.local.mail>
+Subject: Lead from Enquire Form
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Spini-Enquire-Form</h4>
+
+
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>spinions test</td>
+    <td>email@gmail.com</td>
+    <td>9303030303</td>
+   <td>ksdfjlksdjflk lksdjflkjsdkfjsd dsf sdf </td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [bf546d21-9f76-43cd-b64c-5b626fabeed3] Performed ActionMailer::DeliveryJob (Job ID: bf546d21-9f76-43cd-b64c-5b626fabeed3) from Async(mailers) in 3428.47ms
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:31:10 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"", "email"=>"", "phone_number"=>"", "comments"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:31:34 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"", "email"=>"", "phone_number"=>"", "comments"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 9ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:32:10 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"front end test", "email"=>"mail@gmail.com", "phone_number"=>"3332222233", "comments"=>"sdfsdfsdf"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (1.3ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("from", "name", "email", "phone_number", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["from", "Spini-Enquire-Form"], ["name", "front end test"], ["email", "mail@gmail.com"], ["phone_number", "3332222233"], ["comments", "sdfsdfsdf"], ["created_at", "2018-07-23 11:02:10.080477"], ["updated_at", "2018-07-23 11:02:10.080477"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: c562b249-9cb4-4985-8a52-42aed7a6d801) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc32165c430 @uri=#<URI::GID gid://hparks/EnquireLead/13>>
+Completed 201 Created in 13ms (Views: 0.7ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mEnquireLead Load (0.8ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [c562b249-9cb4-4985-8a52-42aed7a6d801] Performing ActionMailer::DeliveryJob (Job ID: c562b249-9cb4-4985-8a52-42aed7a6d801) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007fc321615418 @uri=#<URI::GID gid://hparks/EnquireLead/13>>
+[ActiveJob] [ActionMailer::DeliveryJob] [c562b249-9cb4-4985-8a52-42aed7a6d801]   Rendering payment_mailer/spini_enquire_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [c562b249-9cb4-4985-8a52-42aed7a6d801]   Rendered payment_mailer/spini_enquire_leads.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [c562b249-9cb4-4985-8a52-42aed7a6d801] PaymentMailer#spini_enquire_leads: processed outbound mail in 49.7ms
+[ActiveJob] [ActionMailer::DeliveryJob] [c562b249-9cb4-4985-8a52-42aed7a6d801] Sent mail to karthikeyan@spinircle.com (3294.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [c562b249-9cb4-4985-8a52-42aed7a6d801] Date: Mon, 23 Jul 2018 16:32:10 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b55b5b2279c9_b483fe191db2fb02503@Karthikeyans-MacBook-Air.local.mail>
+Subject: Lead from Enquire Form
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Spini-Enquire-Form</h4>
+
+
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>front end test</td>
+    <td>mail@gmail.com</td>
+    <td>3332222233</td>
+   <td>sdfsdfsdf</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [c562b249-9cb4-4985-8a52-42aed7a6d801] Performed ActionMailer::DeliveryJob (Job ID: c562b249-9cb4-4985-8a52-42aed7a6d801) from Async(mailers) in 3345.42ms
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:33:09 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"", "email"=>"", "phone_number"=>"", "comments"=>""}}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 10ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:34:33 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"front end test", "email"=>"", "phone_number"=>"", "comments"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 7ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:34:49 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"front end test", "email"=>"mail@gmail.com", "phone_number"=>"3333", "comments"=>"3322"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "//Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-23 16:37:06 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"from"=>"Spini-Enquire-Form", "name"=>"", "email"=>"", "phone_number"=>"", "comments"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+Completed 400 Bad Request in 9ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
