@@ -38,7 +38,7 @@ Rails.application.routes.draw do
 	post "Plot-booking/transaction/ccavResponseHandler",to: "payments#responseHandler"
 	# resources :camp_leads
 	post "/camp_lead/new", to: "camp_leads#create"
-	post "Plot-booking/enquire_lead/new", to: "enquire_leads#create"
+	post "/enquire_lead/new", to: "enquire_leads#create"
 	get "Plot-booking/report-data", to: "camp_leads#index"
 
   # resources :payments

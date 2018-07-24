@@ -40,7 +40,7 @@ def create
 		@user_detail.errors.full_messages.each do |key|
 			flash[:warning] = key
 		end
-		# flash[:warning] = "Contact number should be minimum 10 to maximum 15 digits"
+		# flash[:warning] = "Contact phone_number should be minimum 10 to maximum 15 digits"
 		redirect_to action: 'new'
 	end
 	
@@ -51,7 +51,7 @@ def create
 							first_name: @user_detail[:name],
 							last_name: "",
 							email: @user_detail[:email],
-							phone: "+91#{@user_detail[:number]}"
+							phone: "+91#{@user_detail[:phone_number]}"
 							# project_id: "56659cb03bb2f8f46900001b"
 							},
 						note:{
@@ -99,7 +99,7 @@ def thankyou
 end
 private
   def user_detail_params
-    params.require(:user_detail).permit(:name, :email, :plot_details,:number,:payment_status,:description)
+    params.require(:user_detail).permit(:name, :email, :plot_details,:phone_number,:payment_status,:description)
   end	
 
 end

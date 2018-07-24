@@ -2,7 +2,7 @@ class CampLead < ApplicationRecord
 	# include HTTParty
 	validates :phone_number,:presence => true,
                  :length => { :minimum => 10, :maximum => 15 }
-    validates :from,:presence => true
+    validates :source,:presence => true
     validates :name,:presence => true
     VALID_EMAIL_REGEX =  /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true,

@@ -15608,3 +15608,769 @@ Processing by EnquireLeadsController#create as */*
 Completed 400 Bad Request in 9ms (Views: 0.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-07-24 15:21:56 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (373.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 662ms (Views: 621.8ms | ActiveRecord: 4.5ms)
+
+
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to ModifyColumn (20180724103600)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (31.5ms)[0m  [1m[35mALTER TABLE "camp_leads" RENAME COLUMN "from" TO "source"[0m
+  ↳ db/migrate/20180724103600_modify_column.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to ModifyColumn (20180724103600)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (29.5ms)[0m  [1m[35mALTER TABLE "enquire_leads" RENAME COLUMN "from" TO "source"[0m
+  ↳ db/migrate/20180724103600_modify_column.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180724103600"]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (9.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mCampLead Load (2.7ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCampLead Create (4.0ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["source", "facebook"], ["name", "kkndbtest"], ["email", "test@gmail.com"], ["plot_size", "800sqft"], ["phone_number", "9095000950"], ["queries", "test lead"], ["created_at", "2018-07-24 10:51:05.097105"], ["updated_at", "2018-07-24 10:51:05.097105"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCampLead Create (0.4ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["source", "facebook"], ["name", "kkndbtest"], ["email", "test@gmail.com"], ["plot_size", "800sqft"], ["phone_number", "9095000950"], ["queries", "test lead"], ["created_at", "2018-07-24 10:54:13.638930"], ["updated_at", "2018-07-24 10:54:13.638930"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/Plot-booking/camp_lead/new" for 127.0.0.1 at 2018-07-24 16:34:25 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/Plot-booking/camp_lead/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/camp_lead/new" for 127.0.0.1 at 2018-07-24 16:35:23 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"from"=>"spini-campaign-5", "name"=>"vvn", "email"=>"email@gmail.com", "phone_number"=>"8393839393", "queries"=>"nothing", "plot_size"=>"1500sqft"}}
+Unpermitted parameter: :from
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:42
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/camp_leads_controller.rb:42
+Completed 422 Unprocessable Entity in 3135ms (Views: 0.3ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/camp_lead/new" for 127.0.0.1 at 2018-07-24 16:36:44 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"source"=>"facebook", "name"=>"Praveen test", "email"=>"email@gmail.com", "phone_number"=>"8393839393", "queries"=>"nothing", "plot_size"=>"1500sqft"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:42
+  [1m[36mCampLead Create (0.9ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["source", "facebook"], ["name", "Praveen test"], ["email", "email@gmail.com"], ["plot_size", "1500sqft"], ["phone_number", "8393839393"], ["queries", "nothing"], ["created_at", "2018-07-24 11:06:44.738329"], ["updated_at", "2018-07-24 11:06:44.738329"]]
+  ↳ app/controllers/camp_leads_controller.rb:42
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:42
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: bc4ab173-48f5-4461-9b2d-accd76a71e02) to Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007f88b247d690 @uri=#<URI::GID gid://hparks/CampLead/10>>
+  [1m[36mCampLead Load (0.8ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [bc4ab173-48f5-4461-9b2d-accd76a71e02] Performing ActionMailer::DeliveryJob (Job ID: bc4ab173-48f5-4461-9b2d-accd76a71e02) from Async(mailers) with arguments: "PaymentMailer", "camp_lead_response_mail", "deliver_now", #<GlobalID:0x007f88b23cfe00 @uri=#<URI::GID gid://hparks/CampLead/10>>
+[ActiveJob] [ActionMailer::DeliveryJob] [bc4ab173-48f5-4461-9b2d-accd76a71e02]   Rendering payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [bc4ab173-48f5-4461-9b2d-accd76a71e02]   Rendered payment_mailer/camp_lead_response_mail.html.erb within layouts/mailer (0.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [bc4ab173-48f5-4461-9b2d-accd76a71e02] PaymentMailer#camp_lead_response_mail: processed outbound mail in 90.5ms
+Completed 201 Created in 2924ms (Views: 1.9ms | ActiveRecord: 2.6ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [bc4ab173-48f5-4461-9b2d-accd76a71e02] Sent mail to karthikeyan@spinircle.com (3603.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [bc4ab173-48f5-4461-9b2d-accd76a71e02] Date: Tue, 24 Jul 2018 16:36:45 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b5708452e84e_12323fc45923e9b8254dc@KarthikeyansAir.mail>
+Subject: google and fb
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: facebook</h4>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+  </tr>
+  <tr>
+    <td>Praveen test</td>
+    <td>email@gmail.com</td>
+    <td>8393839393</td>
+   <td>1500sqft</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [bc4ab173-48f5-4461-9b2d-accd76a71e02] Performed ActionMailer::DeliveryJob (Job ID: bc4ab173-48f5-4461-9b2d-accd76a71e02) from Async(mailers) in 3695.95ms
+  [1m[36mEnquireLead Load (2.1ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnquireLead Create (2.6ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("source", "name", "email", "phone_number", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["source", "spini-camp"], ["name", "praveen"], ["email", "praveen@gamil.com"], ["phone_number", "9090909090"], ["comments", "test"], ["created_at", "2018-07-24 11:20:16.330126"], ["updated_at", "2018-07-24 11:20:16.330126"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-24 16:53:23 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"source"=>"spini_camp", "name"=>"Praveen test 2", "email"=>"email@gmail.com", "phone_number"=>"8393839393", "comments"=>"nothing"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (0.8ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("source", "name", "email", "phone_number", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["source", "spini_camp"], ["name", "Praveen test 2"], ["email", "email@gmail.com"], ["phone_number", "8393839393"], ["comments", "nothing"], ["created_at", "2018-07-24 11:23:34.076966"], ["updated_at", "2018-07-24 11:23:34.076966"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 033cd973-917d-48a9-95ef-7eaf2c07ae71) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007f88b1812018 @uri=#<URI::GID gid://hparks/EnquireLead/15>>
+Completed 201 Created in 3002ms (Views: 0.5ms | ActiveRecord: 17.3ms)
+
+
+  [1m[36mEnquireLead Load (0.7ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [033cd973-917d-48a9-95ef-7eaf2c07ae71] Performing ActionMailer::DeliveryJob (Job ID: 033cd973-917d-48a9-95ef-7eaf2c07ae71) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007f88ae49c080 @uri=#<URI::GID gid://hparks/EnquireLead/15>>
+[ActiveJob] [ActionMailer::DeliveryJob] [033cd973-917d-48a9-95ef-7eaf2c07ae71]   Rendering payment_mailer/spini_enquire_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [033cd973-917d-48a9-95ef-7eaf2c07ae71]   Rendered payment_mailer/spini_enquire_leads.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [033cd973-917d-48a9-95ef-7eaf2c07ae71] PaymentMailer#spini_enquire_leads: processed outbound mail in 47.5ms
+[ActiveJob] [ActionMailer::DeliveryJob] [033cd973-917d-48a9-95ef-7eaf2c07ae71] Sent mail to karthikeyan@spinircle.com (3775.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [033cd973-917d-48a9-95ef-7eaf2c07ae71] Date: Tue, 24 Jul 2018 16:53:37 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b570c3924096_12323fc45923e9b825590@KarthikeyansAir.mail>
+Subject: Lead from Enquire Form
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: spini_camp</h4>
+
+
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>Praveen test 2</td>
+    <td>email@gmail.com</td>
+    <td>8393839393</td>
+   <td>nothing</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [033cd973-917d-48a9-95ef-7eaf2c07ae71] Performed ActionMailer::DeliveryJob (Job ID: 033cd973-917d-48a9-95ef-7eaf2c07ae71) from Async(mailers) in 3829.61ms
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mUserDetail Load (2.9ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to ModifyColumnInUserdetails (20180724113934)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "user_details" RENAME COLUMN "number" TO "phone_number"[0m
+  ↳ db/migrate/20180724113934_modify_column_in_userdetails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180724113934"]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8118130959030668940)[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserDetail Create (3.0ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "kkn"], ["email", "name@email.com"], ["plot_details", "1000sqft"], ["phone_number", 9988007767], ["created_at", "2018-07-24 11:50:48.978675"], ["updated_at", "2018-07-24 11:50:48.978675"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-07-24 17:26:54 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserDetailsController#create as */*
+  Parameters: {"user_detail"=>{"plot_details"=>"1500 sqft", "name"=>"Praveen test 2", "email"=>"email@gmail.com", "phone_number"=>"8393839393", "description"=>"nothing"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'description' for UserDetail.):
+  
+app/controllers/user_details_controller.rb:23:in `create'
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-07-24 17:27:29 +0530
+Processing by UserDetailsController#create as */*
+  Parameters: {"user_detail"=>{"plot_details"=>"1500 sqft", "name"=>"Praveen test 2", "email"=>"email@gmail.com", "phone_number"=>"8393839393", "description"=>"nothing"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'description' for UserDetail.):
+  
+app/controllers/user_details_controller.rb:23:in `create'
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-07-24 17:28:18 +0530
+Processing by UserDetailsController#create as */*
+  Parameters: {"user_detail"=>{"plot_details"=>"1500 sqft", "name"=>"Praveen test 2", "email"=>"email@gmail.com", "phone_number"=>"8393839393"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[36mUserDetail Create (0.8ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Praveen test 2"], ["email", "email@gmail.com"], ["plot_details", "1500 sqft"], ["phone_number", 8393839393], ["created_at", "2018-07-24 11:58:18.561081"], ["updated_at", "2018-07-24 11:58:18.561081"]]
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.5ms)
+  Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.6ms)
+PaymentMailer#lead_registration: processed outbound mail in 47.3ms
+Sent mail to email@gmail.com (2941.5ms)
+Date: Tue, 24 Jul 2018 17:28:18 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: email@gmail.com
+Message-ID: <5b57145aa0401_12323fc457cf01ec25798@KarthikeyansAir.mail>
+Subject: Thanks for choosing plot with us!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b57145a9f6d8_12323fc457cf01ec2563f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b57145a9f6d8_12323fc457cf01ec2563f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, Praveen test 2 Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5b57145a9f6d8_12323fc457cf01ec2563f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello, Praveen test 2 Thanks for choosing plot with us</h3>
+
+<p>Thank-you for showing interest in buying Hiranandani Premium Villa plot, we will contact you soon...!</p>
+
+<p> You have chosed 1500 sqft,</p>
+<!-- <p>Once payment have done successfully you will receive a mail</p> -->
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5b57145a9f6d8_12323fc457cf01ec2563f--
+
+  Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.5ms)
+PaymentMailer#lead_post: processed outbound mail in 44.8ms
+Sent mail to karthikeyan@spinircle.com (2722.7ms)
+Date: Tue, 24 Jul 2018 17:28:21 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b57145d9d43c_12323fc457cf01ec25888@KarthikeyansAir.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p>1500 sqft</p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p>Praveen test 2</p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p>email@gmail.com</p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>8393839393</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/Plot-booking/thank-you/20
+Completed 302 Found in 8691ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/Plot-booking/thank-you/20" for 127.0.0.1 at 2018-07-24 17:28:27 +0530
+Processing by UserDetailsController#thankyou as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mUserDetail Load (0.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:98
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (361.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 884ms (Views: 843.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-07-24 17:34:58 +0530
+Processing by UserDetailsController#create as */*
+  Parameters: {"user_detail"=>{"plot_details"=>"1500 sqft", "name"=>"kk test 1.1", "email"=>"email@gmail.com", "phone_number"=>"8393839393"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[36mUserDetail Create (1.7ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "kk test 1.1"], ["email", "email@gmail.com"], ["plot_details", "1500 sqft"], ["phone_number", 8393839393], ["created_at", "2018-07-24 12:04:58.958209"], ["updated_at", "2018-07-24 12:04:58.958209"]]
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.4ms)
+  Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+  Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.3ms)
+PaymentMailer#lead_registration: processed outbound mail in 41.2ms
+Sent mail to email@gmail.com (3489.5ms)
+Date: Tue, 24 Jul 2018 17:34:59 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: email@gmail.com
+Message-ID: <5b5715eb1963_12323fc457cf02a026050@KarthikeyansAir.mail>
+Subject: Thanks for choosing plot with us!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b5715ebd2c_12323fc457cf02a02591f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b5715ebd2c_12323fc457cf02a02591f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, kk test 1.1 Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5b5715ebd2c_12323fc457cf02a02591f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello, kk test 1.1 Thanks for choosing plot with us</h3>
+
+<p>Thank-you for showing interest in buying Hiranandani Premium Villa plot, we will contact you soon...!</p>
+
+<p> You have chosed 1500 sqft,</p>
+<!-- <p>Once payment have done successfully you will receive a mail</p> -->
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5b5715ebd2c_12323fc457cf02a02591f--
+
+  Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+  Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.7ms)
+PaymentMailer#lead_post: processed outbound mail in 37.1ms
+Sent mail to karthikeyan@spinircle.com (2730.2ms)
+Date: Tue, 24 Jul 2018 17:35:02 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b5715ee8264a_12323fc457cf02a026189@KarthikeyansAir.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p>1500 sqft</p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p>kk test 1.1</p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p>email@gmail.com</p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>8393839393</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/Plot-booking/thank-you/21
+Completed 302 Found in 10418ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/Plot-booking/thank-you/21" for 127.0.0.1 at 2018-07-24 17:35:09 +0530
+Processing by UserDetailsController#thankyou as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mUserDetail Load (0.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:98
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 299ms (Views: 265.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-24 17:47:46 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `number' for #<UserDetail:0x007f88b5035350>):
+    105:             <div class="input-group">
+    106:               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+    107:               <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
+    108:               <%= f.telephone_field :number, class:'form-control input-md', placeholder:'Enter your 10 digit no' ,required:true %>
+    109:             </div>
+    110:           </div>
+    111:           <div class="col-xs-12">
+  
+app/views/user_details/new.html.erb:108:in `block in _app_views_user_details_new_html_erb___714880679197250709_70112557022920'
+app/views/user_details/new.html.erb:48:in `_app_views_user_details_new_html_erb___714880679197250709_70112557022920'
+Started GET "/" for 127.0.0.1 at 2018-07-24 17:47:54 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `number' for #<UserDetail:0x007f88b1f20620>):
+    105:             <div class="input-group">
+    106:               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+    107:               <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
+    108:               <%= f.telephone_field :number, class:'form-control input-md', placeholder:'Enter your 10 digit no' ,required:true %>
+    109:             </div>
+    110:           </div>
+    111:           <div class="col-xs-12">
+  
+app/views/user_details/new.html.erb:108:in `block in _app_views_user_details_new_html_erb___714880679197250709_70112556693360'
+app/views/user_details/new.html.erb:48:in `_app_views_user_details_new_html_erb___714880679197250709_70112556693360'
+Started GET "/" for 127.0.0.1 at 2018-07-24 17:48:17 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `number' for #<UserDetail:0x007f88b40c0960>):
+    105:             <div class="input-group">
+    106:               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+    107:               <!-- <input id="email" type="text" class="form-control" name="email" placeholder="Email"> -->
+    108:               <%= f.telephone_field :number, class:'form-control input-md', placeholder:'Enter your 10 digit no' ,required:true %>
+    109:             </div>
+    110:           </div>
+    111:           <div class="col-xs-12">
+  
+app/views/user_details/new.html.erb:108:in `block in _app_views_user_details_new_html_erb___714880679197250709_70112556472800'
+app/views/user_details/new.html.erb:48:in `_app_views_user_details_new_html_erb___714880679197250709_70112556472800'
+Started POST "/Plot-booking/enquire_lead/new" for 127.0.0.1 at 2018-07-24 17:49:43 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/Plot-booking/enquire_lead/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/enquire_lead/new" for 127.0.0.1 at 2018-07-24 17:49:51 +0530
+Processing by EnquireLeadsController#create as */*
+  Parameters: {"enquire_lead"=>{"source"=>"spini_camp", "name"=>"Praveen test 2", "email"=>"email@gmail.com", "phone_number"=>"8393839393", "comments"=>"nothing"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[36mEnquireLead Create (1.9ms)[0m  [1m[32mINSERT INTO "enquire_leads" ("source", "name", "email", "phone_number", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["source", "spini_camp"], ["name", "Praveen test 2"], ["email", "email@gmail.com"], ["phone_number", "8393839393"], ["comments", "nothing"], ["created_at", "2018-07-24 12:19:51.602174"], ["updated_at", "2018-07-24 12:19:51.602174"]]
+  ↳ app/controllers/enquire_leads_controller.rb:8
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquire_leads_controller.rb:8
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 160de1d1-b687-46ec-8198-5f16f5d58502) to Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007f88b40408c8 @uri=#<URI::GID gid://hparks/EnquireLead/16>>
+  [1m[36mEnquireLead Load (0.8ms)[0m  [1m[34mSELECT  "enquire_leads".* FROM "enquire_leads" WHERE "enquire_leads"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [160de1d1-b687-46ec-8198-5f16f5d58502] Performing ActionMailer::DeliveryJob (Job ID: 160de1d1-b687-46ec-8198-5f16f5d58502) from Async(mailers) with arguments: "PaymentMailer", "spini_enquire_leads", "deliver_now", #<GlobalID:0x007f88afb86c50 @uri=#<URI::GID gid://hparks/EnquireLead/16>>
+[ActiveJob] [ActionMailer::DeliveryJob] [160de1d1-b687-46ec-8198-5f16f5d58502]   Rendering payment_mailer/spini_enquire_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [160de1d1-b687-46ec-8198-5f16f5d58502]   Rendered payment_mailer/spini_enquire_leads.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [160de1d1-b687-46ec-8198-5f16f5d58502] PaymentMailer#spini_enquire_leads: processed outbound mail in 39.4ms
+Completed 201 Created in 2539ms (Views: 0.6ms | ActiveRecord: 10.4ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [160de1d1-b687-46ec-8198-5f16f5d58502] Sent mail to karthikeyan@spinircle.com (3499.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [160de1d1-b687-46ec-8198-5f16f5d58502] Date: Tue, 24 Jul 2018 17:49:51 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b571967a82fe_12323fc45923e9b8262fa@KarthikeyansAir.mail>
+Subject: Lead from Enquire Form
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: spini_camp</h4>
+
+
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>Praveen test 2</td>
+    <td>email@gmail.com</td>
+    <td>8393839393</td>
+   <td>nothing</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [160de1d1-b687-46ec-8198-5f16f5d58502] Performed ActionMailer::DeliveryJob (Job ID: 160de1d1-b687-46ec-8198-5f16f5d58502) from Async(mailers) in 3540.46ms
+Started GET "/" for 127.0.0.1 at 2018-07-24 17:51:22 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 220ms (Views: 186.0ms | ActiveRecord: 6.3ms)
+
+

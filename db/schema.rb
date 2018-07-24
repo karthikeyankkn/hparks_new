@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_23_063924) do
+ActiveRecord::Schema.define(version: 2018_07_24_113934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_07_23_063924) do
   end
 
   create_table "enquire_leads", force: :cascade do |t|
-    t.string "from"
+    t.string "source"
     t.string "name"
     t.string "email"
     t.string "phone_number"
@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 2018_07_23_063924) do
     t.string "name"
     t.string "email"
     t.string "plot_details"
-    t.bigint "number"
+    t.bigint "phone_number"
     t.boolean "payment_status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -61,6 +61,6 @@ class EnquireLeadsController < ApplicationController
 	private
 
 	def enquire_lead_params
-		params.require(:enquire_lead).permit(:from,:name,:email,:phone_number,:comments)
+		params.require(:enquire_lead).permit(:source,:name,:email,:phone_number,:comments)
 	end
 end
