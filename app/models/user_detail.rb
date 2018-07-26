@@ -2,7 +2,7 @@ class UserDetail < ApplicationRecord
     has_many :orders
 	validates :phone_number,:presence => true,
                  :numericality => true,
-                 :length => { :minimum => 10, :maximum => 15 }
+                 :length => { :minimum => 10, :maximum => 20 }
     validates :plot_details,:presence => true 
     def self.to_csv(options = {})
     	CSV.generate(options) do |csv|

@@ -39,7 +39,7 @@ Rails.application.routes.draw do
 	# resources :camp_leads
 	post "/camp_lead/new", to: "camp_leads#create"
 	post "/enquire_lead/new", to: "enquire_leads#create"
-	get "Plot-booking/report-data", to: "camp_leads#index"
+	get "/report-data", to: "camp_leads#index"
 
   # resources :payments
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
