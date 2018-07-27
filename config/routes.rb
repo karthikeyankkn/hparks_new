@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 	get "Plot-booking", to: "user_details#new"
 	post "Plot-booking-confirmation",to:  "user_details#create"
 	# get "Plot-booking/confirmation",to: "payments#edit"
-	get 'Plot-booking/confirmation/:id' => 'user_details#edit', as: 'plot_booking_confirmation_success'
-	get 'Plot-booking/confirmation/redirect/:id' => 'user_details#redirect', as: 'plot_booking_confirmation_redirect'
-	get 'Plot-booking/thank-you/:id' => 'user_details#thankyou', as: 'plot_booking_thank_you'
+	get '/confirmation/:id' => 'user_details#edit', as: 'plot_booking_confirmation_success'
+	get '/confirmation/redirect/:id' => 'user_details#redirect', as: 'plot_booking_confirmation_redirect'
+	get '/thank-you/:id' => 'user_details#thankyou', as: 'plot_booking_thank_you'
 
 
  
@@ -32,10 +32,10 @@ Rails.application.routes.draw do
 	
 
 	# post "transaction/ccavRequestHandler",to: "payments#requestHandler"
-	get "Plot-booking/transaction/ccavRequestHandler",to: "payments#requestHandler"
+	get "/transaction/ccavRequestHandler",to: "payments#requestHandler"
 
-	get "Plot-booking/success",to: "payments#finish"
-	post "Plot-booking/transaction/ccavResponseHandler",to: "payments#responseHandler"
+	get "/success",to: "payments#finish"
+	post "/transaction/ccavResponseHandler",to: "payments#responseHandler"
 	# resources :camp_leads
 	post "/camp_lead/new", to: "camp_leads#create"
 	post "/enquire_lead/new", to: "enquire_leads#create"

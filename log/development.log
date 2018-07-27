@@ -16411,3 +16411,17 @@ Migrating to ModifyColumnCamplead (20180724132551)
   ↳ /home/ubuntu/.rvm/gems/ruby-2.4.1/bin/rake:22
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ubuntu/.rvm/gems/ruby-2.4.1/bin/rake:22
+Started GET "/" for 127.0.0.1 at 2018-07-27 11:11:32 +0530
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (438.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 783ms (Views: 673.4ms | ActiveRecord: 52.2ms)
+
+
+  [1m[36mUserDetail Load (18.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" LIMIT $1[0m  [["LIMIT", 11]]
