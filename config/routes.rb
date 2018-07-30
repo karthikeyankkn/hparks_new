@@ -39,6 +39,7 @@ Rails.application.routes.draw do
 	# resources :camp_leads
 	post "/camp_lead/new", to: "camp_leads#create"
 	post "/enquire_lead/new", to: "enquire_leads#create"
+	post "/linkdin_lead/new", to: "linkdin_leads#create"
 	get "/report-data", to: "camp_leads#index"
 
   # resources :payments
