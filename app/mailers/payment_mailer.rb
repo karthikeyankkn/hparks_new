@@ -44,7 +44,7 @@ class PaymentMailer < ApplicationMailer
   end
   def spini_linkdin_leads(lead_details)
      @lead_details = lead_details
-     mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<sathesh@spinircle.com>,<durairaju@webboombaa.com>,<contact@getspini.com>" , subject: "Linkedin Campaign Leads"
+     mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<sathesh@spinircle.com>,<tech@webboombaa.com>,<contact@getspini.com>" , subject: "Linkedin Campaign Leads"
       # mail to: "<karthikeyan@spinircle.com>" , subject: "Lead from Linkdin Campaign"
   end
 end
