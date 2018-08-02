@@ -23174,3 +23174,601 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 137ms (Views: 134.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:18:36 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 122ms (Views: 111.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/thank-you/2" for 127.0.0.1 at 2018-08-02 17:20:32 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:101
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 105.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/thank-you/21" for 127.0.0.1 at 2018-08-02 17:20:33 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUserDetail Load (0.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:101
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 129ms (Views: 121.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:23:33 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 136ms (Views: 130.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/thank-you/2" for 127.0.0.1 at 2018-08-02 17:29:36 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserDetail Load (0.8ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:101
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 93.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:35:52 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 93ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:37:44 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 104ms (Views: 101.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:39:18 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 117ms (Views: 113.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:41:23 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.4ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 117ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:43:08 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 114ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:47:51 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 109ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:51:19 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 112ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:53:49 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (1.0ms)
+  Rendered layouts/_enquire.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 132ms (Views: 128.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:55:06 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 126ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:55:52 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 120ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:56:51 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:58:04 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-08-02 17:58:57 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mit9pZirNqy5ANGKGc5i1oajvbL67v72wz7Rfk84P3qSlE5TyiovqIrz+fSE5HxVXfUjlv5m+/6Bbga+DiHS5Q==", "user_detail"=>{"plot_details"=>"Plot size 1800 sq.ft for Rupees 45 Lakhs", "name"=>"kmk", "phone_number"=>"889393303", "email"=>"kmk@dmk.com"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_details_controller.rb:25
+Redirected to http://localhost:3000/
+Completed 302 Found in 3533ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 17:59:01 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (1.0ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 118ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/Plot-booking-confirmation" for 127.0.0.1 at 2018-08-02 17:59:28 +0530
+Processing by UserDetailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GRKJu3XDdIEXzINW0DiS0X/y4QFnYrDrjtzVdK1yZzC5rbpNJ0JthSQ/qyhNEoxSpKR/JWPqtePMjAK07GuKrw==", "user_detail"=>{"plot_details"=>"Plot size 600 sq.ft for Rupees 15 Lakhs", "name"=>"karunanithi", "phone_number"=>"09303930303", "email"=>"email@email.com"}, "commit"=>"Submit"}
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[36mUserDetail Create (1.6ms)[0m  [1m[32mINSERT INTO "user_details" ("name", "email", "plot_details", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "karunanithi"], ["email", "email@email.com"], ["plot_details", "Plot size 600 sq.ft for Rupees 15 Lakhs"], ["phone_number", 9303930303], ["created_at", "2018-08-02 12:29:28.777077"], ["updated_at", "2018-08-02 12:29:28.777077"]]
+  ↳ app/controllers/user_details_controller.rb:25
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:25
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 4b9e8340-5b17-451a-a3b9-394829e73d3f) to Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007f941226e1e0 @uri=#<URI::GID gid://hparks/UserDetail/25>>
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: b3b9460a-73c2-422d-a93c-90016b5741cd) to Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007f941226e1e0 @uri=#<URI::GID gid://hparks/UserDetail/25>>
+  [1m[36mUserDetail Load (2.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Redirected to http://localhost:3000/thank-you/25
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserDetail Load (23.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f] Performing ActionMailer::DeliveryJob (Job ID: 4b9e8340-5b17-451a-a3b9-394829e73d3f) from Async(mailers) with arguments: "PaymentMailer", "lead_registration", "deliver_now", #<GlobalID:0x007f9412208160 @uri=#<URI::GID gid://hparks/UserDetail/25>>
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f]   Rendering payment_mailer/lead_registration.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [b3b9460a-73c2-422d-a93c-90016b5741cd] Performing ActionMailer::DeliveryJob (Job ID: b3b9460a-73c2-422d-a93c-90016b5741cd) from Async(mailers) with arguments: "PaymentMailer", "lead_post", "deliver_now", #<GlobalID:0x007f94102c3340 @uri=#<URI::GID gid://hparks/UserDetail/25>>
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f]   Rendered payment_mailer/lead_registration.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f]   Rendering payment_mailer/lead_registration.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f]   Rendered payment_mailer/lead_registration.text.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b3b9460a-73c2-422d-a93c-90016b5741cd]   Rendering payment_mailer/lead_post.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f] PaymentMailer#lead_registration: processed outbound mail in 103.8ms
+[ActiveJob] [ActionMailer::DeliveryJob] [b3b9460a-73c2-422d-a93c-90016b5741cd]   Rendered payment_mailer/lead_post.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b3b9460a-73c2-422d-a93c-90016b5741cd] PaymentMailer#lead_post: processed outbound mail in 53.5ms
+Completed 302 Found in 2250ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/thank-you/25" for 127.0.0.1 at 2018-08-02 17:59:31 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:101
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.9ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 112ms (Views: 106.9ms | ActiveRecord: 0.6ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f] Sent mail to email@email.com (3553.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f] Date: Thu, 02 Aug 2018 17:59:28 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: email@email.com
+Message-ID: <5b62f928e0fb1_b283fca06b2e17455091@KarthikeyansAir.mail>
+Subject: Thanks for choosing plot with us!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b62f928e00aa_b283fca06b2e17454984";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b62f928e00aa_b283fca06b2e17454984
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello, karunanithi Thanks you Registration.
+
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----==_mimepart_5b62f928e00aa_b283fca06b2e17454984
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello, karunanithi Thanks for choosing plot with us</h3>
+
+<p>Thank-you for showing interest in buying Hiranandani Premium Villa plot, we will contact you soon...!</p>
+
+<p> You have chosed Plot size 600 sq.ft for Rupees 15 Lakhs,</p>
+<!-- <p>Once payment have done successfully you will receive a mail</p> -->
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+----==_mimepart_5b62f928e00aa_b283fca06b2e17454984--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [4b9e8340-5b17-451a-a3b9-394829e73d3f] Performed ActionMailer::DeliveryJob (Job ID: 4b9e8340-5b17-451a-a3b9-394829e73d3f) from Async(mailers) in 3660.44ms
+[ActiveJob] [ActionMailer::DeliveryJob] [b3b9460a-73c2-422d-a93c-90016b5741cd] Sent mail to karthikeyan@spinircle.com (4133.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b3b9460a-73c2-422d-a93c-90016b5741cd] Date: Thu, 02 Aug 2018 17:59:28 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b62f928e207d_b283fca08e8b950551da@KarthikeyansAir.mail>
+Subject: Lead response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hira Plots Booking has a new response:
+</h3>
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p>Plot size 600 sq.ft for Rupees 15 Lakhs</p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p>karunanithi</p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p>email@email.com</p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>9303930303</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [b3b9460a-73c2-422d-a93c-90016b5741cd] Performed ActionMailer::DeliveryJob (Job ID: b3b9460a-73c2-422d-a93c-90016b5741cd) from Async(mailers) in 4189.56ms
+Started POST "/sitevisit-datetime" for 127.0.0.1 at 2018-08-02 17:59:53 +0530
+Processing by UserDetailsController#create_site_visit_lead as */*
+  Parameters: {"sitevisit_lead"=>{"name"=>"karunanithi", "email"=>"email@email.com", "phone_number"=>"9303930303", "plot_details"=>"Plot size 600 sq.ft for Rupees 15 Lakhs", "site_visit_date_time"=>"08/16/2018 6:00 AM"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:110
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_details_controller.rb:110
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::MissingTemplate (Missing template user_details/new_site_visit_lead, application/new_site_visit_lead with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/karthikeyan/Documents/rails_projects/hparks_new/app/views"
+):
+  
+Started GET "/thank-you/25?site_visit_date=08%2F16%2F2018+6%3A00+AM" for 127.0.0.1 at 2018-08-02 17:59:53 +0530
+app/controllers/user_details_controller.rb:113:in `create_site_visit_lead'
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"site_visit_date"=>"08/16/2018 6:00 AM", "id"=>"25"}
+  [1m[36mUserDetail Load (0.6ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:101
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 130ms (Views: 124.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/sitevisit-datetime" for 127.0.0.1 at 2018-08-02 18:00:16 +0530
+Processing by UserDetailsController#create_site_visit_lead as */*
+  Parameters: {"sitevisit_lead"=>{"name"=>"karunanithi", "email"=>"email@email.com", "phone_number"=>"9303930303", "plot_details"=>"Plot size 600 sq.ft for Rupees 15 Lakhs", "site_visit_date_time"=>"08/03/2018 6:00 AM"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_details_controller.rb:110
+  [1m[36mSitevisitLead Create (0.9ms)[0m  [1m[32mINSERT INTO "sitevisit_leads" ("name", "email", "plot_details", "phone_number", "site_visit_date_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "karunanithi"], ["email", "email@email.com"], ["plot_details", "Plot size 600 sq.ft for Rupees 15 Lakhs"], ["phone_number", "9303930303"], ["site_visit_date_time", "2018-03-08 06:00:00"], ["created_at", "2018-08-02 12:30:16.322928"], ["updated_at", "2018-08-02 12:30:16.322928"]]
+  ↳ app/controllers/user_details_controller.rb:110
+Started GET "/thank-you/25?site_visit_date=08%2F03%2F2018+6%3A00+AM" for 127.0.0.1 at 2018-08-02 18:00:16 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"site_visit_date"=>"08/03/2018 6:00 AM", "id"=>"25"}
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_details_controller.rb:110
+  [1m[36mUserDetail Load (0.6ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: ffa10719-9c67-4f38-8e8a-3b17aecb9cd1) to Async(mailers) with arguments: "PaymentMailer", "site_visit_mail", "deliver_now", #<GlobalID:0x007f94115eca70 @uri=#<URI::GID gid://hparks/SitevisitLead/22>>
+  ↳ app/controllers/user_details_controller.rb:101
+No template found for UserDetailsController#create_site_visit_lead, rendering head :no_content
+  [1m[36mSitevisitLead Load (56.2ms)[0m  [1m[34mSELECT  "sitevisit_leads".* FROM "sitevisit_leads" WHERE "sitevisit_leads"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 204 No Content in 219ms (ActiveRecord: 8.5ms)
+
+
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering user_details/thankyou.html.erb within layouts/application
+[ActiveJob] [ActionMailer::DeliveryJob] [ffa10719-9c67-4f38-8e8a-3b17aecb9cd1] Performing ActionMailer::DeliveryJob (Job ID: ffa10719-9c67-4f38-8e8a-3b17aecb9cd1) from Async(mailers) with arguments: "PaymentMailer", "site_visit_mail", "deliver_now", #<GlobalID:0x007f941248cad0 @uri=#<URI::GID gid://hparks/SitevisitLead/22>>
+  Rendered user_details/thankyou.html.erb within layouts/application (4.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ffa10719-9c67-4f38-8e8a-3b17aecb9cd1]   Rendering payment_mailer/site_visit_mail.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [ffa10719-9c67-4f38-8e8a-3b17aecb9cd1]   Rendered payment_mailer/site_visit_mail.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ffa10719-9c67-4f38-8e8a-3b17aecb9cd1] PaymentMailer#site_visit_mail: processed outbound mail in 46.2ms
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 360ms (Views: 152.5ms | ActiveRecord: 0.6ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [ffa10719-9c67-4f38-8e8a-3b17aecb9cd1] Sent mail to karthikeyan@spinircle.com (2681.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ffa10719-9c67-4f38-8e8a-3b17aecb9cd1] Date: Thu, 02 Aug 2018 18:00:16 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5b62f95896111_b283fca08e8b9505524b@KarthikeyansAir.mail>
+Subject: Site vist response
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+
+<ul>
+	<li>
+		<p><b>Choosed your plot size:</b></p>
+		<p>Plot size 600 sq.ft for Rupees 15 Lakhs</p>
+	</li>
+	<li>
+		<p><b>Name:</b></p>
+		<p>karunanithi</p>
+	</li>
+	<li>
+		<p><b>Email:</b></p>
+		<p>email@email.com</p>
+	</li>
+	<li>
+		<p><b>Number:</b></p>
+		<p>9303930303</p>
+	</li>
+	<li>
+		<p><b>Site Visit Date and Time:</b></p>
+		<p>2018-03-08 06:00:00 UTC</p>
+	</li>
+</ul>
+
+
+<h4><b>Thanks & Regards</b>,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [ffa10719-9c67-4f38-8e8a-3b17aecb9cd1] Performed ActionMailer::DeliveryJob (Job ID: ffa10719-9c67-4f38-8e8a-3b17aecb9cd1) from Async(mailers) in 2743.23ms
+Started GET "/" for 127.0.0.1 at 2018-08-02 18:00:52 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 124ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 18:01:37 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2018-08-02 18:01:41 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/blog"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/blog" for 127.0.0.1 at 2018-08-02 18:01:56 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/blog"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-02 18:02:01 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 112ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 18:02:16 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 112ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 18:03:07 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.5ms)
+  Rendered layouts/_enquire.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 130ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+

@@ -17,20 +17,21 @@
     </div>
   </div>
   <div class="container-fluid">
-    <div class="col-md-6 hira-side-img">
-      <img src="http://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/plots-layout-full.jpg" width="100%" large-img="http://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/plots-layout-full.jpg">
-    </div>
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="text-center">
-            <%= image_tag("line-top.png", :alt => "hiranandani-image") %>
-            <h1>Online Plot Booking</h1>
-            <!-- <h3>Oragadam, Chennai</h3> -->
-            <%= image_tag("line-bottom.png", :alt => "hiranandani-image") %>
-          </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <%= image_tag("line-top.png", :alt => "hiranandani-image") %>
+          <h1 style="margin-top: 8px;">Check Availability</h1>
+          <!-- <h3>Oragadam, Chennai</h3> -->
+          <%= image_tag("line-bottom.png", :alt => "hiranandani-image") %>
         </div>
       </div>
+    </div>
+    <div class="col-md-4 hira-side-img">
+      <img src="http://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/plots-layout-full.jpg" width="100%" large-img="http://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/plots-layout-full.jpg">
+    </div>
+    <div class="col-md-8">
+      
       <!--  <div class="col-md-6 border-right">
         <div class="col-md-12 text-center">
           <label style="display: block;">Layout</label>
@@ -48,42 +49,42 @@
         <%= form_for @user_detail, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
         <div class="row">
           <label class="book-plot-heading">Choose Plot*</label>
-          <div class="col-md-6 col-xs-6 box">
+          <div class="col-md-4 col-xs-6 box">
             <label class="btn btn-warning custom-label">
             <img medium-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/600SqFt.jpg" large-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/full/600_sq_ft.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/06.jpg" alt="..." class="img-thumbnail img-check" >
             <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
             <%= f.radio_button :plot_details , "Plot size 600 sq.ft for Rupees 15 Lakhs" ,id: 'item6' , autocomplete: 'off'  %>
             </label>
           </div>
-          <div class="col-md-6 col-xs-6 box">
+          <div class="col-md-4 col-xs-6 box">
             <label class="btn btn-warning custom-label">
             <img medium-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/700-1200SqFt.jpg" large-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/full/700_1200_sq_ft.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/01.jpg" alt="..." class="img-thumbnail img-check">
             <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
             <%= f.radio_button :plot_details , "Plot size 1200 sq.ft for Rupees 30 Lakhs" ,id: 'item1' , autocomplete: 'off'  %>
             </label>
           </div>
-          <div class="col-md-6 col-xs-6 box">
+          <div class="col-md-4 col-xs-6 box">
             <label class="btn btn-warning custom-label">
             <img medium-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/1300-1500SqFt.jpg" large-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/full/1300_1500_sq_ft.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/02.jpg" alt="..." class="img-thumbnail img-check">
             <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
             <%= f.radio_button :plot_details , "Plot size 1500 sq.ft for Rupees 37.5 Lakhs" ,id: 'item2' , autocomplete: 'off'  %>
             </label>
           </div>
-          <div class="col-md-6 col-xs-6 box">
+          <div class="col-md-4 col-xs-6 box">
             <label class="btn btn-warning custom-label">
             <img medium-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/1600-1800SqFt.jpg" large-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/full/1600_1800_sq_ft.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/03.jpg" alt="..." class="img-thumbnail img-check">
             <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
             <%= f.radio_button :plot_details , "Plot size 1800 sq.ft for Rupees 45 Lakhs" ,id: 'item3' , autocomplete: 'off'  %>
             </label>
           </div>
-          <div class="col-md-6 col-xs-6 box">
+          <div class="col-md-4 col-xs-6 box">
             <label class="btn btn-warning custom-label">
             <img medium-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/1900-2100SqFt.jpg" large-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/full/1900_2100_sq_ft.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/04.jpg" alt="..." class="img-thumbnail img-check">
             <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
             <%= f.radio_button :plot_details , "Plot size 2100 sq.ft for Rupees 52.5 Lakhs" ,id: 'item4' , autocomplete: 'off'  %>
             </label>
           </div>
-          <div class="col-md-6 col-xs-6 box">
+          <div class="col-md-4 col-xs-6 box">
             <label class="btn btn-warning custom-label">
             <img medium-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/2200-2600SqFt.jpg" large-img="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/full/2200_2600_sq_ft.jpg" src="https://s3-ap-southeast-1.amazonaws.com/cdn.getspini.com/hira-img/plot-booking/05.jpg" alt="..." class="img-thumbnail img-check">
             <%= image_tag("new_tick-orange.png", :alt => "hiranandani-image", :class => "newimg") %>
@@ -91,8 +92,8 @@
             </label>
           </div>
         </div>
-        <div class="row" style="padding:18px;">
-          <div class="col-xs-12">
+        <div class="row" style="padding:5px 18px;">
+          <div class="col-md-4 col-xs-12">
             <label>Name:</label>
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -100,7 +101,7 @@
               <%= f.text_field :name, class:'form-control input-md', placeholder:'Enter your name',required:true  %>
             </div>
           </div>
-          <div class="col-xs-12">
+          <div class="col-md-4 col-xs-12">
             <label>Contact Number:</label>
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -108,7 +109,7 @@
               <%= f.telephone_field :phone_number, class:'form-control input-md', placeholder:'Enter your 10 digit no' ,required:true %>
             </div>
           </div>
-          <div class="col-xs-12">
+          <div class="col-md-4 col-xs-12">
             <label>Email id:</label>
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -128,7 +129,7 @@
           <input type="text" class="form-control" id="text" name="language" value="EN">
           </div> -->
         <!--Hidden details for payments end -->
-        <div class="row" style="padding: 25px;">
+        <div class="row">
           <div class="col-md-12 box text-center">
             <!-- <button class="btn btn-warning btn-lg" TYPE="submit" value="CheckOut" style="margin-top: 10px">Submit & Payment</button> -->
             <%= f.submit "Submit",class:'btn custom-btn btn-lg'  %>
