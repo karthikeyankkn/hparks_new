@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require moment
+//= require bootstrap-datetimepicker
 
 document.write('<script src="//trkr.scdn1.secure.raxcdn.com/t/5657f9703bb2f89d12000215.js"></script>');
 // var script = document.createElement('script');  

@@ -23,6 +23,7 @@ def create
 	@user_detail = UserDetail.new(user_detail_params)
 	# binding.pry
 	if @user_detail.save
+
 		# binding.pry
 		############use this if paymet needed############
 		PaymentMailer.lead_registration(@user_detail).deliver_later
@@ -87,6 +88,8 @@ def create
     			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
   			});	
   			# binding.pry
+
+  			
 end
 def edit
 	# binding.pry
@@ -97,9 +100,26 @@ end
 def thankyou
 	@user_detail = UserDetail.find(params[:id])
 end
+
+def new_site_visit_lead
+	@sitevisit_lead = SitevisitLead.new
+end
+def create_site_visit_lead
+	@sitevisit_lead = SitevisitLead.new(sitevisit_lead_params)
+
+	if @sitevisit_lead.save
+		PaymentMailer.site_visit_mail(@sitevisit_lead).deliver_later
+	else
+		render 'new_site_visit_lead'
+	end
+end
+
 private
   def user_detail_params
     params.require(:user_detail).permit(:name, :email, :plot_details,:phone_number,:payment_status,:description)
+  end	
+  def sitevisit_lead_params
+    params.require(:sitevisit_lead).permit(:site_visit_date_time, :name, :email, :plot_details,:phone_number,:payment_status,:description)
   end	
 
 end
