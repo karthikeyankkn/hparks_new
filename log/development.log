@@ -23987,3 +23987,44 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [ActionMailer::DeliveryJob] [c3aaa092-59f5-4a6a-b098-c7449f1b2d64] Performed ActionMailer::DeliveryJob (Job ID: c3aaa092-59f5-4a6a-b098-c7449f1b2d64) from Async(mailers) in 3946.45ms
+Started GET "/thank-you/21" for 127.0.0.1 at 2018-08-03 13:03:53 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUserDetail Load (0.5ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:101
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (284.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 493ms (Views: 453.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/thank-you/21" for 127.0.0.1 at 2018-08-03 13:04:21 +0530
+Processing by UserDetailsController#thankyou as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUserDetail Load (2.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/user_details_controller.rb:101
+  Rendering user_details/thankyou.html.erb within layouts/application
+  Rendered user_details/thankyou.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 126ms (Views: 118.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 13:04:23 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_disclaimer.html.erb (1.5ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 275ms (Views: 195.7ms | ActiveRecord: 0.0ms)
+
+
