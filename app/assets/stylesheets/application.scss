@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_self
+ *= require bootstrap-datetimepicker
  */
 
 
@@ -283,6 +284,29 @@ ul.social_media li a .fa {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     /*border-radius: 30px;*/
+  }
+  .site_visit_date_hidden{
+    color: #000;
+    display: none;
+  }
+  .site-visit-container{
+    background: #fff;
+    color: #333 !important;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 3px;
+    border-left: 7px solid #f4ad41;
+    padding: 10px;
+    display: none;
+  }
+  .site-visit-container h4{
+    color: #000;
+  }
+  .site-visit-container form{
+    margin: 10px 0;
+  }
+  .site-visit-container button{
+    margin-top: 10px;
   }
   @media only screen and (max-width: 798px) {
     .book-plot-btn{

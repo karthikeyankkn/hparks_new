@@ -9,7 +9,7 @@
 				<!-- <img src="line-top.png" alt="hiranandani-image"> -->
 				<%= image_tag("line-top.png", :alt => "hiranandani-image") %>
 					<h1>Hello <%= @user_detail.name.camelize %></h1>
-					<h2>Thank You For Booking Plot With Us!</h2>
+					<h2>Thank You we will be calling you soon..!</h2>
 					<!-- <h3>Oragadam, Chennai</h3> -->
 				<!-- <img src="line-bottom.png" alt="hiranandani-image"> -->
 				<%= image_tag("line-bottom.png", :alt => "hiranandani-image") %>
@@ -21,8 +21,75 @@
 			<h5 style="padding-top: 20px;padding-bottom: 10px;">Having Trouble? <a href="https://hiranandaniparks.com/contact-us.html">Contact Us</a></h5>
 		  </div>
 		  	<a  href="https://hiranandaniparks.com"><button type="button" class="btn btn-warning">Continue To Homepage</button></a>
+		  	<br><br>
+		  	<button class="btn btn-warning open-site-visit">Book site visit</button>
 		</div>
+
 	</div>
 	
+  <div class="site-visit-container">
+  	<div class="">
+  		<div class="text-center">
+				<div>
+					<h4>Site Visit Date and Time:</h4>
+					<div class="site_visit_date_hidden">
+						<label class="name"><%= @user_detail.name %></label>
+						<label class="email"><%= @user_detail.email %></label>
+						<label class="phonenum"><%= @user_detail.phone_number %></label>
+						<label class="plot_details"><%= @user_detail.plot_details %></label>
+					</div>  
+					<div>
+						<div class='input-group date' id='datetimepicker1'>
+			  			<input type='text' class="form-control" name="site_visit_date" required/>
+						    <span class="input-group-addon">
+						      <span class="glyphicon glyphicon-calendar"></span>
+						    </span>
+						</div>
+						<button class="btn btn-warning ssl_submit">Submit</button>
+						<p>* Free Pick-up and Drop</p>
+					</div>
+	      </div>		
+	  	</div>
+  	</div>
+		<script type="text/javascript">
+		  $(function () {
+		    $('#datetimepicker1').datetimepicker();
+		  });
+
+		  function send_sitevisit_lead(){
+		  	var data = {"sitevisit_lead": {
+                    "name": $(".name").text(),
+                    "email": $(".email").text(),
+                    "phone_number" : $(".phonenum").text(),
+                    "plot_details" : $(".plot_details").text(),
+                    "site_visit_date_time": $("input[name=site_visit_date]").val(),
+                	}
+					};
+					debugger
+				$.ajax({
+				  type: "POST",
+				  url: location.origin+"/Plot-booking/sitevisit-datetime",
+				  header:{"content-type": "application/json"},
+				  data: data,
+				  success: function(data){
+				  			alert("You have successfully booked site visit.  Our executives will contact you soon.");
+				  			// window.location="linkedin-campaign-thankyou.html";
+					    },
+
+					    error: function(data){
+					       // window.location="linkedin-campaign-thankyou.html";
+					       alert("Our service time is between 10pm to 6am");
+					       location.reload();
+					    }
+				});		
+		  }
+		  $('.open-site-visit').click(function(){
+		  	$('.site-visit-container').fadeIn();
+		  });
+		  $('.ssl_submit').click(function(){
+		  	send_sitevisit_lead();
+		  });
+		</script>
+  </div>
 
 </section>
