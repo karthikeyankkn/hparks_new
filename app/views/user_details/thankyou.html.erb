@@ -38,7 +38,7 @@
 						<label class="phonenum"><%= @user_detail.phone_number %></label>
 						<label class="plot_details"><%= @user_detail.plot_details %></label>
 					</div>  
-					<form>
+					<div>
 						<div class='input-group date' id='datetimepicker1'>
 			  			<input type='text' class="form-control" name="site_visit_date" required/>
 						    <span class="input-group-addon">
@@ -46,7 +46,7 @@
 						    </span>
 						</div>
 						<button class="btn btn-warning ssl_submit">Submit</button>
-					</form>
+					</div>
 	      </div>		
 	  	</div>
   	</div>
@@ -64,10 +64,10 @@
                     "site_visit_date_time": $("input[name=site_visit_date]").val(),
                 	}
 					};
-					
+					debugger
 				$.ajax({
 				  type: "POST",
-				  url: location.origin+"/sitevisit-datetime",
+				  url: location.origin+"/Plot-booking/sitevisit-datetime",
 				  header:{"content-type": "application/json"},
 				  data: data,
 				  success: function(data){
