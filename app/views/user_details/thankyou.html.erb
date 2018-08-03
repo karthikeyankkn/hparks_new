@@ -22,7 +22,7 @@
 		  </div>
 		  	<a  href="https://hiranandaniparks.com"><button type="button" class="btn btn-warning">Continue To Homepage</button></a>
 		  	<br><br>
-		  	<button class="btn btn-warning open-site-visit">Select site visit date and time</button>
+		  	<button class="btn btn-warning open-site-visit">Book site visit</button>
 		</div>
 
 	</div>
@@ -46,6 +46,7 @@
 						    </span>
 						</div>
 						<button class="btn btn-warning ssl_submit">Submit</button>
+						<p>* Free Pick-up and Drop</p>
 					</div>
 	      </div>		
 	  	</div>
@@ -71,13 +72,14 @@
 				  header:{"content-type": "application/json"},
 				  data: data,
 				  success: function(data){
-				  			alert("Thanks for your Interest..We will contact you soon");
+				  			alert("You have successfully booked site visit.  Our executives will contact you soon.");
 				  			// window.location="linkedin-campaign-thankyou.html";
 					    },
 
 					    error: function(data){
 					       // window.location="linkedin-campaign-thankyou.html";
-					       alert("Please Contact Admin");
+					       alert("Our service time is between 10pm to 6am");
+					       location.reload();
 					    }
 				});		
 		  }
