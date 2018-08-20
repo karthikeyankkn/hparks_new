@@ -10,6 +10,8 @@ class CampLeadsController < ApplicationController
 		@end_date = params[:end_date]
 		if params[:type] == "web-lead"
 			@filterLeads = UserDetail.where("created_at between (?) and (?)",@start_date ,@end_date )
+		elsif params[:type] == "enquire-lead"
+			@filterLeads = EnquireLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 		else
 			@camp_leads = CampLead.where("created_at between (?) and (?)",@start_date ,@end_date )
 			if params[:source] == "google"
