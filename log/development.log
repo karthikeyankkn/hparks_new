@@ -25271,3 +25271,109 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [ActionMailer::DeliveryJob] [6894b970-f2e7-4f92-92a3-3cbc2f248886] Performed ActionMailer::DeliveryJob (Job ID: 6894b970-f2e7-4f92-92a3-3cbc2f248886) from Async(mailers) in 3153.79ms
+Started GET "/" for 127.0.0.1 at 2018-10-26 11:55:35 +0530
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (612.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.8ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1101ms (Views: 1025.1ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-26 12:06:07 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (1.4ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 198ms (Views: 168.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-26 12:06:19 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 140ms (Views: 134.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/camp_lead/new" for 127.0.0.1 at 2018-10-26 12:16:51 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"source"=>"Hiranandani Parks - Villa Facebook", "name"=>"kkn test", "email"=>"kknmalar2@gmail.com", "phone_number"=>"8148303123", "queries"=>"test", "plot_size"=>"-"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[36mCampLead Create (3.7ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["source", "Hiranandani Parks - Villa Facebook"], ["name", "kkn test"], ["email", "kknmalar2@gmail.com"], ["plot_size", "-"], ["phone_number", "8148303123"], ["queries", "test"], ["created_at", "2018-10-26 06:46:51.725233"], ["updated_at", "2018-10-26 06:46:51.725233"]]
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 9c18e989-c8ab-4193-9b3b-c6cafeb204ec) to Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007f9a44edf130 @uri=#<URI::GID gid://hparks/CampLead/24>>
+  [1m[36mCampLead Load (1.4ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [9c18e989-c8ab-4193-9b3b-c6cafeb204ec] Performing ActionMailer::DeliveryJob (Job ID: 9c18e989-c8ab-4193-9b3b-c6cafeb204ec) from Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007f9a47159620 @uri=#<URI::GID gid://hparks/CampLead/24>>
+[ActiveJob] [ActionMailer::DeliveryJob] [9c18e989-c8ab-4193-9b3b-c6cafeb204ec]   Rendering payment_mailer/spini_camp_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [9c18e989-c8ab-4193-9b3b-c6cafeb204ec]   Rendered payment_mailer/spini_camp_leads.html.erb within layouts/mailer (0.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [9c18e989-c8ab-4193-9b3b-c6cafeb204ec] PaymentMailer#spini_camp_leads: processed outbound mail in 100.3ms
+Completed 201 Created in 3066ms (Views: 0.9ms | ActiveRecord: 18.1ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [9c18e989-c8ab-4193-9b3b-c6cafeb204ec] Sent mail to karthikeyan@spinircle.com (5605.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [9c18e989-c8ab-4193-9b3b-c6cafeb204ec] Date: Fri, 26 Oct 2018 12:16:52 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5bd2b85c267b5_65c3fcd2276f73039386@KarthikeyansAir.mail>
+Subject: Hiranandani Parks - Villa Facebook
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Hiranandani Parks - Villa Facebook</h4>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+    <th>Comments</th>
+  </tr>
+  <tr>
+    <td>kkn test</td>
+    <td>kknmalar2@gmail.com</td>
+    <td>8148303123</td>
+    <td>-</td>
+    <td>test</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [9c18e989-c8ab-4193-9b3b-c6cafeb204ec] Performed ActionMailer::DeliveryJob (Job ID: 9c18e989-c8ab-4193-9b3b-c6cafeb204ec) from Async(mailers) in 5712.86ms
