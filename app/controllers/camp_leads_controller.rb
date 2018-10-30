@@ -246,6 +246,6 @@ class CampLeadsController < ApplicationController
 
 	def camp_lead_params
 		# binding.pry
-		params.require(:camp_lead).permit(:source,:name,:email,:phone_number,:queries ,:plot_size)
+		params.require(:camp_lead).permit(:source,:name,:email,:phone_number,:queries ,:plot_size, :product)
 	end
 end

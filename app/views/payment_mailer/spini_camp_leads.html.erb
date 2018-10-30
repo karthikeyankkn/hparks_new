@@ -3,13 +3,16 @@
 
 
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <tr>
     <th>Name</th>
     <th>Email</th>
     <th>Number</th>
     <th>Plot Details</th>
     <th>Comments</th>
+    <% if @lead_details.product.present? %>
+      <th>Product</th>
+    <% end %>
   </tr>
   <tr>
     <td><%= @lead_details.name%></td>
@@ -17,6 +20,9 @@
     <td><%= @lead_details.phone_number %></td>
     <td><%= @lead_details.plot_size %></td>
     <td><%= @lead_details.queries %></td>
+     <% if @lead_details.product.present? %>
+      <td><%= @lead_details.product %></td>
+     <% end %>
   </tr>
 </table>
 <br>
