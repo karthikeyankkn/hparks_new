@@ -55,6 +55,7 @@ class CampLeadsController < ApplicationController
 			render json: @camp_lead.errors, status: :unprocessable_entity
 		end
 		# binding.pry
+		# debugger
 		if @camp_lead.source == "facebook"
 		@data = { api_key: "1bd54866736339b8f49efe4cbd3404b8",
 				sell_do: {
@@ -185,7 +186,96 @@ class CampLeadsController < ApplicationController
     			:body => @data.to_json,
     			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
   				});
-			else
+  				
+			elsif @camp_lead.source == "Hiranandani Parks - Sicci Campaign"
+				@data = { api_key: "1bd54866736339b8f49efe4cbd3404b8",
+				sell_do: {
+					form: {
+						lead: {
+							first_name: @camp_lead[:name],
+							last_name: "",
+							email: @camp_lead[:email],
+							phone: @camp_lead[:phone_number]
+							# project_id: "56659cb03bb2f8f46900001b"
+							},
+						note:{
+							content:  @camp_lead[:queries]
+							},
+						address:{
+							address1: "",
+							address2: "",
+							country: "India",
+							state: "tamilnadu",
+							city: "city",
+							zip: "0"
+							},
+						requirement:{
+							property_types: [@camp_lead[:plot_size]],
+							product: [@camp_lead[:product]],
+							locations: [],
+							bhk: ["2","2.5"],
+							min_budget: 0,
+							max_budget: 0,
+							min_possession: "",
+							max_possession: ""
+							}
+						},
+						campaign: { 
+								srd: "5bd97d7f7c0dac5f8f627792"
+							}
+					# sell_do: { campaign: { srd: "5b279800923d4a388d1bb2c2" }}
+					}
+				}	
+					@response = HTTParty.post('https://app.sell.do/api/leads/create',
+					{ 
+    			:body => @data.to_json,
+    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  				});
+  			elsif @camp_lead.source == "Hiranandani Parks - CHN-Campaign-IND"
+				@data = { api_key: "1bd54866736339b8f49efe4cbd3404b8",
+				sell_do: {
+					form: {
+						lead: {
+							first_name: @camp_lead[:name],
+							last_name: "",
+							email: @camp_lead[:email],
+							phone: @camp_lead[:phone_number]
+							# project_id: "56659cb03bb2f8f46900001b"
+							},
+						note:{
+							content:  @camp_lead[:queries]
+							},
+						address:{
+							address1: "",
+							address2: "",
+							country: "India",
+							state: "tamilnadu",
+							city: "city",
+							zip: "0"
+							},
+						requirement:{
+							property_types: [@camp_lead[:plot_size]],
+							product: [@camp_lead[:product]],
+							locations: [],
+							bhk: ["2","2.5"],
+							min_budget: 0,
+							max_budget: 0,
+							min_possession: "",
+							max_possession: ""
+							}
+						},
+						campaign: { 
+								srd: "5bd97d2b7c0dac5f2062a071"
+							}
+					# sell_do: { campaign: { srd: "5b279800923d4a388d1bb2c2" }}
+					}
+				}	
+					@response = HTTParty.post('https://app.sell.do/api/leads/create',
+					{ 
+    			:body => @data.to_json,
+    			:headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+  				});
+				else
 				@data = { api_key: "1bd54866736339b8f49efe4cbd3404b8",
 				sell_do: {
 					form: {
