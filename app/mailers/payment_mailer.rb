@@ -41,11 +41,11 @@ class PaymentMailer < ApplicationMailer
      @lead_details = lead_details
      
      if lead_details.source == "Hiranandani Parks - CHN-Campaign-IND" || lead_details.source == "Hiranandani Parks - Sicci Campaign"
-        # mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<contact@getspini.com>,<csekhar@hrealty.com>,<sprasad@hrealty.com>,<Pvijay@hrealty.com>" , subject: @lead_details.source
-             mail to: "<karthikeyan@spinircle.com>" , subject: "it is from IF statement"
+        mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<contact@getspini.com>,<csekhar@hrealty.com>,<sprasad@hrealty.com>,<Pvijay@hrealty.com>" , subject: @lead_details.source
+             # mail to: "<karthikeyan@spinircle.com>" , subject: "it is from IF statement"
        else
-        # mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<sathesh@spinircle.com>,<anand.kumar@spinircle.com>,<contact@getspini.com>,<csekhar@hrealty.com>,<sprasad@hrealty.com>,<Pvijay@hrealty.com>, <Indiamediasem@gmail.com>, <Praveentkmenon@gmail.com>" , subject: @lead_details.source
-        mail to: "<karthikeyan@spinircle.com>" , subject: "It is a normal output"
+        mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<contact@getspini.com>,<csekhar@hrealty.com>,<sprasad@hrealty.com>,<Pvijay@hrealty.com>, <Indiamediasem@gmail.com>, <Praveentkmenon@gmail.com>" , subject: @lead_details.source
+        # mail to: "<karthikeyan@spinircle.com>" , subject: "It is a normal output"
      end
      
   end
