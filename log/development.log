@@ -26412,3 +26412,334 @@ Content-Transfer-Encoding: 7bit
 /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
 /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
   [1m[36mCampLead Load (0.5ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" ORDER BY "camp_leads"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-11-19 16:41:44 +0530
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (453.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 822ms (Views: 741.3ms | ActiveRecord: 34.7ms)
+
+
+Started POST "/camp_lead/new" for 127.0.0.1 at 2018-11-19 16:59:58 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"source"=>"Hiranandani Parks - Sicci Campaign", "name"=>"local test", "email"=>"test@live.com", "phone_number"=>"+6567688885", "queries"=>"test", "plot_size"=>"-", "product"=>"Apartments - 2.5 BHK & 3 BHK"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[36mCampLead Create (14.6ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at", "product") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["source", "Hiranandani Parks - Sicci Campaign"], ["name", "local test"], ["email", "test@live.com"], ["plot_size", "-"], ["phone_number", "+6567688885"], ["queries", "test"], ["created_at", "2018-11-19 11:29:58.358293"], ["updated_at", "2018-11-19 11:29:58.358293"], ["product", "Apartments - 2.5 BHK & 3 BHK"]]
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: a6af39a8-54d5-453f-9917-60496fbd0644) to Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd18851b830 @uri=#<URI::GID gid://hparks/CampLead/40>>
+Completed 201 Created in 2899ms (Views: 2.6ms | ActiveRecord: 23.8ms)
+
+
+  [1m[36mCampLead Load (7.8ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [a6af39a8-54d5-453f-9917-60496fbd0644] Performing ActionMailer::DeliveryJob (Job ID: a6af39a8-54d5-453f-9917-60496fbd0644) from Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd1890987f8 @uri=#<URI::GID gid://hparks/CampLead/40>>
+[ActiveJob] [ActionMailer::DeliveryJob] [a6af39a8-54d5-453f-9917-60496fbd0644]   Rendering payment_mailer/spini_camp_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [a6af39a8-54d5-453f-9917-60496fbd0644]   Rendered payment_mailer/spini_camp_leads.html.erb within layouts/mailer (7.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [a6af39a8-54d5-453f-9917-60496fbd0644] PaymentMailer#spini_camp_leads: processed outbound mail in 78485.4ms
+[ActiveJob] [ActionMailer::DeliveryJob] [a6af39a8-54d5-453f-9917-60496fbd0644] Sent mail to karthikeyan@spinircle.com (3324.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [a6af39a8-54d5-453f-9917-60496fbd0644] Date: Mon, 19 Nov 2018 17:01:19 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com
+Message-ID: <5bf29f07e487f_10833fe8c428d89429844@Karthikeyans-MacBook-Air.local.mail>
+Subject: Hiranandani Parks - Sicci Campaign
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Hiranandani Parks - Sicci Campaign</h4>
+
+
+
+<table border="1" style="border-collapse: collapse;">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+    <th>Comments</th>
+      <th>Product</th>
+  </tr>
+  <tr>
+    <td>local test</td>
+    <td>test@live.com</td>
+    <td>+6567688885</td>
+    <td>-</td>
+    <td>test</td>
+      <td>Apartments - 2.5 BHK &amp; 3 BHK</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [a6af39a8-54d5-453f-9917-60496fbd0644] Performed ActionMailer::DeliveryJob (Job ID: a6af39a8-54d5-453f-9917-60496fbd0644) from Async(mailers) in 81827.22ms
+Started POST "/camp_lead/new" for 127.0.0.1 at 2018-11-19 17:02:30 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"source"=>"Hiranandani Parks - Sicci Campaign", "name"=>"spini test", "email"=>"test@live.com", "phone_number"=>"+657373737373", "queries"=>"test", "plot_size"=>"-", "product"=>"Villas - Built-up area  starting from 1018 Sqft"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[36mCampLead Create (0.4ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at", "product") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["source", "Hiranandani Parks - Sicci Campaign"], ["name", "spini test"], ["email", "test@live.com"], ["plot_size", "-"], ["phone_number", "+657373737373"], ["queries", "test"], ["created_at", "2018-11-19 11:32:30.899345"], ["updated_at", "2018-11-19 11:32:30.899345"], ["product", "Villas - Built-up area  starting from 1018 Sqft"]]
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 33650282-13b1-4ea3-8fe2-fdcb9c051f26) to Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd189bcb3a0 @uri=#<URI::GID gid://hparks/CampLead/41>>
+Completed 201 Created in 2063ms (Views: 0.5ms | ActiveRecord: 6.3ms)
+
+
+  [1m[36mCampLead Load (0.5ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [33650282-13b1-4ea3-8fe2-fdcb9c051f26] Performing ActionMailer::DeliveryJob (Job ID: 33650282-13b1-4ea3-8fe2-fdcb9c051f26) from Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd189b42ac8 @uri=#<URI::GID gid://hparks/CampLead/41>>
+[ActiveJob] [ActionMailer::DeliveryJob] [33650282-13b1-4ea3-8fe2-fdcb9c051f26]   Rendering payment_mailer/spini_camp_leads.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [33650282-13b1-4ea3-8fe2-fdcb9c051f26]   Rendered payment_mailer/spini_camp_leads.html.erb within layouts/mailer (11.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [33650282-13b1-4ea3-8fe2-fdcb9c051f26] PaymentMailer#spini_camp_leads: processed outbound mail in 41394.0ms
+[ActiveJob] [ActionMailer::DeliveryJob] [33650282-13b1-4ea3-8fe2-fdcb9c051f26] Sent mail to karthikeyan@spinircle.com, joshua.simon@spinircle.com, anuradha.v@spinircle.com, contact@getspini.com, csekhar@hrealty.com, sprasad@hrealty.com, Pvijay@hrealty.com (3958.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [33650282-13b1-4ea3-8fe2-fdcb9c051f26] Date: Mon, 19 Nov 2018 17:03:14 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com, 
+ joshua.simon@spinircle.com, 
+ anuradha.v@spinircle.com, 
+ contact@getspini.com, 
+ csekhar@hrealty.com, 
+ sprasad@hrealty.com, 
+ Pvijay@hrealty.com
+Message-ID: <5bf29f7a856c1_10833fe8c428d894299d7@Karthikeyans-MacBook-Air.local.mail>
+Subject: Hiranandani Parks - Sicci Campaign
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Hiranandani Parks - Sicci Campaign</h4>
+
+
+
+<table border="1" style="border-collapse: collapse;">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+    <th>Comments</th>
+      <th>Product</th>
+  </tr>
+  <tr>
+    <td>spini test</td>
+    <td>test@live.com</td>
+    <td>+657373737373</td>
+    <td>-</td>
+    <td>test</td>
+      <td>Villas - Built-up area  starting from 1018 Sqft</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [33650282-13b1-4ea3-8fe2-fdcb9c051f26] Performed ActionMailer::DeliveryJob (Job ID: 33650282-13b1-4ea3-8fe2-fdcb9c051f26) from Async(mailers) in 45362.2ms
+Started POST "/camp_lead/new" for 127.0.0.1 at 2018-11-19 17:04:13 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"source"=>"Hiranandani Parks - Sicci Campaign", "name"=>"sicci-campaign test", "email"=>"test@live.com", "phone_number"=>"+6583939393", "queries"=>"test", "plot_size"=>"-", "product"=>"Apartments - 2.5 BHK & 3 BHK"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[36mCampLead Create (0.6ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at", "product") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["source", "Hiranandani Parks - Sicci Campaign"], ["name", "sicci-campaign test"], ["email", "test@live.com"], ["plot_size", "-"], ["phone_number", "+6583939393"], ["queries", "test"], ["created_at", "2018-11-19 11:34:13.655479"], ["updated_at", "2018-11-19 11:34:13.655479"], ["product", "Apartments - 2.5 BHK & 3 BHK"]]
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 5862954c-d795-43cf-9d7c-9fce376401a1) to Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd18e8aaae0 @uri=#<URI::GID gid://hparks/CampLead/42>>
+  [1m[36mCampLead Load (0.8ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [5862954c-d795-43cf-9d7c-9fce376401a1] Performing ActionMailer::DeliveryJob (Job ID: 5862954c-d795-43cf-9d7c-9fce376401a1) from Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd18e87b3d0 @uri=#<URI::GID gid://hparks/CampLead/42>>
+Completed 500 Internal Server Error in 15485ms (Views: 0.7ms | ActiveRecord: 2.1ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [5862954c-d795-43cf-9d7c-9fce376401a1]   Rendering payment_mailer/spini_camp_leads.html.erb within layouts/mailer
+  
+[ActiveJob] [ActionMailer::DeliveryJob] [5862954c-d795-43cf-9d7c-9fce376401a1]   Rendered payment_mailer/spini_camp_leads.html.erb within layouts/mailer (4.2ms)
+OpenSSL::SSL::SSLError (SSL_connect SYSCALL returned=5 errno=0 state=SSLv3/TLS write client hello):
+[ActiveJob] [ActionMailer::DeliveryJob] [5862954c-d795-43cf-9d7c-9fce376401a1] PaymentMailer#spini_camp_leads: processed outbound mail in 19999.8ms
+  
+app/controllers/camp_leads_controller.rb:229:in `create'
+[ActiveJob] [ActionMailer::DeliveryJob] [5862954c-d795-43cf-9d7c-9fce376401a1] Sent mail to karthikeyan@spinircle.com, joshua.simon@spinircle.com, anuradha.v@spinircle.com, contact@getspini.com, csekhar@hrealty.com, sprasad@hrealty.com, Pvijay@hrealty.com (3859.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [5862954c-d795-43cf-9d7c-9fce376401a1] Date: Mon, 19 Nov 2018 17:04:33 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com, 
+ joshua.simon@spinircle.com, 
+ anuradha.v@spinircle.com, 
+ contact@getspini.com, 
+ csekhar@hrealty.com, 
+ sprasad@hrealty.com, 
+ Pvijay@hrealty.com
+Message-ID: <5bf29fc9a8bee_10833fe8c428d894300b7@Karthikeyans-MacBook-Air.local.mail>
+Subject: Hiranandani Parks - Sicci Campaign
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Hiranandani Parks - Sicci Campaign</h4>
+
+
+
+<table border="1" style="border-collapse: collapse;">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+    <th>Comments</th>
+      <th>Product</th>
+  </tr>
+  <tr>
+    <td>sicci-campaign test</td>
+    <td>test@live.com</td>
+    <td>+6583939393</td>
+    <td>-</td>
+    <td>test</td>
+      <td>Apartments - 2.5 BHK &amp; 3 BHK</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [5862954c-d795-43cf-9d7c-9fce376401a1] Performed ActionMailer::DeliveryJob (Job ID: 5862954c-d795-43cf-9d7c-9fce376401a1) from Async(mailers) in 23861.13ms
+Started POST "/camp_lead/new" for 127.0.0.1 at 2018-11-19 17:06:11 +0530
+Processing by CampLeadsController#create as */*
+  Parameters: {"camp_lead"=>{"source"=>"Hiranandani Parks - CHN-Campaign-IND", "name"=>"camp test indial", "email"=>"test@live.com", "phone_number"=>"+918393933333", "queries"=>"test", "plot_size"=>"-", "product"=>"Apartments - 2.5 BHK & 3 BHK"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[36mCampLead Create (1.1ms)[0m  [1m[32mINSERT INTO "camp_leads" ("source", "name", "email", "plot_size", "phone_number", "queries", "created_at", "updated_at", "product") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["source", "Hiranandani Parks - CHN-Campaign-IND"], ["name", "camp test indial"], ["email", "test@live.com"], ["plot_size", "-"], ["phone_number", "+918393933333"], ["queries", "test"], ["created_at", "2018-11-19 11:36:11.382336"], ["updated_at", "2018-11-19 11:36:11.382336"], ["product", "Apartments - 2.5 BHK & 3 BHK"]]
+  ↳ app/controllers/camp_leads_controller.rb:44
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/camp_leads_controller.rb:44
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 90b6b9fb-0260-4d0c-8b4e-8b9df27dd976) to Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd18dcc06f8 @uri=#<URI::GID gid://hparks/CampLead/43>>
+  [1m[36mCampLead Load (0.6ms)[0m  [1m[34mSELECT  "camp_leads".* FROM "camp_leads" WHERE "camp_leads"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ /Users/karthikeyan/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::DeliveryJob] [90b6b9fb-0260-4d0c-8b4e-8b9df27dd976] Performing ActionMailer::DeliveryJob (Job ID: 90b6b9fb-0260-4d0c-8b4e-8b9df27dd976) from Async(mailers) with arguments: "PaymentMailer", "spini_camp_leads", "deliver_now", #<GlobalID:0x007fd1894c6e60 @uri=#<URI::GID gid://hparks/CampLead/43>>
+Completed 500 Internal Server Error in 55481ms (Views: 0.5ms | ActiveRecord: 7.3ms)
+
+
+  
+OpenSSL::SSL::SSLError (SSL_connect SYSCALL returned=5 errno=0 state=SSLv3/TLS write client hello):
+[ActiveJob] [ActionMailer::DeliveryJob] [90b6b9fb-0260-4d0c-8b4e-8b9df27dd976]   Rendering payment_mailer/spini_camp_leads.html.erb within layouts/mailer
+  
+[ActiveJob] [ActionMailer::DeliveryJob] [90b6b9fb-0260-4d0c-8b4e-8b9df27dd976]   Rendered payment_mailer/spini_camp_leads.html.erb within layouts/mailer (0.6ms)
+app/controllers/camp_leads_controller.rb:273:in `create'
+[ActiveJob] [ActionMailer::DeliveryJob] [90b6b9fb-0260-4d0c-8b4e-8b9df27dd976] PaymentMailer#spini_camp_leads: processed outbound mail in 55452.6ms
+[ActiveJob] [ActionMailer::DeliveryJob] [90b6b9fb-0260-4d0c-8b4e-8b9df27dd976] Sent mail to karthikeyan@spinircle.com, joshua.simon@spinircle.com, anuradha.v@spinircle.com, contact@getspini.com, csekhar@hrealty.com, sprasad@hrealty.com, Pvijay@hrealty.com (4026.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [90b6b9fb-0260-4d0c-8b4e-8b9df27dd976] Date: Mon, 19 Nov 2018 17:07:06 +0530
+From: 'HIRANANDANI PARKS' <noreply.hiranandaniparks@gmail.com>
+To: karthikeyan@spinircle.com, 
+ joshua.simon@spinircle.com, 
+ anuradha.v@spinircle.com, 
+ contact@getspini.com, 
+ csekhar@hrealty.com, 
+ sprasad@hrealty.com, 
+ Pvijay@hrealty.com
+Message-ID: <5bf2a062dc38b_10833fe8c428d894301f1@Karthikeyans-MacBook-Air.local.mail>
+Subject: Hiranandani Parks - CHN-Campaign-IND
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h3>Enquiry Response</h3>
+<h4>Source: Hiranandani Parks - CHN-Campaign-IND</h4>
+
+
+
+<table border="1" style="border-collapse: collapse;">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number</th>
+    <th>Plot Details</th>
+    <th>Comments</th>
+      <th>Product</th>
+  </tr>
+  <tr>
+    <td>camp test indial</td>
+    <td>test@live.com</td>
+    <td>+918393933333</td>
+    <td>-</td>
+    <td>test</td>
+      <td>Apartments - 2.5 BHK &amp; 3 BHK</td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="http://hiranandaniparks.com/contact-us.html">For more information contact Hiranandani</a>
+
+<h4>Thanks & Regards,</h4>
+<a href="http://hiranandaniparks.com/">Hiranandani parks</a>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [90b6b9fb-0260-4d0c-8b4e-8b9df27dd976] Performed ActionMailer::DeliveryJob (Job ID: 90b6b9fb-0260-4d0c-8b4e-8b9df27dd976) from Async(mailers) in 59515.13ms
