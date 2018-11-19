@@ -39,7 +39,7 @@ class PaymentMailer < ApplicationMailer
   end
   def spini_camp_leads(lead_details)
      @lead_details = lead_details
-     if lead_details.source == "Hiranandani Parks - CHN-Campaign-IND" && lead_details.source == "Hiranandani Parks - Sicci Campaign"
+     if lead_details.source == "Hiranandani Parks - CHN-Campaign-IND" || lead_details.source == "Hiranandani Parks - Sicci Campaign"
         mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<contact@getspini.com>,<csekhar@hrealty.com>,<sprasad@hrealty.com>,<Pvijay@hrealty.com>" , subject: @lead_details.source
        else
         mail to: "<karthikeyan@spinircle.com>,<joshua.simon@spinircle.com>,<anuradha.v@spinircle.com>,<sathesh@spinircle.com>,<anand.kumar@spinircle.com>,<contact@getspini.com>,<csekhar@hrealty.com>,<sprasad@hrealty.com>,<Pvijay@hrealty.com>, <Indiamediasem@gmail.com>, <Praveentkmenon@gmail.com>" , subject: @lead_details.source
