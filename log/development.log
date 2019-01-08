@@ -26767,3 +26767,25 @@ Processing by UserDetailsController#new as HTML
 Completed 200 OK in 123ms (Views: 117.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-08 13:01:39 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.7ms)
+  Rendered layouts/_enquire.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 109ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-08 13:03:03 +0530
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_disclaimer.html.erb (0.6ms)
+  Rendered layouts/_enquire.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 118ms (Views: 112.5ms | ActiveRecord: 0.0ms)
+
+
